@@ -1,0 +1,11 @@
+{
+    "idf.adapterTargetName": "esp32",
+    "idf.portWin": "COM4",
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ],
+    "idf.flashType": "JTAG",
+    "files.associations": {
+        "connect_wifi.h": "c"
+    }
+}

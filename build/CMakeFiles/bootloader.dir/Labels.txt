@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/CMakeFiles/bootloader
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/CMakeFiles/bootloader.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/CMakeFiles/bootloader-complete.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
