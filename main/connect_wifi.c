@@ -1,26 +1,10 @@
 #include "connect_wifi.h"
-
-#define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
-#define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
-#define EXAMPLE_ESP_MAXIMUM_RETRY CONFIG_ESP_MAXIMUM_RETRY
-
-/* FreeRTOS event group to signal when we are connected*/
+static const char *TAG = "connect WIFI";
 static EventGroupHandle_t s_wifi_event_group;
-
-/* The event group allows multiple bits for each event, but we only care about two events:
- * - we are connected to the AP with an IP
- * - we failed to connect after the maximum amount of retries */
-#define WIFI_CONNECTED_BIT BIT0
-#define WIFI_FAIL_BIT BIT1
-
-
 static int s_retry_num = 0;
 int wifi_connect_status = 0;
 
-static const char *TAG = "wifi_connect"; // TAG for debug
-
-static void event_handler(void *arg, esp_event_base_t event_base,
-                          int32_t event_id, void *event_data)
+static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
     {
@@ -51,8 +35,9 @@ static void event_handler(void *arg, esp_event_base_t event_base,
     }
 }
 
-void connect_wifi(void)
+void configure_as_station(void)
 {
+    ESP_LOGE(TAG, "Configuring as a station\n");
     s_wifi_event_group = xEventGroupCreate();
 
     ESP_ERROR_CHECK(esp_netif_init());
@@ -111,10 +96,64 @@ void connect_wifi(void)
     {
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+        ESP_LOGE(TAG, "WiFi connection failed, switch to AP mode\n");
+        configure_as_ap();
     }
     else
     {
         ESP_LOGE(TAG, "UNEXPECTED EVENT");
     }
     vEventGroupDelete(s_wifi_event_group);
+}
+void configure_as_ap()
+{
+    ESP_LOGE(TAG, "Configuring as an AP\n");
+    ESP_LOGE(TAG, "AP SSID:%s password:%s\n", EXAMPLE_ESP_AP_SSID, EXAMPLE_ESP_AP_PASSWORD);
+    esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_ap();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    esp_event_handler_instance_t instance_any_id;
+    esp_event_handler_instance_t instance_got_ip;
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+                                                        ESP_EVENT_ANY_ID,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
+                                                        IP_EVENT_STA_GOT_IP,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_got_ip));
+    wifi_config_t wifi_config = {
+        .ap = {
+            .ssid = EXAMPLE_ESP_AP_SSID,
+            .password = EXAMPLE_ESP_AP_PASSWORD,
+            .max_connection = 4,
+            .authmode = WIFI_AUTH_WPA_WPA2_PSK},
+    };
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+    wifi_connect_status = 1;
+}
+
+void Wifi_Setup(void *pvParameters)
+{
+
+    configure_as_station();
+    if (wifi_connect_status)
+    {
+
+        ESP_LOGI(TAG, "LED Control SPIFFS Web Server is running ... ...\n");
+        initi_web_page_buffer();
+        setup_server();
+    }
+    while (1)
+    {
+        vTaskDelay(pdMS_TO_TICKS(1500)); // Delay for 1500 millisecond
+    }
 }

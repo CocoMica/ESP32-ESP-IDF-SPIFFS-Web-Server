@@ -1,16 +1,11 @@
 #include "url_stuff.h"
 
-#define INDEX_HTML_PATH "/spiffs/index.html"
-#define INDEX_JS_PATH "/spiffs/script.js"
-#define STYLES_CSS_PATH "/spiffs/styles.css"
-#define LED_PIN 2
 int led_state = 0;
 char index_html[4096];
 char index_JS[4096];
 char styles_CSS[4096];
 char response_data[4096];
-
-static const char *TAG = "url_stuff"; // TAG for debug
+static const char *TAG = "URL stuff"; // TAG for debug
 
 void initi_web_page_buffer(void)
 {

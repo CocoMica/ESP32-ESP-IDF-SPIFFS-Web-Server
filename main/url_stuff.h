@@ -1,10 +1,9 @@
 #ifndef URL_STUFF_H
 #define URL_STUFF_H
 
-//#include <esp_http_server.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> //Requires by memset
+#include <string.h> 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
@@ -15,17 +14,26 @@
 #include <sys/stat.h>
 #include "esp_log.h"
 #include "driver/gpio.h"
+
+#define INDEX_HTML_PATH "/spiffs/index.html"
+#define INDEX_JS_PATH "/spiffs/script.js"
+#define STYLES_CSS_PATH "/spiffs/styles.css"
+#define LED_PIN 2
+
+
 extern int led_state;
 
-void initi_web_page_buffer(void);
 
+
+
+
+void initi_web_page_buffer(void);
 esp_err_t script_js_handler(httpd_req_t *req);
 esp_err_t styles_css_handler(httpd_req_t *req);
 esp_err_t send_web_page(httpd_req_t *req);
 esp_err_t get_req_handler(httpd_req_t *req);
 esp_err_t led_on_handler(httpd_req_t *req);
 esp_err_t led_off_handler(httpd_req_t *req);
-
 httpd_handle_t setup_server(void);
 
-#endif // URL_STUFF_H
+#endif

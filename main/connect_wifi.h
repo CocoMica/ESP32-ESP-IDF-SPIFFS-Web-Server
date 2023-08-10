@@ -16,9 +16,27 @@
 #include <lwip/sys.h>
 #include <lwip/api.h>
 #include <lwip/netdb.h>
+#include "url_stuff.h"
+
+ #define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
+//#define EXAMPLE_ESP_WIFI_SSID "eeddd"
+#define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
+#define EXAMPLE_ESP_MAXIMUM_RETRY CONFIG_ESP_MAXIMUM_RETRY
+
+#define EXAMPLE_ESP_AP_SSID CONFIG_ESP_AP_SSID
+#define EXAMPLE_ESP_AP_PASSWORD CONFIG_ESP_AP_PASSWORD
+
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT BIT1
 
 extern int wifi_connect_status;
 
-void connect_wifi(void);
+void configure_as_station(void);
+void configure_as_ap();
+void Wifi_Setup(void *pvParameters);
+
+
+
+
 
 #endif

@@ -4571,6 +4571,26 @@
                 "range": null,
                 "title": "Maximum retry",
                 "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "AP SSID (network name) for the example to connect to.",
+                "id": "ESP_AP_SSID",
+                "name": "ESP_AP_SSID",
+                "range": null,
+                "title": "AP SSID",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "AP password (WPA or WPA2) for the example to use.",
+                "id": "ESP_AP_PASSWORD",
+                "name": "ESP_AP_PASSWORD",
+                "range": null,
+                "title": "AP Password",
+                "type": "string"
             }
         ],
         "depends_on": null,
