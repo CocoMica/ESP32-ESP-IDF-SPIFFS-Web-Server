@@ -6,6 +6,8 @@
     ],
     "idf.flashType": "JTAG",
     "files.associations": {
-        "connect_wifi.h": "c"
+        "connect_wifi.h": "c",
+        "main.h": "c",
+        "wifi_setup.h": "c"
     }
 }

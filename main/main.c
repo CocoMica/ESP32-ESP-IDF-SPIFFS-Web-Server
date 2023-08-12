@@ -15,6 +15,6 @@ void app_main()
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
     led_state = 0;
     ESP_LOGI(TAG, "Main app starting\n");
-    xTaskCreate(Wifi_Setup, "Wifi_Setup", 4096, NULL, 1, NULL);
+    xTaskCreate(wifi_task, "wifi_task", 4096, NULL, 1, NULL);
 }
 
