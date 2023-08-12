@@ -1,4 +1,4 @@
-set(srcs "main.c" "connect_wifi.c" "url_stuff.c" "wifi_setup.c")
+set(srcs "main.c" "url_stuff.c" "wifi_setup.c" "received_messages.c")
 idf_component_register(SRCS ${srcs}
                     INCLUDE_DIRS ".")
 

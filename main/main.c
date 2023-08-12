@@ -1,5 +1,4 @@
-#include "main.h"
-
+#include "inc/main.h"
 
 void app_main()
 {
@@ -13,8 +12,22 @@ void app_main()
     ESP_ERROR_CHECK(ret);
     gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
-    led_state = 0;
     ESP_LOGI(TAG, "Main app starting\n");
+    xTaskCreate(read_ws_msg, "read_ws_msg", 4096, NULL, 1, NULL);
     xTaskCreate(wifi_task, "wifi_task", 4096, NULL, 1, NULL);
+    int count = 0;
+    send_message = "gg";
+    //char sendMsg[MAX_STRING_LENGTH];
+    while (1)
+    {
+        if (wifi_connect_status)
+        {
+            count++;
+           // ESP_LOGI(TAG, "Sending msg: %d\n", count);
+           // snprintf(sendMsg, sizeof(sendMsg), "this is from main loop: %d", count);
+           // esp_err_t ret =  trigger_async_send("Hello!");
+           // ESP_LOGI(TAG, "Sending msg %d success: %s\n", count, esp_err_to_name(ret));
+        }
+        vTaskDelay(pdMS_TO_TICKS(3000));
+    }
 }
-

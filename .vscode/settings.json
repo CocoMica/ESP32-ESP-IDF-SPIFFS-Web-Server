@@ -8,6 +8,7 @@
     "files.associations": {
         "connect_wifi.h": "c",
         "main.h": "c",
-        "wifi_setup.h": "c"
+        "wifi_setup.h": "c",
+        "url_stuff.h": "c"
     }
 }

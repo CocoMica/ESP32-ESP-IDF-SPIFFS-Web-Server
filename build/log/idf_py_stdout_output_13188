@@ -1,62 +1,73 @@
-[1/11] cmd.exe /C "cd /D D:\Hobby_Coding\spiffs_seb_server\ESP32-ESP-IDF-SPIFFS-Web-Server\build\esp-idf\main && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/spiffs/spiffsgen.py 0x100000 D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/data D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
-[2/11] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D D:\Hobby_Coding\spiffs_seb_server\ESP32-ESP-IDF-SPIFFS-Web-Server\build\bootloader\esp-idf\esptool_py && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader/bootloader.bin"
-Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
-[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_setup.c.obj
-[4/9] Linking C static library esp-idf\main\libmain.a
-[5/9] Generating ld/sections.ld
-[6/9] Linking CXX executable esp32_spiffs_webserver.elf
-[7/9] Generating binary image from built executable
-esptool.py v4.7.dev1
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp32_spiffs_webserver.bin
-[8/9] cmd.exe /C "cd /D D:\Hobby_Coding\spiffs_seb_server\ESP32-ESP-IDF-SPIFFS-Web-Server\build\esp-idf\esptool_py && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/partition_table/partition-table.bin D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp32_spiffs_webserver.bin"
-esp32_spiffs_webserver.bin binary size 0x2f660 bytes. Smallest app partition is 0x100000 bytes. 0xd09a0 bytes (81%) free.
-[8/9] cmd.exe /C "cd /D D:\Softwares\ESP-IDF\esp-idf\components\esptool_py && C:\Users\fluxe\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Softwares/ESP-IDF/esp-idf -D SERIAL_TOOL=C:/Users/fluxe/.espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Softwares/ESP-IDF/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build -P D:/Softwares/ESP-IDF/esp-idf/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 esp32_spiffs_webserver.bin 0x8000 partition_table/partition-table.bin 0x110000 storage.bin
-esptool.py v4.7.dev1
-Serial port COM4
-Connecting...........
-Chip is ESP32-D0WDQ6 (revision v1.0)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: 3c:61:05:15:80:c0
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x0003ffff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Flash will be erased from 0x00110000 to 0x0020ffff...
-Compressed 26832 bytes to 16852...
-Writing at 0x00001000... (50 %)
-Writing at 0x0000767c... (100 %)
-Wrote 26832 bytes (16852 compressed) at 0x00001000 in 0.8 seconds (effective 280.2 kbit/s)...
-Hash of data verified.
-Compressed 194144 bytes to 108475...
-Writing at 0x00010000... (14 %)
-Writing at 0x0001c9f5... (28 %)
-Writing at 0x00022344... (42 %)
-Writing at 0x00027e0c... (57 %)
-Writing at 0x0002e1ec... (71 %)
-Writing at 0x0003611d... (85 %)
-Writing at 0x0003baab... (100 %)
-Wrote 194144 bytes (108475 compressed) at 0x00010000 in 2.6 seconds (effective 596.1 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 117...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (117 compressed) at 0x00008000 in 0.1 seconds (effective 373.4 kbit/s)...
-Hash of data verified.
-Compressed 1048576 bytes to 21617...
-Writing at 0x00110000... (50 %)
-Writing at 0x001151cc... (100 %)
-Wrote 1048576 bytes (21617 compressed) at 0x00110000 in 5.0 seconds (effective 1677.9 kbit/s)...
-Hash of data verified.
+ets Jun  8 2016 00:22:57
 
-Leaving...
-Hard resetting via RTS pin...
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 12 2023 13:54:54[0m
+[0;32mI (35) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a4c0h ( 42176) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0001a4e8 vaddr=3ffb0000 size=02180h (  8576) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0001c670 vaddr=40080000 size=039a8h ( 14760) load[0m
+[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16a94h ( 92820) map[0m
+[0;32mI (178) esp_image: segment 4: paddr=00036abc vaddr=400839a8 size=08e84h ( 36484) load[0m
+[0;32mI (200) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu up.[0m
+[0;32mI (212) cpu_start: Starting app cpu, entry point is 0x40081068[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (230) cpu_start: Pro cpu start user code[0m
+[0;32mI (230) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (230) cpu_start: Application information:[0m
+[0;32mI (235) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (241) cpu_start: App version:      2a9ba53-dirty[0m
+[0;32mI (246) cpu_start: Compile time:     Aug 12 2023 13:56:45[0m
+[0;32mI (252) cpu_start: ELF file SHA256:  dfcc79352...[0m
+[0;32mI (258) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (265) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (270) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (274) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (279) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (286) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (292) heap_init: At 3FFB2A30 len 0002D5D0 (181 KiB): DRAM[0m
+[0;32mI (299) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (305) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (311) heap_init: At 4008C82C len 000137D4 (77 KiB): IRAM[0m
+[0;32mI (319) spi_flash: detected chip: generic[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+[0;32mI (391) MAIN: Main app starting
+[0m
+[0;32mI (391) received_messages: Hello, ESP32!
+[0m
+[0;32mI (391) main_task: Returned from app_main()[0m
+[0;32mI (1391) received_messages: Hello, ESP32!
+[0m
+[0;32mI (2391) received_messages: Hello, ESP32!
+[0m
+[0;32mI (3391) received_messages: Hello, ESP32!
+[0m

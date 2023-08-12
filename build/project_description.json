@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "esp32_spiffs_webserver",
-    "project_version":    "77ac313-dirty",
+    "project_version":    "2a9ba53-dirty",
     "project_path":       "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server",
     "idf_path":           "D:/Softwares/ESP-IDF/esp-idf",
     "build_dir":          "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build",
@@ -805,7 +805,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/main.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/connect_wifi.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/url_stuff.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c" ],
+            "sources": [ "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/main.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/url_stuff.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c", "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/received_messages.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
