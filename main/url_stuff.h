@@ -18,6 +18,8 @@
 #define INDEX_HTML_PATH "/spiffs/index.html"
 #define INDEX_JS_PATH "/spiffs/script.js"
 #define STYLES_CSS_PATH "/spiffs/styles.css"
+#define IMAGE_PATH "/spiffs/test.png"
+
 #define LED_PIN 2
 
 

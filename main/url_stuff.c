@@ -5,6 +5,7 @@ char index_html[4096];
 char index_JS[4096];
 char styles_CSS[4096];
 char response_data[4096];
+char image[25000];
 static const char *TAG = "URL stuff"; // TAG for debug
 
 void initi_web_page_buffer(void)
@@ -20,9 +21,11 @@ void initi_web_page_buffer(void)
     memset((void *)index_html, 0, sizeof(index_html));
     memset((void *)index_JS, 0, sizeof(index_JS));
     memset((void *)styles_CSS, 0, sizeof(styles_CSS));
+    memset((void *)image, 0, sizeof(image));
     struct stat st;
     struct stat st2;
     struct stat st3;
+    struct stat st4;
     if (stat(INDEX_HTML_PATH, &st))
     {
         ESP_LOGE(TAG, "index.html not found");
@@ -37,6 +40,11 @@ void initi_web_page_buffer(void)
     if (stat(STYLES_CSS_PATH, &st3))
     {
         ESP_LOGE(TAG, "styles.css not found");
+        return;
+    }
+        if (stat(IMAGE_PATH, &st4))
+    {
+        ESP_LOGE(TAG, "image not found");
         return;
     }
     FILE *fp = fopen(INDEX_HTML_PATH, "r");
@@ -59,6 +67,13 @@ void initi_web_page_buffer(void)
         ESP_LOGE(TAG, "CSS fread failed");
     }
     fclose(fp3);
+
+        FILE *fp4 = fopen(IMAGE_PATH, "r");
+    if (fread(image, st4.st_size, 1, fp4) == 0)
+    {
+        ESP_LOGE(TAG, "image fread failed");
+    }
+    fclose(fp4);
 }
 esp_err_t script_js_handler(httpd_req_t *req)
 {
