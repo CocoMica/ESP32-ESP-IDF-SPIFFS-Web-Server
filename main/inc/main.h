@@ -14,6 +14,7 @@
 #include "wifi_setup.h"
 #include "received_messages.h"
 #include "firmware_update.h"
+#include "mqtt_stuff.h"
 
 
 #define LED_PIN 2

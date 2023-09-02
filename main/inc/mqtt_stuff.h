@@ -21,7 +21,17 @@
 #include "lwip/netdb.h"
 
 #include "esp_log.h"
-#include "mqtt_client.h"
 
+#include "mqtt_client.h"
+#include "esp_tls.h"
+#include "esp_ota_ops.h"
+#include <sys/param.h>
+
+
+#define CONFIG_BROKER_BIN_SIZE_TO_SEND 20000
+//#define CONFIG_BROKER_URI "mqtts://mqtt.eclipseprojects.io:8883"
+#define CONFIG_BROKER_URI "mqtts://bbcbdbaf.ala.us-east-1.emqxsl.com:8883"
+
+void mqtt_app_start(void);
 
 #endif

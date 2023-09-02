@@ -1,0 +1,278 @@
+arting app c�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep  2 2023 16:32:24[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a434h (173108) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=0003a45c vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (184) esp_image: segment 2: paddr=0003dc64 vaddr=40080000 size=023b4h (  9140) load[0m
+[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4d2ch (675116) map[0m
+[0;32mI (436) esp_image: segment 4: paddr=000e4d54 vaddr=400823b4 size=13278h ( 78456) load[0m
+[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (479) boot: Disabling RNG early entropy source...[0m
+[0;32mI (491) cpu_start: Multicore app[0m
+[0;32mI (491) cpu_start: Pro cpu up.[0m
+[0;32mI (491) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (511) cpu_start: Pro cpu start user code[0m
+[0;32mI (511) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (511) cpu_start: Application information:[0m
+[0;32mI (516) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (522) cpu_start: App version:      7d00832-dirty[0m
+[0;32mI (528) cpu_start: Compile time:     Sep  2 2023 16:32:03[0m
+[0;32mI (534) cpu_start: ELF file SHA256:  4fa3c0134...[0m
+[0;32mI (539) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (546) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (551) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (556) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (561) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (568) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (574) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
+[0;32mI (580) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (586) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (593) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
+[0;32mI (601) spi_flash: detected chip: generic[0m
+[0;32mI (604) spi_flash: flash io: dio[0m
+[0;32mI (608) app_start: Starting scheduler on CPU0[0m
+[0;32mI (613) app_start: Starting scheduler on CPU1[0m
+[0;32mI (613) main_task: Started on CPU0[0m
+[0;32mI (623) main_task: Calling app_main()[0m
+[0;32mI (673) MAIN: Main app starting
+[0m
+[0;32mI (673) wifi_setup: wifi_init begin
+[0m
+I (683) wifi:wifi driver task: 3ffcc308, prio:23, stack:6656, core=0
+I (713) wifi:wifi firmware version: 3e5caf3
+I (713) wifi:wifi certification version: v7.0
+I (713) wifi:config NVS flash: enabled
+I (713) wifi:config nano formating: disabled
+I (713) wifi:Init data frame dynamic rx buffer num: 32
+I (713) wifi:Init management frame dynamic rx buffer num: 32
+I (723) wifi:Init management short buffer num: 32
+I (723) wifi:Init dynamic tx buffer num: 32
+I (733) wifi:Init static rx buffer size: 1600
+I (733) wifi:Init static rx buffer num: 10
+I (743) wifi:Init dynamic rx buffer num: 32
+[0;32mI (743) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (753) wifi_init: udp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp mbox: 6[0m
+[0;32mI (763) wifi_init: tcp tx win: 5744[0m
+[0;32mI (763) wifi_init: tcp rx win: 5744[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1023) wifi:enable tsf
+I (1033) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1033) wifi:state: init -> auth (b0)
+I (1043) wifi:state: auth -> assoc (0)
+I (1043) wifi:state: assoc -> run (10)
+I (1083) wifi:connected with Jenny, aid = 2, channel 11, BW20, bssid = 98:9d:5d:9b:ee:a4
+I (1083) wifi:security: WPA2-PSK, phy: bgn, rssi: -70
+I (1083) wifi:pm start, type: 1
+
+I (1143) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+I (1593) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
+[0;32mI (2583) wifi_setup: got ip:10.0.0.75[0m
+[0;32mI (2583) esp_netif_handlers: sta ip: 10.0.0.75, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (2583) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
+[0;32mI (3673) mqtt_stuff: mqtt_app_start[0m
+[0;32mI (3673) mqtt_stuff: [APP] Free memory: 171352 bytes[0m
+[0;32mI (3673) mqtt_stuff: Other event id:7[0m
+I (4013) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:1, winSize:64
+[0;32mI (5343) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5343) mqtt_stuff: sent subscribe successful, msg_id=24002[0m
+[0;32mI (5353) mqtt_stuff: sent subscribe successful, msg_id=58450[0m
+[0;32mI (5393) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=24002[0m
+[0;32mI (5393) mqtt_stuff: sent publish successful, msg_id=0[0m
+[0;32mI (5433) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=58450[0m
+[0;32mI (5433) mqtt_stuff: sent publish successful, msg_id=0[0m
+[0;32mI (5473) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (5513) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (6673) mqtt_stuff: sent publish successful, msg_id=0, count=1.[0m
+[0;32mI (6713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 1
+[0;32mI (9673) mqtt_stuff: sent publish successful, msg_id=0, count=2.[0m
+[0;32mI (9723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 2
+[0;32mI (12673) mqtt_stuff: sent publish successful, msg_id=0, count=3.[0m
+[0;32mI (12713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 3
+[0;32mI (15673) mqtt_stuff: sent publish successful, msg_id=0, count=4.[0m
+[0;32mI (15713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 4
+[0;32mI (18673) mqtt_stuff: sent publish successful, msg_id=0, count=5.[0m
+[0;32mI (18723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 5
+[0;32mI (21673) mqtt_stuff: sent publish successful, msg_id=0, count=6.[0m
+[0;32mI (21833) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 6
+[0;32mI (24673) mqtt_stuff: sent publish successful, msg_id=0, count=7.[0m
+[0;32mI (24713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 7
+[0;32mI (27673) mqtt_stuff: sent publish successful, msg_id=0, count=8.[0m
+[0;32mI (27713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 8
+[0;32mI (30673) mqtt_stuff: sent publish successful, msg_id=0, count=9.[0m
+[0;32mI (30743) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 9
+[0;32mI (33673) mqtt_stuff: sent publish successful, msg_id=0, count=10.[0m
+[0;32mI (33713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 10
+[0;32mI (36673) mqtt_stuff: sent publish successful, msg_id=0, count=11.[0m
+[0;32mI (36713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 11
+[0;32mI (39673) mqtt_stuff: sent publish successful, msg_id=0, count=12.[0m
+[0;32mI (39713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 12
+[0;32mI (42673) mqtt_stuff: sent publish successful, msg_id=0, count=13.[0m
+[0;32mI (42713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 13
+[0;32mI (45673) mqtt_stuff: sent publish successful, msg_id=0, count=14.[0m
+[0;32mI (45713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 14
+[0;32mI (48673) mqtt_stuff: sent publish successful, msg_id=0, count=15.[0m
+[0;32mI (48723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 15
+[0;32mI (51673) mqtt_stuff: sent publish successful, msg_id=0, count=16.[0m
+[0;32mI (51713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 16
+[0;32mI (54673) mqtt_stuff: sent publish successful, msg_id=0, count=17.[0m
+[0;32mI (54713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 17
+[0;32mI (57673) mqtt_stuff: sent publish successful, msg_id=0, count=18.[0m
+[0;32mI (57733) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 18
+[0;32mI (60673) mqtt_stuff: sent publish successful, msg_id=0, count=19.[0m
+[0;32mI (60733) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 19
+[0;32mI (63673) mqtt_stuff: sent publish successful, msg_id=0, count=20.[0m
+[0;32mI (63713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 20
+[0;32mI (66673) mqtt_stuff: sent publish successful, msg_id=0, count=21.[0m
+[0;32mI (66713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 21
+[0;32mI (69673) mqtt_stuff: sent publish successful, msg_id=0, count=22.[0m
+[0;32mI (69713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 22
+[0;32mI (72673) mqtt_stuff: sent publish successful, msg_id=0, count=23.[0m
+[0;32mI (72833) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 23
+[0;32mI (75673) mqtt_stuff: sent publish successful, msg_id=0, count=24.[0m
+[0;32mI (75723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 24
+[0;32mI (78673) mqtt_stuff: sent publish successful, msg_id=0, count=25.[0m
+[0;32mI (78973) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 25
+[0;32mI (81673) mqtt_stuff: sent publish successful, msg_id=0, count=26.[0m
+[0;32mI (81713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 26
+[0;32mI (84673) mqtt_stuff: sent publish successful, msg_id=0, count=27.[0m
+[0;32mI (84713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 27
+[0;32mI (87673) mqtt_stuff: sent publish successful, msg_id=0, count=28.[0m
+[0;32mI (87713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 28
+[0;32mI (90673) mqtt_stuff: sent publish successful, msg_id=0, count=29.[0m
+[0;32mI (90713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 29
+[0;32mI (93673) mqtt_stuff: sent publish successful, msg_id=0, count=30.[0m
+[0;32mI (93713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 30
+[0;32mI (96673) mqtt_stuff: sent publish successful, msg_id=0, count=31.[0m
+[0;32mI (96713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 31
+[0;32mI (99673) mqtt_stuff: sent publish successful, msg_id=0, count=32.[0m
+[0;32mI (99713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 32
+[0;32mI (102673) mqtt_stuff: sent publish successful, msg_id=0, count=33.[0m
+[0;32mI (102713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 33
+[0;32mI (105673) mqtt_stuff: sent publish successful, msg_id=0, count=34.[0m
+[0;32mI (105723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 34
+[0;32mI (108673) mqtt_stuff: sent publish successful, msg_id=0, count=35.[0m
+[0;32mI (108773) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 35
+[0;32mI (111673) mqtt_stuff: sent publish successful, msg_id=0, count=36.[0m
+[0;32mI (111713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 36
+[0;32mI (114673) mqtt_stuff: sent publish successful, msg_id=0, count=37.[0m
+[0;32mI (114713) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 37
+[0;32mI (117673) mqtt_stuff: sent publish successful, msg_id=0, count=38.[0m
+[0;32mI (117753) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 38
+[0;32mI (120673) mqtt_stuff: sent publish successful, msg_id=0, count=39.[0m
+[0;32mI (120723) mqtt_stuff: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=count is: 39
