@@ -1,0 +1,924 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 12 2023 13:54:54[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28394h (164756) map[0m
+[0;32mI (175) esp_image: segment 1: paddr=000383bc vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=0003bbc4 vaddr=40080000 size=04454h ( 17492) load[0m
+[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a25dch (665052) map[0m
+[0;32mI (429) esp_image: segment 4: paddr=000e2604 vaddr=40084454 size=111d8h ( 70104) load[0m
+[0;32mI (469) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (481) cpu_start: Multicore app[0m
+[0;32mI (481) cpu_start: Pro cpu up.[0m
+[0;32mI (481) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (501) cpu_start: Pro cpu start user code[0m
+[0;32mI (501) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (501) cpu_start: Application information:[0m
+[0;32mI (506) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (512) cpu_start: App version:      c8654a7-dirty[0m
+[0;32mI (518) cpu_start: Compile time:     Aug 12 2023 18:06:30[0m
+[0;32mI (524) cpu_start: ELF file SHA256:  0078ef56e...[0m
+[0;32mI (529) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (536) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (541) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (546) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (551) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (558) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (576) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (594) spi_flash: flash io: dio[0m
+[0;32mI (598) app_start: Starting scheduler on CPU0[0m
+[0;32mI (603) app_start: Starting scheduler on CPU1[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (663) MAIN: Main app starting
+[0m
+[0;32mI (663) wifi_setup: wifi_init begin
+[0m
+[0;31mE (663) firmware_update: Wifi state: 0[0m
+I (673) wifi:wifi driver task: 3ffcd464, prio:23, stack:6656, core=0
+I (703) wifi:wifi firmware version: 3e5caf3
+I (703) wifi:wifi certification version: v7.0
+I (703) wifi:config NVS flash: enabled
+I (703) wifi:config nano formating: disabled
+I (703) wifi:Init data frame dynamic rx buffer num: 32
+I (713) wifi:Init management frame dynamic rx buffer num: 32
+I (713) wifi:Init management short buffer num: 32
+I (723) wifi:Init dynamic tx buffer num: 32
+I (723) wifi:Init static rx buffer size: 1600
+I (733) wifi:Init static rx buffer num: 10
+I (733) wifi:Init dynamic rx buffer num: 32
+[0;32mI (733) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (743) wifi_init: udp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp tx win: 5744[0m
+[0;32mI (753) wifi_init: tcp rx win: 5744[0m
+[0;31mE (763) firmware_update: Wifi state: 0[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (763) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;31mE (863) firmware_update: Wifi state: 0[0m
+[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;31mE (963) firmware_update: Wifi state: 0[0m
+I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1023) wifi:enable tsf
+I (1033) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1033) wifi:state: init -> auth (b0)
+[0;31mE (1063) firmware_update: Wifi state: 0[0m
+[0;31mE (1163) firmware_update: Wifi state: 0[0m
+[0;31mE (1263) firmware_update: Wifi state: 0[0m
+[0;31mE (1363) firmware_update: Wifi state: 0[0m
+[0;31mE (1463) firmware_update: Wifi state: 0[0m
+[0;31mE (1563) firmware_update: Wifi state: 0[0m
+[0;31mE (1663) firmware_update: Wifi state: 0[0m
+[0;31mE (1763) firmware_update: Wifi state: 0[0m
+[0;31mE (1863) firmware_update: Wifi state: 0[0m
+[0;31mE (1963) firmware_update: Wifi state: 0[0m
+I (2033) wifi:state: auth -> init (200)
+I (2033) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (2043) wifi_setup: retry to connect to the AP[0m
+[0;32mI (2043) wifi_setup: connect to the AP fail[0m
+[0;31mE (2063) firmware_update: Wifi state: 0[0m
+I (2133) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (2133) wifi:state: init -> auth (b0)
+I (2143) wifi:state: auth -> assoc (0)
+I (2153) wifi:state: assoc -> run (10)
+[0;31mE (2163) firmware_update: Wifi state: 0[0m
+[0;31mE (2263) firmware_update: Wifi state: 0[0m
+I (2263) wifi:connected with Jenny, aid = 5, channel 11, BW20, bssid = 50:d4:f7:cd:9a:01
+I (2263) wifi:security: WPA2-PSK, phy: bgn, rssi: -71
+I (2263) wifi:pm start, type: 1
+
+I (2333) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;31mE (2363) firmware_update: Wifi state: 0[0m
+[0;31mE (2463) firmware_update: Wifi state: 0[0m
+[0;31mE (2563) firmware_update: Wifi state: 0[0m
+[0;31mE (2663) firmware_update: Wifi state: 0[0m
+[0;31mE (2763) firmware_update: Wifi state: 0[0m
+[0;31mE (2863) firmware_update: Wifi state: 0[0m
+[0;31mE (2963) firmware_update: Wifi state: 0[0m
+[0;31mE (3063) firmware_update: Wifi state: 0[0m
+[0;31mE (3163) firmware_update: Wifi state: 0[0m
+[0;31mE (3263) firmware_update: Wifi state: 0[0m
+[0;31mE (3363) firmware_update: Wifi state: 0[0m
+[0;31mE (3463) firmware_update: Wifi state: 0[0m
+[0;31mE (3563) firmware_update: Wifi state: 0[0m
+[0;31mE (3663) firmware_update: Wifi state: 0[0m
+[0;31mE (3763) firmware_update: Wifi state: 0[0m
+[0;32mI (3773) wifi_setup: got ip:10.0.0.50[0m
+[0;32mI (3773) esp_netif_handlers: sta ip: 10.0.0.50, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (3773) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
+I (4893) wifi:<ba-add>idx:0 (ifx:0, 50:d4:f7:cd:9a:01), tid:0, ssn:3, winSize:64
+[0;32mI (5443) firmware_update: OK[0m
+[0;32mI (5443) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (5443) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (5453) firmware_update: Wifi state: 1[0m
+[0;32mI (7043) firmware_update: OK[0m
+[0;32mI (7043) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (7043) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (7053) firmware_update: Wifi state: 1[0m
+[0;32mI (8623) firmware_update: OK[0m
+[0;32mI (8623) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (8623) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (8633) firmware_update: Wifi state: 1[0m
+[0;32mI (10253) firmware_update: OK[0m
+[0;32mI (10253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (10253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (10263) firmware_update: Wifi state: 1[0m
+[0;32mI (12253) firmware_update: OK[0m
+[0;32mI (12253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (12253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (12263) firmware_update: Wifi state: 1[0m
+[0;32mI (13793) firmware_update: OK[0m
+[0;32mI (13793) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (13793) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (13803) firmware_update: Wifi state: 1[0m
+[0;32mI (15343) firmware_update: OK[0m
+[0;32mI (15343) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (15343) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (15353) firmware_update: Wifi state: 1[0m
+[0;32mI (16863) firmware_update: OK[0m
+[0;32mI (16863) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (16863) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (16873) firmware_update: Wifi state: 1[0m
+[0;32mI (18433) firmware_update: OK[0m
+[0;32mI (18433) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (18433) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (18443) firmware_update: Wifi state: 1[0m
+[0;32mI (20003) firmware_update: OK[0m
+[0;32mI (20003) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (20003) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (20013) firmware_update: Wifi state: 1[0m
+[0;32mI (21603) firmware_update: OK[0m
+[0;32mI (21603) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (21603) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (21613) firmware_update: Wifi state: 1[0m
+[0;32mI (23133) firmware_update: OK[0m
+[0;32mI (23133) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (23133) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (23143) firmware_update: Wifi state: 1[0m
+[0;32mI (24663) firmware_update: OK[0m
+[0;32mI (24663) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (24663) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (24673) firmware_update: Wifi state: 1[0m
+[0;32mI (26223) firmware_update: OK[0m
+[0;32mI (26223) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (26223) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (26223) firmware_update: Wifi state: 1[0m
+[0;32mI (27823) firmware_update: OK[0m
+[0;32mI (27823) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (27823) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (27833) firmware_update: Wifi state: 1[0m
+[0;32mI (29393) firmware_update: OK[0m
+[0;32mI (29393) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (29393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (29393) firmware_update: Wifi state: 1[0m
+[0;32mI (31333) firmware_update: OK[0m
+[0;32mI (31333) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (31333) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (31343) firmware_update: Wifi state: 1[0m
+[0;32mI (32943) firmware_update: OK[0m
+[0;32mI (32943) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (32943) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (32953) firmware_update: Wifi state: 1[0m
+[0;32mI (34763) firmware_update: OK[0m
+[0;32mI (34763) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (34763) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (34773) firmware_update: Wifi state: 1[0m
+[0;32mI (36333) firmware_update: OK[0m
+[0;32mI (36333) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (36333) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (36333) firmware_update: Wifi state: 1[0m
+[0;32mI (37873) firmware_update: OK[0m
+[0;32mI (37873) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (37873) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (37883) firmware_update: Wifi state: 1[0m
+[0;32mI (39413) firmware_update: OK[0m
+[0;32mI (39423) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (39423) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (39423) firmware_update: Wifi state: 1[0m
+[0;32mI (41393) firmware_update: OK[0m
+[0;32mI (41393) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (41393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (41403) firmware_update: Wifi state: 1[0m
+[0;32mI (43013) firmware_update: OK[0m
+[0;32mI (43013) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (43013) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (43023) firmware_update: Wifi state: 1[0m
+[0;32mI (44553) firmware_update: OK[0m
+[0;32mI (44553) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (44553) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (44553) firmware_update: Wifi state: 1[0m
+[0;32mI (46243) firmware_update: OK[0m
+[0;32mI (46243) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (46243) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (46253) firmware_update: Wifi state: 1[0m
+[0;32mI (47803) firmware_update: OK[0m
+[0;32mI (47803) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (47803) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (47813) firmware_update: Wifi state: 1[0m
+[0;32mI (49463) firmware_update: OK[0m
+[0;32mI (49463) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (49463) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (49463) firmware_update: Wifi state: 1[0m
+[0;32mI (50973) firmware_update: OK[0m
+[0;32mI (50973) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (50973) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (50983) firmware_update: Wifi state: 1[0m
+[0;32mI (52533) firmware_update: OK[0m
+[0;32mI (52533) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (52533) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (52543) firmware_update: Wifi state: 1[0m
+[0;32mI (54133) firmware_update: OK[0m
+[0;32mI (54143) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (54143) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (54143) firmware_update: Wifi state: 1[0m
+[0;32mI (55693) firmware_update: OK[0m
+[0;32mI (55693) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (55693) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (55703) firmware_update: Wifi state: 1[0m
+[0;32mI (57223) firmware_update: OK[0m
+[0;32mI (57223) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (57223) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (57223) firmware_update: Wifi state: 1[0m
+[0;32mI (58743) firmware_update: OK[0m
+[0;32mI (58753) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (58753) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (58753) firmware_update: Wifi state: 1[0m
+[0;32mI (60293) firmware_update: OK[0m
+[0;32mI (60293) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (60293) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (60303) firmware_update: Wifi state: 1[0m
+[0;32mI (61833) firmware_update: OK[0m
+[0;32mI (61833) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (61833) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (61843) firmware_update: Wifi state: 1[0m
+[0;32mI (63503) firmware_update: OK[0m
+[0;32mI (63503) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (63503) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (63513) firmware_update: Wifi state: 1[0m
+[0;32mI (65153) firmware_update: OK[0m
+[0;32mI (65153) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (65153) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (65163) firmware_update: Wifi state: 1[0m
+[0;32mI (66773) firmware_update: OK[0m
+[0;32mI (66773) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (66773) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (66783) firmware_update: Wifi state: 1[0m
+[0;32mI (68323) firmware_update: OK[0m
+[0;32mI (68323) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (68323) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (68333) firmware_update: Wifi state: 1[0m
+[0;32mI (69923) firmware_update: OK[0m
+[0;32mI (69923) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (69923) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (69933) firmware_update: Wifi state: 1[0m
+[0;32mI (71483) firmware_update: OK[0m
+[0;32mI (71483) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (71483) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (71493) firmware_update: Wifi state: 1[0m
+[0;32mI (73133) firmware_update: OK[0m
+[0;32mI (73133) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (73133) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (73143) firmware_update: Wifi state: 1[0m
+[0;32mI (74733) firmware_update: OK[0m
+[0;32mI (74743) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (74743) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (74743) firmware_update: Wifi state: 1[0m
+[0;32mI (76263) firmware_update: OK[0m
+[0;32mI (76273) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (76273) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (76273) firmware_update: Wifi state: 1[0m
+[0;32mI (77823) firmware_update: OK[0m
+[0;32mI (77823) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (77823) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (77833) firmware_update: Wifi state: 1[0m
+[0;32mI (79463) firmware_update: OK[0m
+[0;32mI (79463) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (79463) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (79473) firmware_update: Wifi state: 1[0m
+[0;32mI (81083) firmware_update: OK[0m
+[0;32mI (81083) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (81083) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (81093) firmware_update: Wifi state: 1[0m
+[0;32mI (82663) firmware_update: OK[0m
+[0;32mI (82663) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (82663) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (82673) firmware_update: Wifi state: 1[0m
+[0;32mI (84253) firmware_update: OK[0m
+[0;32mI (84253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (84253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (84263) firmware_update: Wifi state: 1[0m
+[0;32mI (85803) firmware_update: OK[0m
+[0;32mI (85803) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (85803) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (85813) firmware_update: Wifi state: 1[0m
+[0;32mI (87343) firmware_update: OK[0m
+[0;32mI (87343) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (87343) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (87353) firmware_update: Wifi state: 1[0m
+[0;32mI (88963) firmware_update: OK[0m
+[0;32mI (88963) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (88963) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (88973) firmware_update: Wifi state: 1[0m
+[0;32mI (90523) firmware_update: OK[0m
+[0;32mI (90523) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (90523) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (90533) firmware_update: Wifi state: 1[0m
+[0;32mI (92043) firmware_update: OK[0m
+[0;32mI (92043) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (92043) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (92053) firmware_update: Wifi state: 1[0m
+[0;32mI (93593) firmware_update: OK[0m
+[0;32mI (93593) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (93593) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (93603) firmware_update: Wifi state: 1[0m
+[0;32mI (95153) firmware_update: OK[0m
+[0;32mI (95153) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (95153) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (95163) firmware_update: Wifi state: 1[0m
+[0;32mI (96833) firmware_update: OK[0m
+[0;32mI (96833) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (96833) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (96843) firmware_update: Wifi state: 1[0m
+[0;32mI (98393) firmware_update: OK[0m
+[0;32mI (98403) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (98403) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (98403) firmware_update: Wifi state: 1[0m
+[0;32mI (100033) firmware_update: OK[0m
+[0;32mI (100033) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (100033) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (100043) firmware_update: Wifi state: 1[0m
+[0;32mI (101653) firmware_update: OK[0m
+[0;32mI (101653) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (101653) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (101663) firmware_update: Wifi state: 1[0m
+I (102773) wifi:<ba-add>idx:1 (ifx:0, 50:d4:f7:cd:9a:01), tid:6, ssn:0, winSize:64
+[0;32mI (103223) firmware_update: OK[0m
+[0;32mI (103223) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (103223) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (103233) firmware_update: Wifi state: 1[0m
+[0;32mI (105063) firmware_update: OK[0m
+[0;32mI (105063) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (105063) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (105073) firmware_update: Wifi state: 1[0m
+[0;32mI (106583) firmware_update: OK[0m
+[0;32mI (106583) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (106593) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (106593) firmware_update: Wifi state: 1[0m
+[0;32mI (108223) firmware_update: OK[0m
+[0;32mI (108233) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (108233) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (108233) firmware_update: Wifi state: 1[0m
+[0;32mI (109863) firmware_update: OK[0m
+[0;32mI (109863) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (109863) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (109873) firmware_update: Wifi state: 1[0m
+[0;32mI (111553) firmware_update: OK[0m
+[0;32mI (111553) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (111553) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (111563) firmware_update: Wifi state: 1[0m
+[0;32mI (113693) firmware_update: OK[0m
+[0;32mI (113693) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (113693) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (113693) firmware_update: Wifi state: 1[0m
+[0;32mI (115643) firmware_update: OK[0m
+[0;32mI (115643) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (115643) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (115653) firmware_update: Wifi state: 1[0m
+[0;32mI (117243) firmware_update: OK[0m
+[0;32mI (117243) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (117243) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (117253) firmware_update: Wifi state: 1[0m
+[0;32mI (118763) firmware_update: OK[0m
+[0;32mI (118763) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (118763) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (118773) firmware_update: Wifi state: 1[0m
+[0;32mI (120333) firmware_update: OK[0m
+[0;32mI (120333) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (120333) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (120343) firmware_update: Wifi state: 1[0m
+[0;32mI (122153) firmware_update: OK[0m
+[0;32mI (122153) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (122153) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (122163) firmware_update: Wifi state: 1[0m
+[0;32mI (123693) firmware_update: OK[0m
+[0;32mI (123693) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (123693) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (123703) firmware_update: Wifi state: 1[0m
+[0;32mI (125223) firmware_update: OK[0m
+[0;32mI (125223) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (125223) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (125233) firmware_update: Wifi state: 1[0m
+[0;32mI (126733) firmware_update: OK[0m
+[0;32mI (126733) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (126733) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (126743) firmware_update: Wifi state: 1[0m
+[0;32mI (128273) firmware_update: OK[0m
+[0;32mI (128273) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (128273) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (128283) firmware_update: Wifi state: 1[0m
+[0;32mI (129813) firmware_update: OK[0m
+[0;32mI (129813) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (129813) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (129823) firmware_update: Wifi state: 1[0m
+[0;32mI (131473) firmware_update: OK[0m
+[0;32mI (131473) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (131473) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (131483) firmware_update: Wifi state: 1[0m
+[0;32mI (133003) firmware_update: OK[0m
+[0;32mI (133003) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (133003) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (133013) firmware_update: Wifi state: 1[0m
+[0;32mI (134543) firmware_update: OK[0m
+[0;32mI (134543) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (134543) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (134553) firmware_update: Wifi state: 1[0m
+[0;32mI (136173) firmware_update: OK[0m
+[0;32mI (136173) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (136173) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (136183) firmware_update: Wifi state: 1[0m
+[0;32mI (137733) firmware_update: OK[0m
+[0;32mI (137733) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (137733) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (137733) firmware_update: Wifi state: 1[0m
+[0;32mI (139283) firmware_update: OK[0m
+[0;32mI (139283) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (139283) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (139293) firmware_update: Wifi state: 1[0m
+[0;32mI (140873) firmware_update: OK[0m
+[0;32mI (140873) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (140873) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (140883) firmware_update: Wifi state: 1[0m
+[0;32mI (142453) firmware_update: OK[0m
+[0;32mI (142453) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (142453) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (142463) firmware_update: Wifi state: 1[0m
+[0;32mI (144053) firmware_update: OK[0m
+[0;32mI (144053) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (144053) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (144063) firmware_update: Wifi state: 1[0m
+[0;32mI (145603) firmware_update: OK[0m
+[0;32mI (145603) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (145603) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (145613) firmware_update: Wifi state: 1[0m
+[0;32mI (147163) firmware_update: OK[0m
+[0;32mI (147163) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (147163) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (147173) firmware_update: Wifi state: 1[0m
+[0;32mI (148763) firmware_update: OK[0m
+[0;32mI (148763) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (148763) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (148763) firmware_update: Wifi state: 1[0m
+[0;32mI (150333) firmware_update: OK[0m
+[0;32mI (150333) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (150333) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (150343) firmware_update: Wifi state: 1[0m
+[0;32mI (151843) firmware_update: OK[0m
+[0;32mI (151843) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (151843) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (151853) firmware_update: Wifi state: 1[0m
+[0;32mI (153593) firmware_update: OK[0m
+[0;32mI (153593) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (153593) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (153603) firmware_update: Wifi state: 1[0m
+[0;32mI (155253) firmware_update: OK[0m
+[0;32mI (155253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (155253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (155263) firmware_update: Wifi state: 1[0m
+[0;32mI (156943) firmware_update: OK[0m
+[0;32mI (156943) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (156943) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (156953) firmware_update: Wifi state: 1[0m
+[0;32mI (158543) firmware_update: OK[0m
+[0;32mI (158543) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (158543) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (158553) firmware_update: Wifi state: 1[0m
+[0;32mI (160193) firmware_update: OK[0m
+[0;32mI (160193) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (160193) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (160203) firmware_update: Wifi state: 1[0m
+[0;32mI (161773) firmware_update: OK[0m
+[0;32mI (161773) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (161773) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (161783) firmware_update: Wifi state: 1[0m
+[0;32mI (163313) firmware_update: OK[0m
+[0;32mI (163313) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (163313) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (163323) firmware_update: Wifi state: 1[0m
+[0;32mI (164843) firmware_update: OK[0m
+[0;32mI (164843) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (164843) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (164853) firmware_update: Wifi state: 1[0m
+[0;32mI (166393) firmware_update: OK[0m
+[0;32mI (166393) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (166393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (166403) firmware_update: Wifi state: 1[0m
+[0;32mI (168003) firmware_update: OK[0m
+[0;32mI (168013) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (168013) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (168013) firmware_update: Wifi state: 1[0m
+[0;32mI (169553) firmware_update: OK[0m
+[0;32mI (169553) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (169553) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (169563) firmware_update: Wifi state: 1[0m
+[0;32mI (171083) firmware_update: OK[0m
+[0;32mI (171083) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (171083) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (171093) firmware_update: Wifi state: 1[0m
+[0;32mI (172633) firmware_update: OK[0m
+[0;32mI (172633) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (172633) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (172643) firmware_update: Wifi state: 1[0m
+[0;32mI (174183) firmware_update: OK[0m
+[0;32mI (174183) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (174183) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (174193) firmware_update: Wifi state: 1[0m
+[0;32mI (175813) firmware_update: OK[0m
+[0;32mI (175813) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (175813) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (175823) firmware_update: Wifi state: 1[0m
+[0;32mI (177343) firmware_update: OK[0m
+[0;32mI (177343) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (177343) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (177353) firmware_update: Wifi state: 1[0m
+[0;32mI (178883) firmware_update: OK[0m
+[0;32mI (178883) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (178883) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (178883) firmware_update: Wifi state: 1[0m
+[0;32mI (180433) firmware_update: OK[0m
+[0;32mI (180433) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (180433) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (180443) firmware_update: Wifi state: 1[0m
+[0;32mI (182053) firmware_update: OK[0m
+[0;32mI (182053) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (182063) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (182063) firmware_update: Wifi state: 1[0m
+[0;32mI (183613) firmware_update: OK[0m
+[0;32mI (183613) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (183613) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (183623) firmware_update: Wifi state: 1[0m
+[0;32mI (185243) firmware_update: OK[0m
+[0;32mI (185243) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (185243) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (185253) firmware_update: Wifi state: 1[0m
+[0;32mI (186743) firmware_update: OK[0m
+[0;32mI (186743) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (186743) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (186753) firmware_update: Wifi state: 1[0m
+[0;32mI (188293) firmware_update: OK[0m
+[0;32mI (188293) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (188293) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (188303) firmware_update: Wifi state: 1[0m
+[0;32mI (189883) firmware_update: OK[0m
+[0;32mI (189883) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (189883) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (189893) firmware_update: Wifi state: 1[0m
+[0;32mI (191483) firmware_update: OK[0m
+[0;32mI (191483) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (191483) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (191493) firmware_update: Wifi state: 1[0m
+[0;32mI (192993) firmware_update: OK[0m
+[0;32mI (192993) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (192993) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (193003) firmware_update: Wifi state: 1[0m
+[0;32mI (194543) firmware_update: OK[0m
+[0;32mI (194543) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (194543) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (194553) firmware_update: Wifi state: 1[0m
+[0;32mI (196273) firmware_update: OK[0m
+[0;32mI (196283) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (196283) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (196283) firmware_update: Wifi state: 1[0m
+[0;32mI (197813) firmware_update: OK[0m
+[0;32mI (197813) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (197813) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (197823) firmware_update: Wifi state: 1[0m
+[0;32mI (199363) firmware_update: OK[0m
+[0;32mI (199363) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (199363) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (199373) firmware_update: Wifi state: 1[0m
+[0;32mI (200943) firmware_update: OK[0m
+[0;32mI (200943) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (200943) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (200953) firmware_update: Wifi state: 1[0m
+[0;32mI (203003) firmware_update: OK[0m
+[0;32mI (203003) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (203003) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (203013) firmware_update: Wifi state: 1[0m
+[0;32mI (204623) firmware_update: OK[0m
+[0;32mI (204623) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (204623) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (204633) firmware_update: Wifi state: 1[0m
+[0;32mI (206253) firmware_update: OK[0m
+[0;32mI (206253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (206253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (206263) firmware_update: Wifi state: 1[0m
+[0;32mI (207913) firmware_update: OK[0m
+[0;32mI (207913) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (207913) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (207923) firmware_update: Wifi state: 1[0m
+[0;32mI (209693) firmware_update: OK[0m
+[0;32mI (209693) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (209693) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (209693) firmware_update: Wifi state: 1[0m
+[0;32mI (211383) firmware_update: OK[0m
+[0;32mI (211383) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (211383) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (211393) firmware_update: Wifi state: 1[0m
+[0;32mI (212963) firmware_update: OK[0m
+[0;32mI (212963) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (212963) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (212973) firmware_update: Wifi state: 1[0m
+[0;32mI (214533) firmware_update: OK[0m
+[0;32mI (214533) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (214533) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (214543) firmware_update: Wifi state: 1[0m
+[0;32mI (216153) firmware_update: OK[0m
+[0;32mI (216153) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (216153) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (216163) firmware_update: Wifi state: 1[0m
+[0;32mI (217773) firmware_update: OK[0m
+[0;32mI (217773) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (217773) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (217783) firmware_update: Wifi state: 1[0m
+[0;32mI (219523) firmware_update: OK[0m
+[0;32mI (219533) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (219533) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (219533) firmware_update: Wifi state: 1[0m
+[0;32mI (221073) firmware_update: OK[0m
+[0;32mI (221073) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (221073) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (221083) firmware_update: Wifi state: 1[0m
+[0;32mI (222593) firmware_update: OK[0m
+[0;32mI (222593) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (222593) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (222603) firmware_update: Wifi state: 1[0m
+[0;32mI (224193) firmware_update: OK[0m
+[0;32mI (224203) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (224203) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (224203) firmware_update: Wifi state: 1[0m
+[0;32mI (225793) firmware_update: OK[0m
+[0;32mI (225793) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (225793) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (225803) firmware_update: Wifi state: 1[0m
+[0;32mI (227433) firmware_update: OK[0m
+[0;32mI (227433) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (227433) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (227443) firmware_update: Wifi state: 1[0m
+[0;32mI (228963) firmware_update: OK[0m
+[0;32mI (228963) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (228963) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (228973) firmware_update: Wifi state: 1[0m
+[0;32mI (230513) firmware_update: OK[0m
+[0;32mI (230513) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (230513) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (230523) firmware_update: Wifi state: 1[0m
+[0;32mI (232033) firmware_update: OK[0m
+[0;32mI (232033) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (232033) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (232043) firmware_update: Wifi state: 1[0m
+[0;32mI (233653) firmware_update: OK[0m
+[0;32mI (233653) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (233653) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (233663) firmware_update: Wifi state: 1[0m
+[0;32mI (235293) firmware_update: OK[0m
+[0;32mI (235293) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (235293) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (235303) firmware_update: Wifi state: 1[0m
+[0;32mI (236833) firmware_update: OK[0m
+[0;32mI (236833) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (236833) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (236843) firmware_update: Wifi state: 1[0m
+[0;32mI (238493) firmware_update: OK[0m
+[0;32mI (238493) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (238493) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (238503) firmware_update: Wifi state: 1[0m
+[0;32mI (240113) firmware_update: OK[0m
+[0;32mI (240113) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (240113) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (240123) firmware_update: Wifi state: 1[0m
+[0;32mI (241653) firmware_update: OK[0m
+[0;32mI (241653) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (241653) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (241663) firmware_update: Wifi state: 1[0m
+[0;32mI (243173) firmware_update: OK[0m
+[0;32mI (243173) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (243173) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (243173) firmware_update: Wifi state: 1[0m
+[0;32mI (244763) firmware_update: OK[0m
+[0;32mI (244763) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (244763) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (244773) firmware_update: Wifi state: 1[0m
+[0;32mI (246373) firmware_update: OK[0m
+[0;32mI (246373) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (246373) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (246383) firmware_update: Wifi state: 1[0m
+[0;32mI (248023) firmware_update: OK[0m
+[0;32mI (248023) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (248023) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (248033) firmware_update: Wifi state: 1[0m
+[0;32mI (249543) firmware_update: OK[0m
+[0;32mI (249543) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (249543) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (249543) firmware_update: Wifi state: 1[0m
+[0;32mI (251083) firmware_update: OK[0m
+[0;32mI (251083) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (251083) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (251093) firmware_update: Wifi state: 1[0m
+[0;32mI (252713) firmware_update: OK[0m
+[0;32mI (252713) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (252713) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (252723) firmware_update: Wifi state: 1[0m
+[0;32mI (254253) firmware_update: OK[0m
+[0;32mI (254253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (254253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (254263) firmware_update: Wifi state: 1[0m
+[0;32mI (255793) firmware_update: OK[0m
+[0;32mI (255793) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (255793) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (255803) firmware_update: Wifi state: 1[0m
+[0;32mI (257303) firmware_update: OK[0m
+[0;32mI (257303) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (257303) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (257313) firmware_update: Wifi state: 1[0m
+[0;32mI (258843) firmware_update: OK[0m
+[0;32mI (258843) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (258843) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (258843) firmware_update: Wifi state: 1[0m
+[0;32mI (260493) firmware_update: OK[0m
+[0;32mI (260493) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (260493) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (260503) firmware_update: Wifi state: 1[0m
+[0;32mI (262133) firmware_update: OK[0m
+[0;32mI (262133) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (262133) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (262143) firmware_update: Wifi state: 1[0m
+[0;32mI (263753) firmware_update: OK[0m
+[0;32mI (263753) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (263753) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (263763) firmware_update: Wifi state: 1[0m
+[0;32mI (265313) firmware_update: OK[0m
+[0;32mI (265313) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (265313) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (265323) firmware_update: Wifi state: 1[0m
+[0;32mI (266833) firmware_update: OK[0m
+[0;32mI (266833) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (266833) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (266843) firmware_update: Wifi state: 1[0m
+[0;32mI (268393) firmware_update: OK[0m
+[0;32mI (268393) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (268393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (268403) firmware_update: Wifi state: 1[0m
+[0;32mI (269963) firmware_update: OK[0m
+[0;32mI (269963) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (269963) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (269973) firmware_update: Wifi state: 1[0m
+[0;32mI (271573) firmware_update: OK[0m
+[0;32mI (271573) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (271573) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (271573) firmware_update: Wifi state: 1[0m
+[0;32mI (273183) firmware_update: OK[0m
+[0;32mI (273183) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (273183) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (273193) firmware_update: Wifi state: 1[0m
+[0;32mI (274723) firmware_update: OK[0m
+[0;32mI (274723) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (274723) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (274733) firmware_update: Wifi state: 1[0m
+[0;32mI (276263) firmware_update: OK[0m
+[0;32mI (276263) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (276263) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (276273) firmware_update: Wifi state: 1[0m
+[0;32mI (277803) firmware_update: OK[0m
+[0;32mI (277803) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (277803) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (277813) firmware_update: Wifi state: 1[0m
+[0;32mI (279513) firmware_update: OK[0m
+[0;32mI (279513) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (279513) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (279513) firmware_update: Wifi state: 1[0m
+[0;32mI (281073) firmware_update: OK[0m
+[0;32mI (281073) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (281073) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (281073) firmware_update: Wifi state: 1[0m
+[0;32mI (282713) firmware_update: OK[0m
+[0;32mI (282713) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (282713) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (282723) firmware_update: Wifi state: 1[0m
+[0;32mI (284253) firmware_update: OK[0m
+[0;32mI (284253) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (284253) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (284263) firmware_update: Wifi state: 1[0m
+[0;32mI (285783) firmware_update: OK[0m
+[0;32mI (285783) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (285783) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (285793) firmware_update: Wifi state: 1[0m
+[0;32mI (287343) firmware_update: OK[0m
+[0;32mI (287343) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (287343) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (287353) firmware_update: Wifi state: 1[0m
+[0;32mI (289373) firmware_update: OK[0m
+[0;32mI (289373) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (289373) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (289373) firmware_update: Wifi state: 1[0m
+[0;32mI (290923) firmware_update: OK[0m
+[0;32mI (290933) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (290933) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (290933) firmware_update: Wifi state: 1[0m
+[0;32mI (292553) firmware_update: OK[0m
+[0;32mI (292553) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (292553) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (292563) firmware_update: Wifi state: 1[0m
+[0;32mI (294113) firmware_update: OK[0m
+[0;32mI (294113) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (294113) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (294123) firmware_update: Wifi state: 1[0m
+[0;32mI (295713) firmware_update: OK[0m
+[0;32mI (295713) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (295723) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (295723) firmware_update: Wifi state: 1[0m
+[0;32mI (297403) firmware_update: OK[0m
+[0;32mI (297403) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (297413) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (297413) firmware_update: Wifi state: 1[0m
+[0;32mI (299023) firmware_update: OK[0m
+[0;32mI (299023) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (299033) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (299033) firmware_update: Wifi state: 1[0m
+[0;32mI (300633) firmware_update: OK[0m
+[0;32mI (300633) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (300633) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (300643) firmware_update: Wifi state: 1[0m
+[0;32mI (302473) firmware_update: OK[0m
+[0;32mI (302473) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (302473) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (302483) firmware_update: Wifi state: 1[0m
+[0;32mI (304133) firmware_update: OK[0m
+[0;32mI (304133) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (304133) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (304143) firmware_update: Wifi state: 1[0m
+[0;32mI (305753) firmware_update: OK[0m
+[0;32mI (305753) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (305753) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (305763) firmware_update: Wifi state: 1[0m
+[0;32mI (307293) firmware_update: OK[0m
+[0;32mI (307293) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (307293) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (307303) firmware_update: Wifi state: 1[0m
+[0;32mI (308933) firmware_update: OK[0m
+[0;32mI (308933) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (308933) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (308943) firmware_update: Wifi state: 1[0m
+[0;32mI (310553) firmware_update: OK[0m
+[0;32mI (310563) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (310563) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (310563) firmware_update: Wifi state: 1[0m
+[0;32mI (312113) firmware_update: OK[0m
+[0;32mI (312113) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (312113) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (312113) firmware_update: Wifi state: 1[0m
+[0;32mI (313743) firmware_update: OK[0m
+[0;32mI (313743) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (313743) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (313753) firmware_update: Wifi state: 1[0m
+[0;32mI (315273) firmware_update: OK[0m
+[0;32mI (315273) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (315273) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (315283) firmware_update: Wifi state: 1[0m
+[0;32mI (316823) firmware_update: OK[0m
+[0;32mI (316823) firmware_update: HTTP Digest Auth Status = 200, content_length = -1[0m
+[0;32mI (316823) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (316833) firmware_update: Wifi state: 1[0m

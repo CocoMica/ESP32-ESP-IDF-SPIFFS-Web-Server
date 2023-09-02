@@ -22,6 +22,7 @@ void init_queues(void);
 void receiveStringFromQueue();
 void sendStringToQueue(const char *str);
 void read_ws_msg(void *pvParameters);
+char* getSendingCommand(const char *str);
 
 
 

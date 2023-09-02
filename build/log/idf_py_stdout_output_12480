@@ -1,0 +1,598 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 12 2023 13:54:54[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2826ch (164460) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=00038294 vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (180) esp_image: segment 2: paddr=0003ba9c vaddr=40080000 size=0457ch ( 17788) load[0m
+[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a28c8h (665800) map[0m
+[0;32mI (429) esp_image: segment 4: paddr=000e28f0 vaddr=4008457c size=110b0h ( 69808) load[0m
+[0;32mI (469) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (481) cpu_start: Multicore app[0m
+[0;32mI (481) cpu_start: Pro cpu up.[0m
+[0;32mI (481) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (501) cpu_start: Pro cpu start user code[0m
+[0;32mI (501) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (501) cpu_start: Application information:[0m
+[0;32mI (506) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (512) cpu_start: App version:      c8654a7-dirty[0m
+[0;32mI (518) cpu_start: Compile time:     Aug 12 2023 18:06:30[0m
+[0;32mI (524) cpu_start: ELF file SHA256:  d4c865013...[0m
+[0;32mI (529) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (536) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (541) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (546) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (551) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (558) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (576) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (594) spi_flash: flash io: dio[0m
+[0;32mI (598) app_start: Starting scheduler on CPU0[0m
+[0;32mI (603) app_start: Starting scheduler on CPU1[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (663) MAIN: Main app starting
+[0m
+[0;32mI (663) wifi_setup: wifi_init begin
+[0m
+[0;31mE (663) firmware_update: Wifi state: 0[0m
+I (673) wifi:wifi driver task: 3ffcd464, prio:23, stack:6656, core=0
+I (703) wifi:wifi firmware version: 3e5caf3
+I (703) wifi:wifi certification version: v7.0
+I (703) wifi:config NVS flash: enabled
+I (703) wifi:config nano formating: disabled
+I (703) wifi:Init data frame dynamic rx buffer num: 32
+I (713) wifi:Init management frame dynamic rx buffer num: 32
+I (713) wifi:Init management short buffer num: 32
+I (723) wifi:Init dynamic tx buffer num: 32
+I (723) wifi:Init static rx buffer size: 1600
+I (733) wifi:Init static rx buffer num: 10
+I (733) wifi:Init dynamic rx buffer num: 32
+[0;32mI (743) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (743) wifi_init: udp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp tx win: 5744[0m
+[0;32mI (753) wifi_init: tcp rx win: 5744[0m
+[0;31mE (763) firmware_update: Wifi state: 0[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;31mE (863) firmware_update: Wifi state: 0[0m
+[0;32mI (923) wifi_setup: Entering from_sta_to_ap.
+[0m
+[0;32mI (923) wifi_setup: IP: 192.168.2.1[0m
+[0;32mI (923) wifi_setup: GW: 192.168.2.1[0m
+[0;32mI (923) wifi_setup: Mask: 255.255.255.0[0m
+[0;32mI (933) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;31mE (963) firmware_update: Wifi state: 0[0m
+I (1033) wifi:mode : softAP (3c:61:05:15:80:c1)
+I (1043) wifi:Total power save buffer number: 16
+I (1043) wifi:Init max length of beacon: 752/752
+I (1043) wifi:Init max length of beacon: 752/752
+[0;32mI (1043) wifi_setup: wifi_init_softap finished. SSID:ESP password:123456789[0m
+[0;32mI (1043) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.2.1[0m
+[0;31mE (1063) firmware_update: Wifi state: 0[0m
+[0;31mE (1163) firmware_update: Wifi state: 0[0m
+[0;31mE (1263) firmware_update: Wifi state: 0[0m
+[0;31mE (1363) firmware_update: Wifi state: 0[0m
+[0;31mE (1463) firmware_update: Wifi state: 0[0m
+[0;31mE (1563) firmware_update: Wifi state: 0[0m
+[0;31mE (1663) firmware_update: Wifi state: 0[0m
+[0;31mE (1763) firmware_update: Wifi state: 0[0m
+[0;31mE (1863) firmware_update: Wifi state: 0[0m
+[0;31mE (1963) firmware_update: Wifi state: 0[0m
+[0;31mE (2063) firmware_update: Wifi state: 0[0m
+[0;31mE (2163) firmware_update: Wifi state: 0[0m
+[0;31mE (2263) firmware_update: Wifi state: 0[0m
+[0;31mE (2363) firmware_update: Wifi state: 0[0m
+[0;31mE (2463) firmware_update: Wifi state: 0[0m
+[0;31mE (2563) firmware_update: Wifi state: 0[0m
+[0;31mE (2663) firmware_update: Wifi state: 0[0m
+[0;31mE (2763) firmware_update: Wifi state: 0[0m
+[0;31mE (2863) firmware_update: Wifi state: 0[0m
+[0;31mE (2963) firmware_update: Wifi state: 0[0m
+[0;31mE (3063) firmware_update: Wifi state: 0[0m
+[0;31mE (3163) firmware_update: Wifi state: 0[0m
+[0;31mE (3263) firmware_update: Wifi state: 0[0m
+[0;31mE (3363) firmware_update: Wifi state: 0[0m
+[0;31mE (3463) firmware_update: Wifi state: 0[0m
+[0;31mE (3563) firmware_update: Wifi state: 0[0m
+[0;31mE (3663) firmware_update: Wifi state: 0[0m
+[0;31mE (3763) firmware_update: Wifi state: 0[0m
+[0;31mE (3863) firmware_update: Wifi state: 0[0m
+[0;31mE (3963) firmware_update: Wifi state: 0[0m
+[0;31mE (4063) firmware_update: Wifi state: 0[0m
+[0;31mE (4163) firmware_update: Wifi state: 0[0m
+[0;31mE (4263) firmware_update: Wifi state: 0[0m
+[0;31mE (4363) firmware_update: Wifi state: 0[0m
+[0;31mE (4463) firmware_update: Wifi state: 0[0m
+[0;31mE (4563) firmware_update: Wifi state: 0[0m
+[0;31mE (4663) firmware_update: Wifi state: 0[0m
+[0;31mE (4763) firmware_update: Wifi state: 0[0m
+[0;31mE (4863) firmware_update: Wifi state: 0[0m
+[0;31mE (4963) firmware_update: Wifi state: 0[0m
+[0;31mE (5063) firmware_update: Wifi state: 0[0m
+[0;31mE (5163) firmware_update: Wifi state: 0[0m
+[0;31mE (5263) firmware_update: Wifi state: 0[0m
+[0;31mE (5363) firmware_update: Wifi state: 0[0m
+[0;31mE (5463) firmware_update: Wifi state: 0[0m
+[0;31mE (5563) firmware_update: Wifi state: 0[0m
+[0;31mE (5663) firmware_update: Wifi state: 0[0m
+[0;31mE (5763) firmware_update: Wifi state: 0[0m
+[0;31mE (5863) firmware_update: Wifi state: 0[0m
+[0;31mE (5963) firmware_update: Wifi state: 0[0m
+[0;31mE (6063) firmware_update: Wifi state: 0[0m
+[0;31mE (6163) firmware_update: Wifi state: 0[0m
+[0;31mE (6263) firmware_update: Wifi state: 0[0m
+[0;31mE (6363) firmware_update: Wifi state: 0[0m
+[0;31mE (6463) firmware_update: Wifi state: 0[0m
+[0;31mE (6563) firmware_update: Wifi state: 0[0m
+[0;31mE (6663) firmware_update: Wifi state: 0[0m
+[0;31mE (6763) firmware_update: Wifi state: 0[0m
+[0;31mE (6863) firmware_update: Wifi state: 0[0m
+[0;31mE (6963) firmware_update: Wifi state: 0[0m
+[0;31mE (7063) firmware_update: Wifi state: 0[0m
+[0;31mE (7163) firmware_update: Wifi state: 0[0m
+[0;31mE (7263) firmware_update: Wifi state: 0[0m
+[0;31mE (7363) firmware_update: Wifi state: 0[0m
+[0;31mE (7463) firmware_update: Wifi state: 0[0m
+[0;31mE (7563) firmware_update: Wifi state: 0[0m
+[0;31mE (7663) firmware_update: Wifi state: 0[0m
+[0;31mE (7763) firmware_update: Wifi state: 0[0m
+[0;31mE (7863) firmware_update: Wifi state: 0[0m
+[0;31mE (7963) firmware_update: Wifi state: 0[0m
+[0;31mE (8063) firmware_update: Wifi state: 0[0m
+[0;31mE (8163) firmware_update: Wifi state: 0[0m
+[0;31mE (8263) firmware_update: Wifi state: 0[0m
+[0;31mE (8363) firmware_update: Wifi state: 0[0m
+[0;31mE (8463) firmware_update: Wifi state: 0[0m
+[0;31mE (8563) firmware_update: Wifi state: 0[0m
+[0;31mE (8663) firmware_update: Wifi state: 0[0m
+[0;31mE (8763) firmware_update: Wifi state: 0[0m
+[0;31mE (8863) firmware_update: Wifi state: 0[0m
+[0;31mE (8963) firmware_update: Wifi state: 0[0m
+[0;31mE (9063) firmware_update: Wifi state: 0[0m
+[0;31mE (9163) firmware_update: Wifi state: 0[0m
+[0;31mE (9263) firmware_update: Wifi state: 0[0m
+[0;31mE (9363) firmware_update: Wifi state: 0[0m
+[0;31mE (9463) firmware_update: Wifi state: 0[0m
+[0;31mE (9563) firmware_update: Wifi state: 0[0m
+[0;31mE (9663) firmware_update: Wifi state: 0[0m
+[0;31mE (9763) firmware_update: Wifi state: 0[0m
+[0;31mE (9863) firmware_update: Wifi state: 0[0m
+[0;31mE (9963) firmware_update: Wifi state: 0[0m
+[0;31mE (10063) firmware_update: Wifi state: 0[0m
+[0;31mE (10163) firmware_update: Wifi state: 0[0m
+[0;31mE (10263) firmware_update: Wifi state: 0[0m
+[0;31mE (10363) firmware_update: Wifi state: 0[0m
+[0;31mE (10463) firmware_update: Wifi state: 0[0m
+[0;31mE (10563) firmware_update: Wifi state: 0[0m
+[0;31mE (10663) firmware_update: Wifi state: 0[0m
+[0;31mE (10763) firmware_update: Wifi state: 0[0m
+[0;31mE (10863) firmware_update: Wifi state: 0[0m
+[0;31mE (10963) firmware_update: Wifi state: 0[0m
+[0;31mE (11063) firmware_update: Wifi state: 0[0m
+[0;31mE (11163) firmware_update: Wifi state: 0[0m
+[0;31mE (11263) firmware_update: Wifi state: 0[0m
+[0;31mE (11363) firmware_update: Wifi state: 0[0m
+[0;31mE (11463) firmware_update: Wifi state: 0[0m
+[0;31mE (11563) firmware_update: Wifi state: 0[0m
+[0;31mE (11663) firmware_update: Wifi state: 0[0m
+[0;31mE (11763) firmware_update: Wifi state: 0[0m
+[0;31mE (11863) firmware_update: Wifi state: 0[0m
+[0;31mE (11963) firmware_update: Wifi state: 0[0m
+[0;31mE (12063) firmware_update: Wifi state: 0[0m
+[0;31mE (12163) firmware_update: Wifi state: 0[0m
+[0;31mE (12263) firmware_update: Wifi state: 0[0m
+[0;31mE (12363) firmware_update: Wifi state: 0[0m
+[0;31mE (12463) firmware_update: Wifi state: 0[0m
+[0;31mE (12563) firmware_update: Wifi state: 0[0m
+[0;31mE (12663) firmware_update: Wifi state: 0[0m
+[0;31mE (12763) firmware_update: Wifi state: 0[0m
+[0;31mE (12863) firmware_update: Wifi state: 0[0m
+[0;31mE (12963) firmware_update: Wifi state: 0[0m
+[0;31mE (13063) firmware_update: Wifi state: 0[0m
+I (13073) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (13073) wifi:station: 3c:95:09:99:ec:03 join, AID=1, bgn, 40U
+I (13113) wifi:<ba-add>idx:2 (ifx:1, 3c:95:09:99:ec:03), tid:0, ssn:0, winSize:64
+[0;31mE (13163) firmware_update: Wifi state: 0[0m
+[0;31mE (13263) firmware_update: Wifi state: 0[0m
+[0;31mE (13363) firmware_update: Wifi state: 0[0m
+[0;31mE (13463) firmware_update: Wifi state: 0[0m
+[0;31mE (13563) firmware_update: Wifi state: 0[0m
+[0;31mE (13663) firmware_update: Wifi state: 0[0m
+[0;31mE (13763) firmware_update: Wifi state: 0[0m
+[0;31mE (13863) firmware_update: Wifi state: 0[0m
+[0;31mE (13963) firmware_update: Wifi state: 0[0m
+[0;31mE (14063) firmware_update: Wifi state: 0[0m
+[0;31mE (14163) firmware_update: Wifi state: 0[0m
+[0;31mE (14263) firmware_update: Wifi state: 0[0m
+[0;31mE (14363) firmware_update: Wifi state: 0[0m
+[0;31mE (14463) firmware_update: Wifi state: 0[0m
+[0;31mE (14563) firmware_update: Wifi state: 0[0m
+[0;31mE (14663) firmware_update: Wifi state: 0[0m
+[0;31mE (14763) firmware_update: Wifi state: 0[0m
+[0;31mE (14863) firmware_update: Wifi state: 0[0m
+[0;31mE (14963) firmware_update: Wifi state: 0[0m
+[0;31mE (15063) firmware_update: Wifi state: 0[0m
+[0;31mE (15163) firmware_update: Wifi state: 0[0m
+[0;31mE (15263) firmware_update: Wifi state: 0[0m
+[0;31mE (15363) firmware_update: Wifi state: 0[0m
+[0;31mE (15463) firmware_update: Wifi state: 0[0m
+[0;31mE (15563) firmware_update: Wifi state: 0[0m
+[0;31mE (15663) firmware_update: Wifi state: 0[0m
+[0;31mE (15763) firmware_update: Wifi state: 0[0m
+[0;31mE (15863) firmware_update: Wifi state: 0[0m
+[0;31mE (15963) firmware_update: Wifi state: 0[0m
+[0;31mE (16063) firmware_update: Wifi state: 0[0m
+[0;31mE (16163) firmware_update: Wifi state: 0[0m
+[0;31mE (16263) firmware_update: Wifi state: 0[0m
+[0;31mE (16363) firmware_update: Wifi state: 0[0m
+[0;31mE (16463) firmware_update: Wifi state: 0[0m
+[0;31mE (16563) firmware_update: Wifi state: 0[0m
+[0;31mE (16663) firmware_update: Wifi state: 0[0m
+[0;31mE (16763) firmware_update: Wifi state: 0[0m
+[0;31mE (16863) firmware_update: Wifi state: 0[0m
+[0;31mE (16963) firmware_update: Wifi state: 0[0m
+[0;31mE (17063) firmware_update: Wifi state: 0[0m
+[0;31mE (17163) firmware_update: Wifi state: 0[0m
+[0;31mE (17263) firmware_update: Wifi state: 0[0m
+[0;31mE (17363) firmware_update: Wifi state: 0[0m
+[0;31mE (17463) firmware_update: Wifi state: 0[0m
+[0;31mE (17563) firmware_update: Wifi state: 0[0m
+[0;31mE (17663) firmware_update: Wifi state: 0[0m
+[0;31mE (17763) firmware_update: Wifi state: 0[0m
+[0;32mI (17793) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.2.2[0m
+I (17823) wifi:<ba-add>idx:3 (ifx:1, 3c:95:09:99:ec:03), tid:6, ssn:2, winSize:64
+[0;31mE (17863) firmware_update: Wifi state: 0[0m
+[0;31mE (17963) firmware_update: Wifi state: 0[0m
+[0;31mE (18063) firmware_update: Wifi state: 0[0m
+[0;31mE (18163) firmware_update: Wifi state: 0[0m
+[0;31mE (18263) firmware_update: Wifi state: 0[0m
+[0;31mE (18363) firmware_update: Wifi state: 0[0m
+[0;31mE (18463) firmware_update: Wifi state: 0[0m
+[0;31mE (18563) firmware_update: Wifi state: 0[0m
+[0;31mE (18663) firmware_update: Wifi state: 0[0m
+[0;31mE (18763) firmware_update: Wifi state: 0[0m
+[0;31mE (18863) firmware_update: Wifi state: 0[0m
+[0;31mE (18963) firmware_update: Wifi state: 0[0m
+[0;31mE (19063) firmware_update: Wifi state: 0[0m
+[0;31mE (19163) firmware_update: Wifi state: 0[0m
+[0;31mE (19263) firmware_update: Wifi state: 0[0m
+[0;31mE (19363) firmware_update: Wifi state: 0[0m
+[0;31mE (19463) firmware_update: Wifi state: 0[0m
+[0;31mE (19563) firmware_update: Wifi state: 0[0m
+[0;31mE (19663) firmware_update: Wifi state: 0[0m
+[0;31mE (19763) firmware_update: Wifi state: 0[0m
+[0;31mE (19863) firmware_update: Wifi state: 0[0m
+[0;31mE (19963) firmware_update: Wifi state: 0[0m
+[0;31mE (20063) firmware_update: Wifi state: 0[0m
+[0;31mE (20163) firmware_update: Wifi state: 0[0m
+[0;31mE (20263) firmware_update: Wifi state: 0[0m
+[0;31mE (20363) firmware_update: Wifi state: 0[0m
+[0;31mE (20463) firmware_update: Wifi state: 0[0m
+[0;31mE (20563) firmware_update: Wifi state: 0[0m
+[0;31mE (20663) firmware_update: Wifi state: 0[0m
+[0;31mE (20763) firmware_update: Wifi state: 0[0m
+[0;31mE (20863) firmware_update: Wifi state: 0[0m
+[0;31mE (20963) firmware_update: Wifi state: 0[0m
+[0;31mE (21063) firmware_update: Wifi state: 0[0m
+[0;31mE (21163) firmware_update: Wifi state: 0[0m
+[0;31mE (21263) firmware_update: Wifi state: 0[0m
+[0;31mE (21363) firmware_update: Wifi state: 0[0m
+[0;31mE (21463) firmware_update: Wifi state: 0[0m
+[0;31mE (21563) firmware_update: Wifi state: 0[0m
+[0;31mE (21663) firmware_update: Wifi state: 0[0m
+[0;31mE (21763) firmware_update: Wifi state: 0[0m
+[0;31mE (21863) firmware_update: Wifi state: 0[0m
+[0;31mE (21963) firmware_update: Wifi state: 0[0m
+[0;31mE (22063) firmware_update: Wifi state: 0[0m
+[0;31mE (22163) firmware_update: Wifi state: 0[0m
+[0;31mE (22263) firmware_update: Wifi state: 0[0m
+[0;31mE (22363) firmware_update: Wifi state: 0[0m
+[0;31mE (22463) firmware_update: Wifi state: 0[0m
+[0;31mE (22563) firmware_update: Wifi state: 0[0m
+[0;31mE (22663) firmware_update: Wifi state: 0[0m
+[0;31mE (22763) firmware_update: Wifi state: 0[0m
+[0;31mE (22863) firmware_update: Wifi state: 0[0m
+[0;31mE (22963) firmware_update: Wifi state: 0[0m
+[0;31mE (23063) firmware_update: Wifi state: 0[0m
+[0;31mE (23163) firmware_update: Wifi state: 0[0m
+[0;31mE (23263) firmware_update: Wifi state: 0[0m
+[0;31mE (23363) firmware_update: Wifi state: 0[0m
+[0;31mE (23463) firmware_update: Wifi state: 0[0m
+[0;31mE (23563) firmware_update: Wifi state: 0[0m
+[0;31mE (23663) firmware_update: Wifi state: 0[0m
+[0;31mE (23763) firmware_update: Wifi state: 0[0m
+[0;31mE (23863) firmware_update: Wifi state: 0[0m
+[0;31mE (23963) firmware_update: Wifi state: 0[0m
+[0;31mE (24063) firmware_update: Wifi state: 0[0m
+[0;31mE (24163) firmware_update: Wifi state: 0[0m
+[0;31mE (24263) firmware_update: Wifi state: 0[0m
+[0;31mE (24363) firmware_update: Wifi state: 0[0m
+[0;31mE (24463) firmware_update: Wifi state: 0[0m
+[0;31mE (24563) firmware_update: Wifi state: 0[0m
+[0;31mE (24663) firmware_update: Wifi state: 0[0m
+[0;31mE (24763) firmware_update: Wifi state: 0[0m
+[0;31mE (24863) firmware_update: Wifi state: 0[0m
+[0;31mE (24963) firmware_update: Wifi state: 0[0m
+[0;31mE (25063) firmware_update: Wifi state: 0[0m
+[0;31mE (25163) firmware_update: Wifi state: 0[0m
+[0;31mE (25263) firmware_update: Wifi state: 0[0m
+[0;31mE (25363) firmware_update: Wifi state: 0[0m
+[0;31mE (25463) firmware_update: Wifi state: 0[0m
+[0;31mE (25563) firmware_update: Wifi state: 0[0m
+[0;31mE (25663) firmware_update: Wifi state: 0[0m
+[0;31mE (25763) firmware_update: Wifi state: 0[0m
+[0;31mE (25863) firmware_update: Wifi state: 0[0m
+[0;31mE (25963) firmware_update: Wifi state: 0[0m
+[0;31mE (26063) firmware_update: Wifi state: 0[0m
+[0;31mE (26163) firmware_update: Wifi state: 0[0m
+[0;31mE (26263) firmware_update: Wifi state: 0[0m
+[0;31mE (26363) firmware_update: Wifi state: 0[0m
+[0;31mE (26463) firmware_update: Wifi state: 0[0m
+[0;31mE (26563) firmware_update: Wifi state: 0[0m
+[0;31mE (26663) firmware_update: Wifi state: 0[0m
+[0;31mE (26763) firmware_update: Wifi state: 0[0m
+[0;31mE (26863) firmware_update: Wifi state: 0[0m
+[0;31mE (26963) firmware_update: Wifi state: 0[0m
+[0;31mE (27063) firmware_update: Wifi state: 0[0m
+[0;31mE (27163) firmware_update: Wifi state: 0[0m
+[0;31mE (27263) firmware_update: Wifi state: 0[0m
+[0;31mE (27363) firmware_update: Wifi state: 0[0m
+[0;31mE (27463) firmware_update: Wifi state: 0[0m
+[0;31mE (27563) firmware_update: Wifi state: 0[0m
+[0;31mE (27663) firmware_update: Wifi state: 0[0m
+[0;31mE (27763) firmware_update: Wifi state: 0[0m
+[0;31mE (27863) firmware_update: Wifi state: 0[0m
+[0;31mE (27963) firmware_update: Wifi state: 0[0m
+[0;31mE (28063) firmware_update: Wifi state: 0[0m
+[0;31mE (28163) firmware_update: Wifi state: 0[0m
+[0;31mE (28263) firmware_update: Wifi state: 0[0m
+[0;31mE (28363) firmware_update: Wifi state: 0[0m
+[0;31mE (28463) firmware_update: Wifi state: 0[0m
+[0;31mE (28563) firmware_update: Wifi state: 0[0m
+[0;31mE (28663) firmware_update: Wifi state: 0[0m
+[0;31mE (28763) firmware_update: Wifi state: 0[0m
+[0;31mE (28863) firmware_update: Wifi state: 0[0m
+[0;31mE (28963) firmware_update: Wifi state: 0[0m
+[0;31mE (29063) firmware_update: Wifi state: 0[0m
+[0;31mE (29163) firmware_update: Wifi state: 0[0m
+[0;31mE (29263) firmware_update: Wifi state: 0[0m
+[0;31mE (29363) firmware_update: Wifi state: 0[0m
+[0;31mE (29463) firmware_update: Wifi state: 0[0m
+[0;31mE (29563) firmware_update: Wifi state: 0[0m
+[0;31mE (29663) firmware_update: Wifi state: 0[0m
+[0;31mE (29763) firmware_update: Wifi state: 0[0m
+[0;31mE (29863) firmware_update: Wifi state: 0[0m
+[0;31mE (29963) firmware_update: Wifi state: 0[0m
+[0;31mE (30063) firmware_update: Wifi state: 0[0m
+[0;31mE (30163) firmware_update: Wifi state: 0[0m
+[0;31mE (30263) firmware_update: Wifi state: 0[0m
+[0;31mE (30363) firmware_update: Wifi state: 0[0m
+[0;31mE (30463) firmware_update: Wifi state: 0[0m
+[0;31mE (30563) firmware_update: Wifi state: 0[0m
+[0;31mE (30663) firmware_update: Wifi state: 0[0m
+[0;31mE (30763) firmware_update: Wifi state: 0[0m
+[0;31mE (30863) firmware_update: Wifi state: 0[0m
+[0;31mE (30963) firmware_update: Wifi state: 0[0m
+[0;31mE (31063) firmware_update: Wifi state: 0[0m
+[0;31mE (31163) firmware_update: Wifi state: 0[0m
+[0;31mE (31263) firmware_update: Wifi state: 0[0m
+[0;31mE (31363) firmware_update: Wifi state: 0[0m
+[0;31mE (31463) firmware_update: Wifi state: 0[0m
+[0;31mE (31563) firmware_update: Wifi state: 0[0m
+[0;31mE (31663) firmware_update: Wifi state: 0[0m
+[0;31mE (31763) firmware_update: Wifi state: 0[0m
+[0;31mE (31863) firmware_update: Wifi state: 0[0m
+[0;31mE (31963) firmware_update: Wifi state: 0[0m
+[0;31mE (32063) firmware_update: Wifi state: 0[0m
+[0;31mE (32163) firmware_update: Wifi state: 0[0m
+[0;31mE (32263) firmware_update: Wifi state: 0[0m
+[0;31mE (32363) firmware_update: Wifi state: 0[0m
+[0;31mE (32463) firmware_update: Wifi state: 0[0m
+[0;31mE (32563) firmware_update: Wifi state: 0[0m
+[0;31mE (32663) firmware_update: Wifi state: 0[0m
+[0;31mE (32763) firmware_update: Wifi state: 0[0m
+[0;31mE (32863) firmware_update: Wifi state: 0[0m
+[0;31mE (32963) firmware_update: Wifi state: 0[0m
+[0;31mE (33063) firmware_update: Wifi state: 0[0m
+[0;31mE (33163) firmware_update: Wifi state: 0[0m
+[0;31mE (33263) firmware_update: Wifi state: 0[0m
+[0;31mE (33363) firmware_update: Wifi state: 0[0m
+[0;31mE (33463) firmware_update: Wifi state: 0[0m
+[0;31mE (33563) firmware_update: Wifi state: 0[0m
+[0;31mE (33663) firmware_update: Wifi state: 0[0m
+[0;31mE (33763) firmware_update: Wifi state: 0[0m
+[0;31mE (33863) firmware_update: Wifi state: 0[0m
+[0;31mE (33963) firmware_update: Wifi state: 0[0m
+[0;31mE (34063) firmware_update: Wifi state: 0[0m
+[0;31mE (34163) firmware_update: Wifi state: 0[0m
+[0;31mE (34263) firmware_update: Wifi state: 0[0m
+[0;31mE (34363) firmware_update: Wifi state: 0[0m
+[0;31mE (34463) firmware_update: Wifi state: 0[0m
+[0;31mE (34563) firmware_update: Wifi state: 0[0m
+[0;31mE (34663) firmware_update: Wifi state: 0[0m
+[0;31mE (34763) firmware_update: Wifi state: 0[0m
+[0;31mE (34863) firmware_update: Wifi state: 0[0m
+[0;31mE (34963) firmware_update: Wifi state: 0[0m
+I (34993) wifi:station: 3c:95:09:99:ec:03 leave, AID = 1, bss_flags is 658531, bss:0x3ffd7970
+I (34993) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (35003) wifi:<ba-del>idx:2, tid:0
+I (35003) wifi:<ba-del>idx:3, tid:6
+[0;31mE (35063) firmware_update: Wifi state: 0[0m
+[0;31mE (35163) firmware_update: Wifi state: 0[0m
+[0;31mE (35263) firmware_update: Wifi state: 0[0m
+[0;31mE (35363) firmware_update: Wifi state: 0[0m
+[0;31mE (35463) firmware_update: Wifi state: 0[0m
+[0;31mE (35563) firmware_update: Wifi state: 0[0m
+[0;31mE (35663) firmware_update: Wifi state: 0[0m
+[0;31mE (35763) firmware_update: Wifi state: 0[0m
+[0;31mE (35863) firmware_update: Wifi state: 0[0m
+[0;31mE (35963) firmware_update: Wifi state: 0[0m
+[0;31mE (36063) firmware_update: Wifi state: 0[0m
+[0;31mE (36163) firmware_update: Wifi state: 0[0m
+[0;31mE (36263) firmware_update: Wifi state: 0[0m
+[0;31mE (36363) firmware_update: Wifi state: 0[0m
+[0;31mE (36463) firmware_update: Wifi state: 0[0m
+[0;31mE (36563) firmware_update: Wifi state: 0[0m
+[0;31mE (36663) firmware_update: Wifi state: 0[0m
+[0;31mE (36763) firmware_update: Wifi state: 0[0m
+[0;31mE (36863) firmware_update: Wifi state: 0[0m
+[0;31mE (36963) firmware_update: Wifi state: 0[0m
+[0;31mE (37063) firmware_update: Wifi state: 0[0m
+[0;31mE (37163) firmware_update: Wifi state: 0[0m
+[0;31mE (37263) firmware_update: Wifi state: 0[0m
+[0;31mE (37363) firmware_update: Wifi state: 0[0m
+[0;31mE (37463) firmware_update: Wifi state: 0[0m
+[0;31mE (37563) firmware_update: Wifi state: 0[0m
+[0;31mE (37663) firmware_update: Wifi state: 0[0m
+[0;31mE (37763) firmware_update: Wifi state: 0[0m
+[0;31mE (37863) firmware_update: Wifi state: 0[0m
+[0;31mE (37963) firmware_update: Wifi state: 0[0m
+[0;31mE (38063) firmware_update: Wifi state: 0[0m
+[0;31mE (38163) firmware_update: Wifi state: 0[0m
+[0;31mE (38263) firmware_update: Wifi state: 0[0m
+[0;31mE (38363) firmware_update: Wifi state: 0[0m
+[0;31mE (38463) firmware_update: Wifi state: 0[0m
+[0;31mE (38563) firmware_update: Wifi state: 0[0m
+[0;31mE (38663) firmware_update: Wifi state: 0[0m
+[0;31mE (38763) firmware_update: Wifi state: 0[0m
+[0;31mE (38863) firmware_update: Wifi state: 0[0m
+[0;31mE (38963) firmware_update: Wifi state: 0[0m
+[0;31mE (39063) firmware_update: Wifi state: 0[0m
+[0;31mE (39163) firmware_update: Wifi state: 0[0m
+[0;31mE (39263) firmware_update: Wifi state: 0[0m
+[0;31mE (39363) firmware_update: Wifi state: 0[0m
+[0;31mE (39463) firmware_update: Wifi state: 0[0m
+[0;31mE (39563) firmware_update: Wifi state: 0[0m
+[0;31mE (39663) firmware_update: Wifi state: 0[0m
+[0;31mE (39763) firmware_update: Wifi state: 0[0m
+[0;31mE (39863) firmware_update: Wifi state: 0[0m
+[0;31mE (39963) firmware_update: Wifi state: 0[0m
+[0;31mE (40063) firmware_update: Wifi state: 0[0m
+[0;31mE (40163) firmware_update: Wifi state: 0[0m
+[0;31mE (40263) firmware_update: Wifi state: 0[0m
+[0;31mE (40363) firmware_update: Wifi state: 0[0m
+[0;31mE (40463) firmware_update: Wifi state: 0[0m
+[0;31mE (40563) firmware_update: Wifi state: 0[0m
+[0;31mE (40663) firmware_update: Wifi state: 0[0m
+[0;31mE (40763) firmware_update: Wifi state: 0[0m
+[0;31mE (40863) firmware_update: Wifi state: 0[0m
+[0;31mE (40963) firmware_update: Wifi state: 0[0m
+[0;31mE (41063) firmware_update: Wifi state: 0[0m
+[0;31mE (41163) firmware_update: Wifi state: 0[0m
+[0;31mE (41263) firmware_update: Wifi state: 0[0m
+[0;31mE (41363) firmware_update: Wifi state: 0[0m
+[0;31mE (41463) firmware_update: Wifi state: 0[0m
+[0;31mE (41563) firmware_update: Wifi state: 0[0m
+[0;31mE (41663) firmware_update: Wifi state: 0[0m
+[0;31mE (41763) firmware_update: Wifi state: 0[0m
+[0;31mE (41863) firmware_update: Wifi state: 0[0m
+[0;31mE (41963) firmware_update: Wifi state: 0[0m
+[0;31mE (42063) firmware_update: Wifi state: 0[0m
+[0;31mE (42163) firmware_update: Wifi state: 0[0m
+[0;31mE (42263) firmware_update: Wifi state: 0[0m
+[0;31mE (42363) firmware_update: Wifi state: 0[0m
+[0;31mE (42463) firmware_update: Wifi state: 0[0m
+[0;31mE (42563) firmware_update: Wifi state: 0[0m
+[0;31mE (42663) firmware_update: Wifi state: 0[0m
+[0;31mE (42763) firmware_update: Wifi state: 0[0m
+[0;31mE (42863) firmware_update: Wifi state: 0[0m
+[0;31mE (42963) firmware_update: Wifi state: 0[0m
+[0;31mE (43063) firmware_update: Wifi state: 0[0m
+[0;31mE (43163) firmware_update: Wifi state: 0[0m
+[0;31mE (43263) firmware_update: Wifi state: 0[0m
+[0;31mE (43363) firmware_update: Wifi state: 0[0m
+[0;31mE (43463) firmware_update: Wifi state: 0[0m
+[0;31mE (43563) firmware_update: Wifi state: 0[0m
+[0;31mE (43663) firmware_update: Wifi state: 0[0m
+[0;31mE (43763) firmware_update: Wifi state: 0[0m
+[0;31mE (43863) firmware_update: Wifi state: 0[0m
+[0;31mE (43963) firmware_update: Wifi state: 0[0m
+[0;31mE (44063) firmware_update: Wifi state: 0[0m
+[0;31mE (44163) firmware_update: Wifi state: 0[0m
+[0;31mE (44263) firmware_update: Wifi state: 0[0m
+[0;31mE (44363) firmware_update: Wifi state: 0[0m
+[0;31mE (44463) firmware_update: Wifi state: 0[0m
+[0;31mE (44563) firmware_update: Wifi state: 0[0m
+[0;31mE (44663) firmware_update: Wifi state: 0[0m
+[0;31mE (44763) firmware_update: Wifi state: 0[0m
+[0;31mE (44863) firmware_update: Wifi state: 0[0m
+[0;31mE (44963) firmware_update: Wifi state: 0[0m
+[0;31mE (45063) firmware_update: Wifi state: 0[0m
+[0;31mE (45163) firmware_update: Wifi state: 0[0m
+[0;31mE (45263) firmware_update: Wifi state: 0[0m
+[0;31mE (45363) firmware_update: Wifi state: 0[0m
+[0;31mE (45463) firmware_update: Wifi state: 0[0m
+[0;31mE (45563) firmware_update: Wifi state: 0[0m
+[0;31mE (45663) firmware_update: Wifi state: 0[0m
+[0;31mE (45763) firmware_update: Wifi state: 0[0m
+[0;31mE (45863) firmware_update: Wifi state: 0[0m
+[0;31mE (45963) firmware_update: Wifi state: 0[0m
+[0;31mE (46063) firmware_update: Wifi state: 0[0m
+[0;31mE (46163) firmware_update: Wifi state: 0[0m
+[0;31mE (46263) firmware_update: Wifi state: 0[0m
+[0;31mE (46363) firmware_update: Wifi state: 0[0m
+[0;31mE (46463) firmware_update: Wifi state: 0[0m
+[0;31mE (46563) firmware_update: Wifi state: 0[0m
+[0;31mE (46663) firmware_update: Wifi state: 0[0m
+[0;31mE (46763) firmware_update: Wifi state: 0[0m
+[0;31mE (46863) firmware_update: Wifi state: 0[0m
+[0;31mE (46963) firmware_update: Wifi state: 0[0m
+[0;31mE (47063) firmware_update: Wifi state: 0[0m
+[0;31mE (47163) firmware_update: Wifi state: 0[0m
+[0;31mE (47263) firmware_update: Wifi state: 0[0m
+[0;31mE (47363) firmware_update: Wifi state: 0[0m
+[0;31mE (47463) firmware_update: Wifi state: 0[0m
+[0;31mE (47563) firmware_update: Wifi state: 0[0m
+[0;31mE (47663) firmware_update: Wifi state: 0[0m
+[0;31mE (47763) firmware_update: Wifi state: 0[0m
+[0;31mE (47863) firmware_update: Wifi state: 0[0m
+[0;31mE (47963) firmware_update: Wifi state: 0[0m
+[0;31mE (48063) firmware_update: Wifi state: 0[0m
+[0;31mE (48163) firmware_update: Wifi state: 0[0m
+[0;31mE (48263) firmware_update: Wifi state: 0[0m
+[0;31mE (48363) firmware_update: Wifi state: 0[0m
+[0;31mE (48463) firmware_update: Wifi state: 0[0m
+[0;31mE (48563) firmware_update: Wifi state: 0[0m
+[0;31mE (48663) firmware_update: Wifi state: 0[0m
+[0;31mE (48763) firmware_update: Wifi state: 0[0m
+[0;31mE (48863) firmware_update: Wifi state: 0[0m
+[0;31mE (48963) firmware_update: Wifi state: 0[0m
+[0;31mE (49063) firmware_update: Wifi state: 0[0m
+[0;31mE (49163) firmware_update: Wifi state: 0[0m
+[0;31mE (49263) firmware_update: Wifi state: 0[0m
+[0;31mE (49363) firmware_update: Wifi state: 0[0m
+[0;31mE (49463) firmware_update: Wifi state: 0[0m
+[0;31mE (49563) firmware_update: Wifi state: 0[0m

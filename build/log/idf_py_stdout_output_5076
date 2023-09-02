@@ -1,0 +1,699 @@
+�[C��+ښ�j%ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 12 2023 13:54:54[0m
+[0;32mI (35) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28374h (164724) map[0m
+[0;32mI (175) esp_image: segment 1: paddr=0003839c vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=0003bba4 vaddr=40080000 size=04474h ( 17524) load[0m
+[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2598h (664984) map[0m
+[0;32mI (429) esp_image: segment 4: paddr=000e25c0 vaddr=40084474 size=111b8h ( 70072) load[0m
+[0;32mI (469) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (481) cpu_start: Multicore app[0m
+[0;32mI (481) cpu_start: Pro cpu up.[0m
+[0;32mI (481) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (501) cpu_start: Pro cpu start user code[0m
+[0;32mI (501) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (501) cpu_start: Application information:[0m
+[0;32mI (506) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (512) cpu_start: App version:      c8654a7-dirty[0m
+[0;32mI (518) cpu_start: Compile time:     Aug 12 2023 18:06:30[0m
+[0;32mI (524) cpu_start: ELF file SHA256:  b3af2fa68...[0m
+[0;32mI (529) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (536) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (541) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (546) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (551) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (558) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (576) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (593) spi_flash: flash io: dio[0m
+[0;32mI (598) app_start: Starting scheduler on CPU0[0m
+[0;32mI (603) app_start: Starting scheduler on CPU1[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (663) MAIN: Main app starting
+[0m
+[0;32mI (663) wifi_setup: wifi_init begin
+[0m
+[0;31mE (663) firmware_update: Wifi state: 0[0m
+I (673) wifi:wifi driver task: 3ffcd464, prio:23, stack:6656, core=0
+I (703) wifi:wifi firmware version: 3e5caf3
+I (703) wifi:wifi certification version: v7.0
+I (703) wifi:config NVS flash: enabled
+I (703) wifi:config nano formating: disabled
+I (703) wifi:Init data frame dynamic rx buffer num: 32
+I (713) wifi:Init management frame dynamic rx buffer num: 32
+I (713) wifi:Init management short buffer num: 32
+I (723) wifi:Init dynamic tx buffer num: 32
+I (723) wifi:Init static rx buffer size: 1600
+I (733) wifi:Init static rx buffer num: 10
+I (733) wifi:Init dynamic rx buffer num: 32
+[0;32mI (733) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (743) wifi_init: udp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp tx win: 5744[0m
+[0;32mI (753) wifi_init: tcp rx win: 5744[0m
+[0;31mE (763) firmware_update: Wifi state: 0[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (763) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;31mE (863) firmware_update: Wifi state: 0[0m
+[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;31mE (963) firmware_update: Wifi state: 0[0m
+I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1023) wifi:enable tsf
+I (1033) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1043) wifi:state: init -> auth (b0)
+I (1043) wifi:state: auth -> assoc (0)
+I (1043) wifi:state: assoc -> run (10)
+[0;31mE (1063) firmware_update: Wifi state: 0[0m
+I (1093) wifi:connected with Jenny, aid = 6, channel 11, BW20, bssid = 98:9d:5d:9b:ee:a4
+I (1093) wifi:security: WPA2-PSK, phy: bgn, rssi: -68
+I (1093) wifi:pm start, type: 1
+
+[0;31mE (1163) firmware_update: Wifi state: 0[0m
+I (1183) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;31mE (1263) firmware_update: Wifi state: 0[0m
+[0;31mE (1363) firmware_update: Wifi state: 0[0m
+[0;31mE (1463) firmware_update: Wifi state: 0[0m
+[0;31mE (1563) firmware_update: Wifi state: 0[0m
+I (1603) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
+[0;31mE (1663) firmware_update: Wifi state: 0[0m
+[0;31mE (1763) firmware_update: Wifi state: 0[0m
+[0;31mE (1863) firmware_update: Wifi state: 0[0m
+[0;31mE (1963) firmware_update: Wifi state: 0[0m
+[0;31mE (2063) firmware_update: Wifi state: 0[0m
+[0;31mE (2163) firmware_update: Wifi state: 0[0m
+[0;31mE (2263) firmware_update: Wifi state: 0[0m
+[0;31mE (2363) firmware_update: Wifi state: 0[0m
+[0;31mE (2463) firmware_update: Wifi state: 0[0m
+[0;31mE (2563) firmware_update: Wifi state: 0[0m
+[0;32mI (2593) wifi_setup: got ip:10.0.0.75[0m
+[0;32mI (2593) esp_netif_handlers: sta ip: 10.0.0.75, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (2593) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
+I (3663) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:1, winSize:64
+[0;32mI (3693) URL stuff: Handshake done, the new connection was opened[0m
+[0;31mE (4363) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (4363) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (4383) esp-tls: create_ssl_handle failed[0m
+[0;31mE (4383) esp-tls: Failed to open new connection[0m
+[0;31mE (4393) transport_base: Failed to open a new connection[0m
+[0;31mE (4393) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (4403) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4403) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (4413) firmware_update: Wifi state: 1[0m
+[0;31mE (5673) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (5673) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (5683) esp-tls: create_ssl_handle failed[0m
+[0;31mE (5683) esp-tls: Failed to open new connection[0m
+[0;31mE (5693) transport_base: Failed to open a new connection[0m
+[0;31mE (5703) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (5703) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5713) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (5713) firmware_update: Wifi state: 1[0m
+[0;31mE (7133) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (7133) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (7143) esp-tls: create_ssl_handle failed[0m
+[0;31mE (7143) esp-tls: Failed to open new connection[0m
+[0;31mE (7153) transport_base: Failed to open a new connection[0m
+[0;31mE (7163) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (7163) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7173) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (7173) firmware_update: Wifi state: 1[0m
+[0;31mE (8663) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;32mI (8673) received_messages: info from browser: 272
+[0m
+[0;31mE (8673) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (8683) esp-tls: create_ssl_handle failed[0m
+[0;31mE (8693) esp-tls: Failed to open new connection[0m
+[0;31mE (8693) transport_base: Failed to open a new connection[0m
+[0;31mE (8703) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (8703) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8713) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (8723) firmware_update: Wifi state: 1[0m
+[0;31mE (10203) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (10203) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (10213) esp-tls: create_ssl_handle failed[0m
+[0;31mE (10223) esp-tls: Failed to open new connection[0m
+[0;31mE (10223) transport_base: Failed to open a new connection[0m
+[0;31mE (10233) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (10233) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10243) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (10253) firmware_update: Wifi state: 1[0m
+[0;32mI (10513) received_messages: info from browser: 273
+[0m
+[0;31mE (11743) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (11743) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (11753) esp-tls: create_ssl_handle failed[0m
+[0;31mE (11753) esp-tls: Failed to open new connection[0m
+[0;31mE (11763) transport_base: Failed to open a new connection[0m
+[0;31mE (11773) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (11773) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11783) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (11783) firmware_update: Wifi state: 1[0m
+[0;32mI (12663) received_messages: info from browser: 274
+[0m
+[0;31mE (13273) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (13273) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (13283) esp-tls: create_ssl_handle failed[0m
+[0;31mE (13293) esp-tls: Failed to open new connection[0m
+[0;31mE (13293) transport_base: Failed to open a new connection[0m
+[0;31mE (13303) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (13303) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13313) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (13323) firmware_update: Wifi state: 1[0m
+[0;31mE (14813) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (14813) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (14823) esp-tls: create_ssl_handle failed[0m
+[0;31mE (14823) esp-tls: Failed to open new connection[0m
+[0;31mE (14833) transport_base: Failed to open a new connection[0m
+[0;31mE (14843) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (14843) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14853) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (14853) firmware_update: Wifi state: 1[0m
+[0;31mE (16343) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (16353) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (16363) esp-tls: create_ssl_handle failed[0m
+[0;31mE (16363) esp-tls: Failed to open new connection[0m
+[0;31mE (16373) transport_base: Failed to open a new connection[0m
+[0;31mE (16373) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (16383) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (16393) firmware_update: Wifi state: 1[0m
+[0;32mI (16653) received_messages: info from browser: 275
+[0m
+[0;31mE (17883) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (17883) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (17893) esp-tls: create_ssl_handle failed[0m
+[0;31mE (17903) esp-tls: Failed to open new connection[0m
+[0;31mE (17903) transport_base: Failed to open a new connection[0m
+[0;31mE (17913) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (17923) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17923) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (17933) firmware_update: Wifi state: 1[0m
+[0;31mE (19423) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (19423) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (19433) esp-tls: create_ssl_handle failed[0m
+[0;31mE (19433) esp-tls: Failed to open new connection[0m
+[0;31mE (19443) transport_base: Failed to open a new connection[0m
+[0;31mE (19453) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (19453) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19463) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (19463) firmware_update: Wifi state: 1[0m
+[0;32mI (20583) received_messages: info from browser: 276
+[0m
+[0;31mE (20953) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (20953) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (20963) esp-tls: create_ssl_handle failed[0m
+[0;31mE (20973) esp-tls: Failed to open new connection[0m
+[0;31mE (20973) transport_base: Failed to open a new connection[0m
+[0;31mE (20983) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (20993) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20993) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (21003) firmware_update: Wifi state: 1[0m
+[0;31mE (22493) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (22493) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (22503) esp-tls: create_ssl_handle failed[0m
+[0;31mE (22503) esp-tls: Failed to open new connection[0m
+[0;31mE (22513) transport_base: Failed to open a new connection[0m
+[0;31mE (22523) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (22523) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22533) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (22533) firmware_update: Wifi state: 1[0m
+[0;31mE (24023) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (24033) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (24043) esp-tls: create_ssl_handle failed[0m
+[0;31mE (24043) esp-tls: Failed to open new connection[0m
+[0;31mE (24053) transport_base: Failed to open a new connection[0m
+[0;31mE (24063) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (24063) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24073) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (24073) firmware_update: Wifi state: 1[0m
+[0;31mE (25563) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (25563) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (25573) esp-tls: create_ssl_handle failed[0m
+[0;31mE (25583) esp-tls: Failed to open new connection[0m
+[0;31mE (25583) transport_base: Failed to open a new connection[0m
+[0;31mE (25593) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (25593) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25603) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (25613) firmware_update: Wifi state: 1[0m
+[0;31mE (27103) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (27103) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (27113) esp-tls: create_ssl_handle failed[0m
+[0;31mE (27113) esp-tls: Failed to open new connection[0m
+[0;31mE (27123) transport_base: Failed to open a new connection[0m
+[0;31mE (27133) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (27133) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27143) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (27143) firmware_update: Wifi state: 1[0m
+[0;31mE (28633) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (28633) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (28643) esp-tls: create_ssl_handle failed[0m
+[0;31mE (28653) esp-tls: Failed to open new connection[0m
+[0;31mE (28653) transport_base: Failed to open a new connection[0m
+[0;31mE (28663) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (28673) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28673) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (28683) firmware_update: Wifi state: 1[0m
+[0;31mE (30173) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (30173) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (30183) esp-tls: create_ssl_handle failed[0m
+[0;31mE (30183) esp-tls: Failed to open new connection[0m
+[0;31mE (30193) transport_base: Failed to open a new connection[0m
+[0;31mE (30203) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (30203) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30213) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (30213) firmware_update: Wifi state: 1[0m
+[0;31mE (31703) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (31703) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (31723) esp-tls: create_ssl_handle failed[0m
+[0;31mE (31723) esp-tls: Failed to open new connection[0m
+[0;31mE (31733) transport_base: Failed to open a new connection[0m
+[0;31mE (31733) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (31743) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (31743) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (31753) firmware_update: Wifi state: 1[0m
+[0;31mE (33243) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (33243) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (33253) esp-tls: create_ssl_handle failed[0m
+[0;31mE (33263) esp-tls: Failed to open new connection[0m
+[0;31mE (33263) transport_base: Failed to open a new connection[0m
+[0;31mE (33273) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (33273) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (33283) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (33293) firmware_update: Wifi state: 1[0m
+[0;31mE (34783) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (34783) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (34793) esp-tls: create_ssl_handle failed[0m
+[0;31mE (34793) esp-tls: Failed to open new connection[0m
+[0;31mE (34803) transport_base: Failed to open a new connection[0m
+[0;31mE (34813) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (34813) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (34823) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (34823) firmware_update: Wifi state: 1[0m
+[0;31mE (36313) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (36313) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (36323) esp-tls: create_ssl_handle failed[0m
+[0;31mE (36333) esp-tls: Failed to open new connection[0m
+[0;31mE (36333) transport_base: Failed to open a new connection[0m
+[0;31mE (36343) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (36343) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (36353) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (36363) firmware_update: Wifi state: 1[0m
+[0;31mE (37853) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (37853) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (37863) esp-tls: create_ssl_handle failed[0m
+[0;31mE (37863) esp-tls: Failed to open new connection[0m
+[0;31mE (37873) transport_base: Failed to open a new connection[0m
+[0;31mE (37883) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (37883) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (37893) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (37893) firmware_update: Wifi state: 1[0m
+[0;31mE (39383) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (39383) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (39393) esp-tls: create_ssl_handle failed[0m
+[0;31mE (39403) esp-tls: Failed to open new connection[0m
+[0;31mE (39403) transport_base: Failed to open a new connection[0m
+[0;31mE (39413) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (39423) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (39423) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (39433) firmware_update: Wifi state: 1[0m
+[0;31mE (40923) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (40923) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (40933) esp-tls: create_ssl_handle failed[0m
+[0;31mE (40943) esp-tls: Failed to open new connection[0m
+[0;31mE (40943) transport_base: Failed to open a new connection[0m
+[0;31mE (40953) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (40953) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (40963) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (40973) firmware_update: Wifi state: 1[0m
+[0;31mE (42463) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (42463) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (42473) esp-tls: create_ssl_handle failed[0m
+[0;31mE (42473) esp-tls: Failed to open new connection[0m
+[0;31mE (42483) transport_base: Failed to open a new connection[0m
+[0;31mE (42493) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (42493) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (42503) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (42503) firmware_update: Wifi state: 1[0m
+[0;31mE (43993) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (43993) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (44003) esp-tls: create_ssl_handle failed[0m
+[0;31mE (44013) esp-tls: Failed to open new connection[0m
+[0;31mE (44013) transport_base: Failed to open a new connection[0m
+[0;31mE (44023) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (44033) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (44033) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (44043) firmware_update: Wifi state: 1[0m
+[0;31mE (45533) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (45533) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (45543) esp-tls: create_ssl_handle failed[0m
+[0;31mE (45543) esp-tls: Failed to open new connection[0m
+[0;31mE (45553) transport_base: Failed to open a new connection[0m
+[0;31mE (45563) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (45563) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (45573) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (45573) firmware_update: Wifi state: 1[0m
+[0;31mE (47063) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (47063) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (47083) esp-tls: create_ssl_handle failed[0m
+[0;31mE (47083) esp-tls: Failed to open new connection[0m
+[0;31mE (47093) transport_base: Failed to open a new connection[0m
+[0;31mE (47093) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (47103) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (47103) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (47113) firmware_update: Wifi state: 1[0m
+[0;31mE (48603) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (48603) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (48613) esp-tls: create_ssl_handle failed[0m
+[0;31mE (48623) esp-tls: Failed to open new connection[0m
+[0;31mE (48623) transport_base: Failed to open a new connection[0m
+[0;31mE (48633) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (48633) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (48643) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (48653) firmware_update: Wifi state: 1[0m
+[0;31mE (50143) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (50143) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (50153) esp-tls: create_ssl_handle failed[0m
+[0;31mE (50153) esp-tls: Failed to open new connection[0m
+[0;31mE (50163) transport_base: Failed to open a new connection[0m
+[0;31mE (50173) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (50173) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (50183) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (50183) firmware_update: Wifi state: 1[0m
+[0;31mE (51673) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (51673) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (51693) esp-tls: create_ssl_handle failed[0m
+[0;31mE (51693) esp-tls: Failed to open new connection[0m
+[0;31mE (51703) transport_base: Failed to open a new connection[0m
+[0;31mE (51703) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (51713) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (51713) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (51723) firmware_update: Wifi state: 1[0m
+[0;31mE (53223) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (53223) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (53233) esp-tls: create_ssl_handle failed[0m
+[0;31mE (53233) esp-tls: Failed to open new connection[0m
+[0;31mE (53243) transport_base: Failed to open a new connection[0m
+[0;31mE (53253) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (53253) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (53263) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (53273) firmware_update: Wifi state: 1[0m
+[0;31mE (54743) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (54743) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (54763) esp-tls: create_ssl_handle failed[0m
+[0;31mE (54763) esp-tls: Failed to open new connection[0m
+[0;31mE (54773) transport_base: Failed to open a new connection[0m
+[0;31mE (54773) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (54783) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (54793) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (54793) firmware_update: Wifi state: 1[0m
+[0;31mE (56283) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (56283) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (56293) esp-tls: create_ssl_handle failed[0m
+[0;31mE (56303) esp-tls: Failed to open new connection[0m
+[0;31mE (56303) transport_base: Failed to open a new connection[0m
+[0;31mE (56313) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (56313) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (56323) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (56333) firmware_update: Wifi state: 1[0m
+[0;31mE (57823) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (57823) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (57833) esp-tls: create_ssl_handle failed[0m
+[0;31mE (57833) esp-tls: Failed to open new connection[0m
+[0;31mE (57843) transport_base: Failed to open a new connection[0m
+[0;31mE (57853) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (57853) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (57863) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (57863) firmware_update: Wifi state: 1[0m
+[0;31mE (59353) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (59353) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (59363) esp-tls: create_ssl_handle failed[0m
+[0;31mE (59373) esp-tls: Failed to open new connection[0m
+[0;31mE (59373) transport_base: Failed to open a new connection[0m
+[0;31mE (59383) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (59393) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (59393) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (59403) firmware_update: Wifi state: 1[0m
+[0;31mE (60893) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (60893) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (60903) esp-tls: create_ssl_handle failed[0m
+[0;31mE (60903) esp-tls: Failed to open new connection[0m
+[0;31mE (60913) transport_base: Failed to open a new connection[0m
+[0;31mE (60923) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (60923) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (60933) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (60933) firmware_update: Wifi state: 1[0m
+[0;31mE (62433) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (62433) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (62443) esp-tls: create_ssl_handle failed[0m
+[0;31mE (62453) esp-tls: Failed to open new connection[0m
+[0;31mE (62453) transport_base: Failed to open a new connection[0m
+[0;31mE (62463) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (62463) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (62473) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (62483) firmware_update: Wifi state: 1[0m
+[0;31mE (63963) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (63963) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (63973) esp-tls: create_ssl_handle failed[0m
+[0;31mE (63983) esp-tls: Failed to open new connection[0m
+[0;31mE (63983) transport_base: Failed to open a new connection[0m
+[0;31mE (63993) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (64003) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (64003) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (64013) firmware_update: Wifi state: 1[0m
+[0;31mE (65503) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (65503) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (65513) esp-tls: create_ssl_handle failed[0m
+[0;31mE (65513) esp-tls: Failed to open new connection[0m
+[0;31mE (65523) transport_base: Failed to open a new connection[0m
+[0;31mE (65533) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (65533) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (65543) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (65543) firmware_update: Wifi state: 1[0m
+[0;31mE (67033) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (67033) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (67043) esp-tls: create_ssl_handle failed[0m
+[0;31mE (67053) esp-tls: Failed to open new connection[0m
+[0;31mE (67053) transport_base: Failed to open a new connection[0m
+[0;31mE (67063) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (67073) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (67073) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (67083) firmware_update: Wifi state: 1[0m
+[0;31mE (68573) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (68573) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (68583) esp-tls: create_ssl_handle failed[0m
+[0;31mE (68583) esp-tls: Failed to open new connection[0m
+[0;31mE (68593) transport_base: Failed to open a new connection[0m
+[0;31mE (68603) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (68603) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (68613) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (68613) firmware_update: Wifi state: 1[0m
+[0;31mE (70103) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (70103) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (70123) esp-tls: create_ssl_handle failed[0m
+[0;31mE (70123) esp-tls: Failed to open new connection[0m
+[0;31mE (70133) transport_base: Failed to open a new connection[0m
+[0;31mE (70133) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (70143) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (70143) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (70153) firmware_update: Wifi state: 1[0m
+[0;32mI (70723) received_messages: info from browser: 277
+[0m
+[0;32mI (70823) received_messages: info from browser: 278
+[0m
+[0;31mE (71643) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (71643) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (71653) esp-tls: create_ssl_handle failed[0m
+[0;31mE (71663) esp-tls: Failed to open new connection[0m
+[0;31mE (71663) transport_base: Failed to open a new connection[0m
+[0;31mE (71673) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (71673) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (71683) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (71693) firmware_update: Wifi state: 1[0m
+[0;31mE (73183) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (73183) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (73193) esp-tls: create_ssl_handle failed[0m
+[0;31mE (73193) esp-tls: Failed to open new connection[0m
+[0;31mE (73203) transport_base: Failed to open a new connection[0m
+[0;31mE (73213) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (73213) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (73223) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (73223) firmware_update: Wifi state: 1[0m
+[0;31mE (74723) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (74723) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (74733) esp-tls: create_ssl_handle failed[0m
+[0;31mE (74733) esp-tls: Failed to open new connection[0m
+[0;31mE (74743) transport_base: Failed to open a new connection[0m
+[0;31mE (74753) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (74753) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (74763) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (74763) firmware_update: Wifi state: 1[0m
+[0;31mE (76253) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (76253) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (76263) esp-tls: create_ssl_handle failed[0m
+[0;31mE (76273) esp-tls: Failed to open new connection[0m
+[0;31mE (76273) transport_base: Failed to open a new connection[0m
+[0;31mE (76283) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (76283) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (76293) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (76303) firmware_update: Wifi state: 1[0m
+[0;31mE (78403) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (78403) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (78413) esp-tls: create_ssl_handle failed[0m
+[0;31mE (78423) esp-tls: Failed to open new connection[0m
+[0;31mE (78423) transport_base: Failed to open a new connection[0m
+[0;31mE (78433) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (78433) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (78443) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (78453) firmware_update: Wifi state: 1[0m
+[0;31mE (79933) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (79933) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (79953) esp-tls: create_ssl_handle failed[0m
+[0;31mE (79953) esp-tls: Failed to open new connection[0m
+[0;31mE (79963) transport_base: Failed to open a new connection[0m
+[0;31mE (79963) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (79973) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (79983) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (79983) firmware_update: Wifi state: 1[0m
+[0;31mE (81473) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (81473) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (81483) esp-tls: create_ssl_handle failed[0m
+[0;31mE (81493) esp-tls: Failed to open new connection[0m
+[0;31mE (81493) transport_base: Failed to open a new connection[0m
+[0;31mE (81503) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (81503) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (81513) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (81523) firmware_update: Wifi state: 1[0m
+[0;31mE (83013) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (83013) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (83023) esp-tls: create_ssl_handle failed[0m
+[0;31mE (83023) esp-tls: Failed to open new connection[0m
+[0;31mE (83033) transport_base: Failed to open a new connection[0m
+[0;31mE (83043) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (83043) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (83053) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (83053) firmware_update: Wifi state: 1[0m
+[0;31mE (84543) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (84543) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (84553) esp-tls: create_ssl_handle failed[0m
+[0;31mE (84563) esp-tls: Failed to open new connection[0m
+[0;31mE (84563) transport_base: Failed to open a new connection[0m
+[0;31mE (84573) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (84583) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (84583) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (84593) firmware_update: Wifi state: 1[0m
+[0;31mE (86083) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (86083) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (86093) esp-tls: create_ssl_handle failed[0m
+[0;31mE (86103) esp-tls: Failed to open new connection[0m
+[0;31mE (86103) transport_base: Failed to open a new connection[0m
+[0;31mE (86113) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (86113) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (86123) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (86133) firmware_update: Wifi state: 1[0m
+[0;31mE (87613) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (87623) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (87633) esp-tls: create_ssl_handle failed[0m
+[0;31mE (87633) esp-tls: Failed to open new connection[0m
+[0;31mE (87643) transport_base: Failed to open a new connection[0m
+[0;31mE (87643) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (87653) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (87663) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (87663) firmware_update: Wifi state: 1[0m
+[0;31mE (89153) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (89153) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (89163) esp-tls: create_ssl_handle failed[0m
+[0;31mE (89173) esp-tls: Failed to open new connection[0m
+[0;31mE (89173) transport_base: Failed to open a new connection[0m
+[0;31mE (89183) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (89183) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (89193) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (89203) firmware_update: Wifi state: 1[0m
+[0;31mE (90693) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (90693) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (90703) esp-tls: create_ssl_handle failed[0m
+[0;31mE (90703) esp-tls: Failed to open new connection[0m
+[0;31mE (90713) transport_base: Failed to open a new connection[0m
+[0;31mE (90723) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (90723) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (90733) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (90733) firmware_update: Wifi state: 1[0m
+[0;31mE (92223) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (92223) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (92233) esp-tls: create_ssl_handle failed[0m
+[0;31mE (92243) esp-tls: Failed to open new connection[0m
+[0;31mE (92243) transport_base: Failed to open a new connection[0m
+[0;31mE (92253) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (92263) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (92263) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (92273) firmware_update: Wifi state: 1[0m
+[0;31mE (93763) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (93763) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (93773) esp-tls: create_ssl_handle failed[0m
+[0;31mE (93773) esp-tls: Failed to open new connection[0m
+[0;31mE (93783) transport_base: Failed to open a new connection[0m
+[0;31mE (93793) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (93793) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (93803) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (93803) firmware_update: Wifi state: 1[0m
+[0;31mE (95293) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (95293) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (95313) esp-tls: create_ssl_handle failed[0m
+[0;31mE (95313) esp-tls: Failed to open new connection[0m
+[0;31mE (95323) transport_base: Failed to open a new connection[0m
+[0;31mE (95323) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (95333) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (95343) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (95343) firmware_update: Wifi state: 1[0m
+[0;31mE (96833) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (96833) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (96843) esp-tls: create_ssl_handle failed[0m
+[0;31mE (96853) esp-tls: Failed to open new connection[0m
+[0;31mE (96853) transport_base: Failed to open a new connection[0m
+[0;31mE (96863) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (96863) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (96873) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (96883) firmware_update: Wifi state: 1[0m
+[0;31mE (98373) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (98373) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (98383) esp-tls: create_ssl_handle failed[0m
+[0;31mE (98383) esp-tls: Failed to open new connection[0m
+[0;31mE (98393) transport_base: Failed to open a new connection[0m
+[0;31mE (98403) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (98403) firmware_update: Error perform http request ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (98413) firmware_update: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (98413) firmware_update: Wifi state: 1[0m

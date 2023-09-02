@@ -146,4 +146,283 @@ entry 0x40080650
 [0;32mI (478) cpu_start: App version:      2a9ba53-dirty[0m
 [0;32mI (484) cpu_start: Compile time:     Aug 12 2023 13:56:45[0m
 [0;32mI (490) cpu_start: ELF file SHA256:  da301a1f6...[0m
-[0;32mI (495) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-di
+[0;32mI (495) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (502) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFC1A68 len 0001E598 (121 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;32mI (564) app_start: Starting scheduler on CPU0[0m
+[0;32mI (569) app_start: Starting scheduler on CPU1[0m
+[0;32mI (569) main_task: Started on CPU0[0m
+[0;32mI (579) main_task: Calling app_main()[0m
+[0;32mI (629) MAIN: Main app starting
+[0m
+[0;32mI (629) wifi_setup: wifi_init begin
+[0m
+I (639) wifi:wifi driver task: 3ffcbcb0, prio:23, stack:6656, core=0
+I (669) wifi:wifi firmware version: 3e5caf3
+I (669) wifi:wifi certification version: v7.0
+I (669) wifi:config NVS flash: enabled
+I (669) wifi:config nano formating: disabled
+I (669) wifi:Init data frame dynamic rx buffer num: 32
+I (669) wifi:Init management frame dynamic rx buffer num: 32
+I (679) wifi:Init management short buffer num: 32
+I (679) wifi:Init dynamic tx buffer num: 32
+I (689) wifi:Init static rx buffer size: 1600
+I (689) wifi:Init static rx buffer num: 10
+I (699) wifi:Init dynamic rx buffer num: 32
+[0;32mI (699) wifi_init: rx ba win: 6[0m
+[0;32mI (699) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (709) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5744[0m
+[0;32mI (719) wifi_init: tcp rx win: 5744[0m
+[0;32mI (719) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (729) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (879) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (889) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (979) wifi:mode : sta (3c:61:05:15:80:c0)
+I (979) wifi:enable tsf
+I (999) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (999) wifi:state: init -> auth (b0)
+I (1019) wifi:state: auth -> assoc (0)
+I (1079) wifi:state: assoc -> run (10)
+I (1189) wifi:connected with Jenny, aid = 3, channel 11, BW20, bssid = 50:d4:f7:cd:9a:01
+I (1189) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (1199) wifi:pm start, type: 1
+
+I (1289) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3199) wifi_setup: got ip:10.0.0.50[0m
+[0;32mI (3199) esp_netif_handlers: sta ip: 10.0.0.50, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (3199) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
+I (3289) wifi:<ba-add>idx:0 (ifx:0, 50:d4:f7:cd:9a:01), tid:0, ssn:415, winSize:64
+[0;32mI (3299) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (3629) received_messages: info from browser: 124
+[0m
+[0;32mI (4469) received_messages: info from browser: 125
+[0m
+[0;32mI (7339) received_messages: info from browser: 126
+[0m
+[0;32mI (7559) received_messages: info from browser: 127
+[0m
+[0;32mI (8469) received_messages: info from browser: 128
+[0m
+[0;32mI (11429) received_messages: info from browser: 129
+[0m
+[0;32mI (11559) received_messages: info from browser: 130
+[0m
+[0;32mI (12459) received_messages: info from browser: 131
+[0m
+[0;32mI (15429) received_messages: info from browser: 132
+[0m
+[0;32mI (15569) received_messages: info from browser: 133
+[0m
+[0;32mI (16459) received_messages: info from browser: 134
+[0m
+[0;32mI (19419) received_messages: info from browser: 135
+[0m
+[0;32mI (19569) received_messages: info from browser: 136
+[0m
+[0;32mI (20549) received_messages: info from browser: 137
+[0m
+[0;32mI (23409) received_messages: info from browser: 138
+[0m
+[0;32mI (23929) received_messages: info from browser: 139
+[0m
+[0;32mI (24539) received_messages: info from browser: 140
+[0m
+[0;32mI (27409) received_messages: info from browser: 141
+[0m
+[0;32mI (27609) received_messages: info from browser: 142
+[0m
+[0;32mI (28529) received_messages: info from browser: 143
+[0m
+[0;32mI (31399) received_messages: info from browser: 144
+[0m
+[0;32mI (31609) received_messages: info from browser: 145
+[0m
+[0;32mI (32559) received_messages: info from browser: 146
+[0m
+I (35189) wifi:<ba-add>idx:1 (ifx:0, 50:d4:f7:cd:9a:01), tid:6, ssn:9, winSize:64
+[0;32mI (35399) received_messages: info from browser: 147
+[0m
+[0;32mI (35599) received_messages: info from browser: 148
+[0m
+[0;32mI (36519) received_messages: info from browser: 149
+[0m
+[0;32mI (39389) received_messages: info from browser: 150
+[0m
+[0;32mI (39589) received_messages: info from browser: 151
+[0m
+[0;32mI (40519) received_messages: info from browser: 152
+[0m
+[0;32mI (43379) received_messages: info from browser: 153
+[0m
+[0;32mI (43589) received_messages: info from browser: 154
+[0m
+[0;32mI (44509) received_messages: info from browser: 155
+[0m
+[0;32mI (48199) received_messages: info from browser: 156
+[0m
+[0;32mI (48299) received_messages: info from browser: 157
+[0m
+[0;32mI (49219) received_messages: info from browser: 158
+[0m
+[0;32mI (52189) received_messages: info from browser: 159
+[0m
+[0;32mI (52289) received_messages: info from browser: 160
+[0m
+[0;32mI (53209) received_messages: info from browser: 161
+[0m
+[0;32mI (56189) received_messages: info from browser: 162
+[0m
+[0;32mI (56289) received_messages: info from browser: 163
+[0m
+[0;32mI (57209) received_messages: info from browser: 164
+[0m
+[0;32mI (60179) received_messages: info from browser: 165
+[0m
+[0;32mI (60279) received_messages: info from browser: 166
+[0m
+[0;32mI (61199) received_messages: info from browser: 167
+[0m
+[0;32mI (64179) received_messages: info from browser: 168
+[0m
+[0;32mI (64279) received_messages: info from browser: 169
+[0m
+[0;32mI (65189) received_messages: info from browser: 170
+[0m
+[0;32mI (68159) received_messages: info from browser: 171
+[0m
+[0;32mI (68259) received_messages: info from browser: 172
+[0m
+[0;32mI (69189) received_messages: info from browser: 173
+[0m
+[0;32mI (72259) received_messages: info from browser: 174
+[0m
+[0;32mI (72359) received_messages: info from browser: 175
+[0m
+[0;32mI (73179) received_messages: info from browser: 176
+[0m
+[0;32mI (76249) received_messages: info from browser: 177
+[0m
+[0;32mI (76349) received_messages: info from browser: 178
+[0m
+[0;32mI (77169) received_messages: info from browser: 179
+[0m
+[0;32mI (80269) received_messages: info from browser: 180
+[0m
+[0;32mI (80369) received_messages: info from browser: 181
+[0m
+[0;32mI (81169) received_messages: info from browser: 182
+[0m
+[0;32mI (84239) received_messages: info from browser: 183
+[0m
+[0;32mI (84339) received_messages: info from browser: 184
+[0m
+[0;32mI (85169) received_messages: info from browser: 185
+[0m
+[0;32mI (88239) received_messages: info from browser: 186
+[0m
+[0;32mI (88339) received_messages: info from browser: 187
+[0m
+[0;32mI (89159) received_messages: info from browser: 188
+[0m
+[0;32mI (92229) received_messages: info from browser: 189
+[0m
+[0;32mI (92329) received_messages: info from browser: 190
+[0m
+[0;32mI (93249) received_messages: info from browser: 191
+[0m
+[0;32mI (96219) received_messages: info from browser: 192
+[0m
+[0;32mI (96319) received_messages: info from browser: 193
+[0m
+[0;32mI (97249) received_messages: info from browser: 194
+[0m
+[0;32mI (100319) received_messages: info from browser: 195
+[0m
+[0;32mI (100419) received_messages: info from browser: 196
+[0m
+[0;32mI (101239) received_messages: info from browser: 197
+[0m
+[0;32mI (104209) received_messages: info from browser: 198
+[0m
+[0;32mI (104309) received_messages: info from browser: 199
+[0m
+[0;32mI (105229) received_messages: info from browser: 200
+[0m
+[0;32mI (123249) received_messages: info from browser: 201
+[0m
+[0;32mI (123359) received_messages: info from browser: 202
+[0m
+[0;32mI (123459) received_messages: info from browser: 203
+[0m
+[0;32mI (168419) received_messages: info from browser: 204
+[0m
+[0;32mI (168519) received_messages: info from browser: 205
+[0m
+[0;32mI (168619) received_messages: info from browser: 206
+[0m
+[0;32mI (171379) received_messages: info from browser: 207
+[0m
+[0;32mI (171589) received_messages: info from browser: 208
+[0m
+[0;32mI (172509) received_messages: info from browser: 209
+[0m
+[0;32mI (174039) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (178139) received_messages: info from browser: 1
+[0m
+[0;32mI (182129) received_messages: info from browser: 2
+[0m
+[0;32mI (186129) received_messages: info from browser: 3
+[0m
+[0;32mI (190119) received_messages: info from browser: 4
+[0m
+[0;32mI (194219) received_messages: info from browser: 5
+[0m
+[0;32mI (198209) received_messages: info from browser: 6
+[0m
+[0;32mI (202209) received_messages: info from browser: 7
+[0m
+[0;32mI (206199) received_messages: info from browser: 8
+[0m
+[0;32mI (210199) received_messages: info from browser: 9
+[0m
+[0;32mI (214189) received_messages: info from browser: 10
+[0m
+[0;32mI (218199) received_messages: info from browser: 11
+[0m
+[0;32mI (222169) received_messages: info from browser: 12
+[0m
+[0;32mI (226269) received_messages: info from browser: 13
+[0m
+[0;32mI (230159) received_messages: info from browser: 14
+[0m
+[0;32mI (234259) received_messages: info from browser: 15
+[0m
+[0;32mI (238249) received_messages: info from browser: 16
+[0m
+[0;32mI (242239) received_messages: info from browser: 17
+[0m
+[0;32mI (246239) received_messages: info from browser: 18
+[0m
+[0;32mI (250239) received_messages: info from browser: 19
+[0m
+[0;32mI (254219) received_messages: info from browser: 20
+[0m
+[0;32mI (303169) received_messages: info from browser: 21
+[0m
+[0;32mI (363179) received_messages: info from browser: 22
+[0m
+[0;32mI (423179) received_messages: info from browser: 23
+[0m

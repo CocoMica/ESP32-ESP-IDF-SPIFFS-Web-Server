@@ -24,6 +24,27 @@ void receiveStringFromQueue() {
     }
 }
 
+char* getSendingCommand(const char *str){
+    sendStringToQueue(str);
+    int size = 10;
+    if(strcmp(str, "info from browser: 2") == 0){
+        size = 4;
+        char* returnMsg = (char*)malloc(size*sizeof(char));
+        if(returnMsg == NULL){
+            return "";
+        }
+        strcpy(returnMsg, "HI!");
+        return returnMsg;
+    }
+    char* returnMsg = (char*)malloc(size*sizeof(char));
+    if(returnMsg == NULL){
+            return "";
+    }
+    strcpy(returnMsg, "123456789");
+    return returnMsg;
+
+}
+
 void read_ws_msg(void *pvParameters){
     init_queues();
     while(1){

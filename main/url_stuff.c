@@ -35,8 +35,8 @@ static esp_err_t trigger_async_send(httpd_handle_t handle, httpd_req_t *req, cha
     struct async_resp_arg *resp_arg = malloc(sizeof(struct async_resp_arg));
     resp_arg->hd = req->handle;
     resp_arg->fd = httpd_req_to_sockfd(req);
-    //strcpy(ws_sendMsg, sendMsg);
-    strcpy(ws_sendMsg, send_message);
+    strcpy(ws_sendMsg, sendMsg);//local msg
+    //strcpy(ws_sendMsg, send_message);//global msg
    return httpd_queue_work(handle, ws_async_send, resp_arg);
 }
 static esp_err_t handle_ws_req(httpd_req_t *req)
@@ -49,6 +49,7 @@ static esp_err_t handle_ws_req(httpd_req_t *req)
 
     httpd_ws_frame_t ws_pkt;
     uint8_t *buf = NULL;
+    char* sendMsg = NULL;
     memset(&ws_pkt, 0, sizeof(httpd_ws_frame_t));
     ws_pkt.type = HTTPD_WS_TYPE_TEXT;
     esp_err_t ret = httpd_ws_recv_frame(req, &ws_pkt, 0);
@@ -74,13 +75,14 @@ static esp_err_t handle_ws_req(httpd_req_t *req)
             free(buf);
             return ret;
         }
-        sendStringToQueue((char *)ws_pkt.payload);
+        sendMsg = getSendingCommand((char *)ws_pkt.payload);
     }
 
     if (ws_pkt.type == HTTPD_WS_TYPE_TEXT)
     {
         free(buf);
-        return trigger_async_send(req->handle, req, "heloo!");//-------------------------------------------------------------------------
+        return trigger_async_send(req->handle, req, sendMsg);//-------------------------------------------------------------------------
+        free(sendMsg);
     }
     return ESP_OK;
 }
