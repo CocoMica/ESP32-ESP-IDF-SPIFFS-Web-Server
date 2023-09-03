@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "esp32_spiffs_webserver",
-    "project_version":    "7d00832-dirty",
+    "project_version":    "30c00d3-dirty",
     "project_path":       "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server",
     "idf_path":           "D:/Softwares/ESP-IDF/esp-idf",
     "build_dir":          "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build",

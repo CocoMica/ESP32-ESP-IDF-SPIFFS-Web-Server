@@ -1,14 +1,86 @@
 #include "inc/mqtt_stuff.h"
+#include <esp_partition.h>
+#include "esp_ota_ops.h"
 static const char *TAG = "mqtt_stuff";
 
-
 #if CONFIG_BROKER_CERTIFICATE_OVERRIDDEN == 1
-static const uint8_t mqtt_eclipseprojects_io_pem_start[]  = "-----BEGIN CERTIFICATE-----\n" CONFIG_BROKER_CERTIFICATE_OVERRIDE "\n-----END CERTIFICATE-----";
+static const uint8_t mqtt_eclipseprojects_io_pem_start[] = "-----BEGIN CERTIFICATE-----\n" CONFIG_BROKER_CERTIFICATE_OVERRIDE "\n-----END CERTIFICATE-----";
 #else
-extern const uint8_t mqtt_eclipseprojects_io_pem_start[]   asm("_binary_mqtt_eclipseprojects_io_pem_start");
+extern const uint8_t mqtt_eclipseprojects_io_pem_start[] asm("_binary_mqtt_eclipseprojects_io_pem_start");
 #endif
-extern const uint8_t mqtt_eclipseprojects_io_pem_end[]   asm("_binary_mqtt_eclipseprojects_io_pem_end");
+extern const uint8_t mqtt_eclipseprojects_io_pem_end[] asm("_binary_mqtt_eclipseprojects_io_pem_end");
 
+uint32_t total_received_data_len = 0;
+uint32_t targetAddress;
+static esp_ota_handle_t ota_handle;
+bool first_time = true;
+
+// Initialize OTA update process
+esp_err_t ota_begin()
+{
+    const esp_partition_t *update_partition = esp_partition_find_first(
+        ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
+    if (update_partition == NULL)
+    {
+        return ESP_FAIL;
+    }
+
+    return esp_ota_begin(update_partition, OTA_SIZE_UNKNOWN, &ota_handle);
+}
+
+// Write firmware data to OTA partition
+esp_err_t ota_write_data(const void *data, size_t size)
+{
+    return esp_ota_write(ota_handle, data, size);
+}
+
+// Finish OTA update and set the updated partition as the boot partition
+esp_err_t ota_end()
+{
+    if (esp_ota_end(ota_handle) != ESP_OK)
+    {
+        return ESP_FAIL;
+    }
+    if (esp_ota_set_boot_partition(esp_ota_get_next_update_partition(NULL)) != ESP_OK)
+    {
+        return ESP_FAIL;
+    }
+    return ESP_OK;
+}
+
+void copy_data_to_ota_0(const char *data, size_t data_len)
+{
+    // esp_partition_t *otaPartition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
+    total_received_data_len += data_len;
+    ESP_LOGW(TAG, "copy_data_to_ota_0: Data len=%d, copy address:  0x%08lx, total_received=%ld.", data_len, targetAddress, total_received_data_len);
+    // ESP_LOGW(TAG, "copy_data_to_ota_0: Data len=%d, total_received=%ld. first character: %c: ", data_len,  total_received_data_len, data[0]);
+
+    // memcpy((void*)targetAddress, data, data_len);
+    // uint8_t *target_address = (uint8_t *)otaPartition->address;
+    // memcpy(otaPartition->address, data, data_len);
+    targetAddress += data_len;
+    if (first_time)
+    {
+        first_time = false;
+        esp_err_t ret1 = ota_begin();
+        ESP_LOGI(TAG, "begining the OTA. status of OTA: %d", ret1);
+    }
+    esp_err_t ret2 = ota_write_data(data, data_len);
+    ESP_LOGW(TAG, "writing data. status: %d", ret2);
+    if (total_received_data_len == 950160)
+    {
+        // end
+        esp_err_t ret3 = ota_end();
+        ESP_LOGI(TAG, "all data received. status of ota: %d", ret3);
+        const char *ota0_label = "ota_0";
+        // Use esp_ota_set_boot_partition() to set ota_0 as the active partition
+        esp_ota_set_boot_partition(esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, ota0_label));
+        // Print a message indicating that the next boot will use ota_0
+        printf("Next boot will use ota_0 as the active partition.....\n");
+        vTaskDelay(pdMS_TO_TICKS(6000));
+        esp_restart();
+    }
+}
 //
 // Note: this function is for testing purposes only publishing part of the active partition
 //       (to be checked against the original binary)
@@ -41,7 +113,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     esp_mqtt_event_handle_t event = event_data;
     esp_mqtt_client_handle_t client = event->client;
     int msg_id;
-    switch ((esp_mqtt_event_id_t)event_id) {
+    switch ((esp_mqtt_event_id_t)event_id)
+    {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
         msg_id = esp_mqtt_client_subscribe(client, "/topic/qos0", 0);
@@ -50,8 +123,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         msg_id = esp_mqtt_client_subscribe(client, "/topic/qos1", 1);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
 
-        //msg_id = esp_mqtt_client_unsubscribe(client, "/topic/qos1");
-        //ESP_LOGI(TAG, "sent unsubscribe successful, msg_id=%d", msg_id);
+        // msg_id = esp_mqtt_client_unsubscribe(client, "/topic/qos1");
+        // ESP_LOGI(TAG, "sent unsubscribe successful, msg_id=%d", msg_id);
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
@@ -59,8 +132,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     case MQTT_EVENT_SUBSCRIBED:
         ESP_LOGI(TAG, "MQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
-        msg_id = esp_mqtt_client_publish(client, "/topic/qos0", "data", 0, 0, 0);
-        ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
+        // msg_id = esp_mqtt_client_publish(client, "/topic/qos0", "data", 0, 0, 0);
+        // ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
         break;
     case MQTT_EVENT_UNSUBSCRIBED:
         ESP_LOGI(TAG, "MQTT_EVENT_UNSUBSCRIBED, msg_id=%d", event->msg_id);
@@ -69,25 +142,39 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_PUBLISHED, msg_id=%d", event->msg_id);
         break;
     case MQTT_EVENT_DATA:
-        ESP_LOGI(TAG, "MQTT_EVENT_DATA");
-        ESP_LOGW(TAG,"Data len=%d", event->data_len);
-        printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
-        printf("DATA=%.*s\r\n", event->data_len, event->data);
-        if (strncmp(event->data, "send binary please", event->data_len) == 0) {
+
+        if (strncmp(event->topic, "/topic/qos0", event->topic_len) == 0)
+        {
+            copy_data_to_ota_0(event->data, event->data_len);
+        }
+        else
+        {
+            ESP_LOGI(TAG, "MQTT_EVENT_DATA");
+            ESP_LOGW(TAG, "Data len=%d", event->data_len);
+            printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
+            printf("DATA=%.*s\r\n", event->data_len, event->data);
+        }
+        if (strncmp(event->data, "send binary please", event->data_len) == 0)
+        {
             ESP_LOGI(TAG, "Sending the binary");
             send_binary(client);
         }
         break;
     case MQTT_EVENT_ERROR:
         ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
-        if (event->error_handle->error_type == MQTT_ERROR_TYPE_TCP_TRANSPORT) {
+        if (event->error_handle->error_type == MQTT_ERROR_TYPE_TCP_TRANSPORT)
+        {
             ESP_LOGI(TAG, "Last error code reported from esp-tls: 0x%x", event->error_handle->esp_tls_last_esp_err);
             ESP_LOGI(TAG, "Last tls stack error number: 0x%x", event->error_handle->esp_tls_stack_err);
-            ESP_LOGI(TAG, "Last captured errno : %d (%s)",  event->error_handle->esp_transport_sock_errno,
+            ESP_LOGI(TAG, "Last captured errno : %d (%s)", event->error_handle->esp_transport_sock_errno,
                      strerror(event->error_handle->esp_transport_sock_errno));
-        } else if (event->error_handle->error_type == MQTT_ERROR_TYPE_CONNECTION_REFUSED) {
+        }
+        else if (event->error_handle->error_type == MQTT_ERROR_TYPE_CONNECTION_REFUSED)
+        {
             ESP_LOGI(TAG, "Connection refused error: 0x%x", event->error_handle->connect_return_code);
-        } else {
+        }
+        else
+        {
             ESP_LOGW(TAG, "Unknown error type: 0x%x", event->error_handle->error_type);
         }
         break;
@@ -98,32 +185,62 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 }
 
 void mqtt_app_start(void)
-{   ESP_LOGI(TAG, "mqtt_app_start");
+{
+    ESP_LOGI(TAG, "mqtt_app_start");
+    // Get a pointer to the currently active partition
+    const esp_partition_t *active_partition = esp_ota_get_boot_partition();
+
+    // Print information about the active partition
+    if (active_partition != NULL)
+    {
+        printf("Active Partition Label: %s\n", active_partition->label);
+        printf("Active Partition Type: %d\n", active_partition->type);
+        printf("Active Partition Subtype: %d\n", active_partition->subtype);
+        printf("Active Partition Address: 0x%08lx\n", active_partition->address);
+        printf("Active Partition Size: %ld bytes\n", active_partition->size);
+    }
+    else
+    {
+        printf("Failed to get active partition information\n");
+    }
+
+    const esp_partition_t *otaPartition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
+    targetAddress = otaPartition->address;
+    if (otaPartition != NULL)
+    {
+        // Print the address of the ota_0 partition
+        printf("targetaddress: 0x%08lx. OTA Partition Address: 0x%08lx\n", targetAddress, otaPartition->address);
+    }
+    else
+    {
+        printf("OTA Partition not found\n");
+    }
+
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker = {
             .address.uri = CONFIG_BROKER_URI,
             .verification.certificate = (const char *)mqtt_eclipseprojects_io_pem_start,
         },
         .credentials = {
-                .username = "device1",
+            .username = "device1",
             .authentication.password = "device001",
 
-        }
-    };
+        }};
 
     ESP_LOGI(TAG, "[APP] Free memory: %" PRIu32 " bytes", esp_get_free_heap_size());
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(client);
-int count = 0;
-    while(true){
-         vTaskDelay(pdMS_TO_TICKS(3000));
-         char data[80];
-        count ++;
-        sprintf(data, "count is: %d",count);
+    int count = 0;
+    while (true)
+    {
+        return;
+        vTaskDelay(pdMS_TO_TICKS(3000));
+        char data[80];
+        count++;
+        sprintf(data, "count is: %d", count);
         int msg_id = esp_mqtt_client_publish(client, "/topic/qos0", data, 0, 0, 0);
         ESP_LOGI(TAG, "sent publish successful, msg_id=%d, count=%d.", msg_id, count);
     }
-    
 }

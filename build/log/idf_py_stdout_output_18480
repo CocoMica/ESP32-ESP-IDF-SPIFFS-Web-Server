@@ -1,1972 +1,0 @@
-��j%�(522) �ets Jun  8 2016 00:22:57
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7132
-ho 0 tail 12 room 4
-load:0x40078000,len:15708
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3884
-entry 0x40080650
-[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
-[0;32mI (32) boot: compile time Sep  2 2023 16:32:24[0m
-[0;32mI (34) boot: Multicore bootloader[0m
-[0;32mI (39) boot: chip revision: v1.0[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
-[0;32mI (56) boot: Enabling RNG early entropy source...[0m
-[0;32mI (62) boot: Partition Table:[0m
-[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
-[0;32mI (102) boot: End of partition table[0m
-[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a434h (173108) map[0m
-[0;32mI (178) esp_image: segment 1: paddr=0003a45c vaddr=3ffb0000 size=03800h ( 14336) load[0m
-[0;32mI (184) esp_image: segment 2: paddr=0003dc64 vaddr=40080000 size=023b4h (  9140) load[0m
-[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4d2ch (675116) map[0m
-[0;32mI (436) esp_image: segment 4: paddr=000e4d54 vaddr=400823b4 size=13278h ( 78456) load[0m
-[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (479) boot: Disabling RNG early entropy source...[0m
-[0;32mI (491) cpu_start: Multicore app[0m
-[0;32mI (491) cpu_start: Pro cpu up.[0m
-[0;32mI (491) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (511) cpu_start: Pro cpu start user code[0m
-[0;32mI (511) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (511) cpu_start: Application information:[0m
-[0;32mI (516) cpu_start: Project name:     esp32_spiffs_webserver[0m
-[0;32mI (522) cpu_start: App version:      7d00832-dirty[0m
-[0;32mI (528) cpu_start: Compile time:     Sep  2 2023 16:32:03[0m
-[0;32mI (534) cpu_start: ELF file SHA256:  4fa3c0134...[0m
-[0;32mI (539) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
-[0;32mI (546) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (551) cpu_start: Max chip rev:     v3.99 [0m
-[0;32mI (556) cpu_start: Chip rev:         v1.0[0m
-[0;32mI (561) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (568) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (574) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
-[0;32mI (580) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (586) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (593) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
-[0;32mI (601) spi_flash: detected chip: generic[0m
-[0;32mI (604) spi_flash: flash io: dio[0m
-[0;32mI (608) app_start: Starting scheduler on CPU0[0m
-[0;32mI (613) app_start: Starting scheduler on CPU1[0m
-[0;32mI (613) main_task: Started on CPU0[0m
-[0;32mI (623) main_task: Calling app_main()[0m
-[0;32mI (673) MAIN: Main app starting
-[0m
-[0;32mI (673) wifi_setup: wifi_init begin
-[0m
-I (683) wifi:wifi driver task: 3ffcc308, prio:23, stack:6656, core=0
-I (713) wifi:wifi firmware version: 3e5caf3
-I (713) wifi:wifi certification version: v7.0
-I (713) wifi:config NVS flash: enabled
-I (713) wifi:config nano formating: disabled
-I (713) wifi:Init data frame dynamic rx buffer num: 32
-I (713) wifi:Init management frame dynamic rx buffer num: 32
-I (723) wifi:Init management short buffer num: 32
-I (723) wifi:Init dynamic tx buffer num: 32
-I (733) wifi:Init static rx buffer size: 1600
-I (733) wifi:Init static rx buffer num: 10
-I (743) wifi:Init dynamic rx buffer num: 32
-[0;32mI (743) wifi_init: rx ba win: 6[0m
-[0;32mI (743) wifi_init: tcpip mbox: 32[0m
-[0;32mI (753) wifi_init: udp mbox: 6[0m
-[0;32mI (753) wifi_init: tcp mbox: 6[0m
-[0;32mI (763) wifi_init: tcp tx win: 5744[0m
-[0;32mI (763) wifi_init: tcp rx win: 5744[0m
-[0;32mI (763) wifi_init: tcp mss: 1440[0m
-[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
-[0m
-[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
-I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
-I (1023) wifi:enable tsf
-I (1033) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
-I (1043) wifi:state: init -> auth (b0)
-I (1063) wifi:state: auth -> assoc (0)
-I (2063) wifi:state: assoc -> init (2700)
-I (2073) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
-[0;32mI (2073) wifi_setup: retry to connect to the AP[0m
-[0;32mI (2073) wifi_setup: connect to the AP fail[0m
-I (2093) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
-I (2093) wifi:state: init -> auth (b0)
-I (2103) wifi:state: auth -> assoc (0)
-I (2113) wifi:state: assoc -> run (10)
-I (2163) wifi:connected with Jenny, aid = 3, channel 11, BW20, bssid = 98:9d:5d:9b:ee:a4
-I (2163) wifi:security: WPA2-PSK, phy: bgn, rssi: -61
-I (2163) wifi:pm start, type: 1
-
-I (2173) wifi:AP's beacon interval = 102400 us, DTIM period = 3
-I (2193) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
-[0;32mI (3183) wifi_setup: got ip:10.0.0.75[0m
-[0;32mI (3183) esp_netif_handlers: sta ip: 10.0.0.75, mask: 255.255.255.0, gw: 10.0.0.1[0m
-[0;32mI (3183) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
-[0;32mI (3673) mqtt_stuff: mqtt_app_start[0m
-[0;32mI (3673) mqtt_stuff: [APP] Free memory: 170960 bytes[0m
-[0;32mI (3673) mqtt_stuff: Other event id:7[0m
-I (3813) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:1, winSize:64
-[0;32mI (5133) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
-[0;32mI (5143) mqtt_stuff: sent subscribe successful, msg_id=13118[0m
-[0;32mI (5143) mqtt_stuff: sent subscribe successful, msg_id=45264[0m
-[0;32mI (5193) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=13118[0m
-[0;32mI (5193) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5253) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=45264[0m
-[0;32mI (5253) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5263) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 87
-[0;32mI (5293) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (5333) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (6573) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 88
-[0;32mI (6683) mqtt_stuff: sent publish successful, msg_id=0, count=1.[0m
-[0;32mI (6743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 1
-[0;32mI (7503) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 89
-[0;32mI (8423) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 90
-[0;32mI (9343) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 91
-[0;32mI (9683) mqtt_stuff: sent publish successful, msg_id=0, count=2.[0m
-[0;32mI (9723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 2
-[0;32mI (10573) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 92
-[0;32mI (11493) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 93
-[0;32mI (12413) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 94
-[0;32mI (12683) mqtt_stuff: sent publish successful, msg_id=0, count=3.[0m
-[0;32mI (12723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 3
-[0;32mI (13643) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 95
-[0;32mI (14563) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 96
-[0;32mI (15483) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 97
-[0;32mI (15683) mqtt_stuff: sent publish successful, msg_id=0, count=4.[0m
-[0;32mI (15733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 4
-[0;32mI (16413) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 98
-[0;32mI (17633) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 99
-[0;32mI (18563) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 100
-[0;32mI (18683) mqtt_stuff: sent publish successful, msg_id=0, count=5.[0m
-[0;32mI (18723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 5
-[0;32mI (19483) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 101
-[0;32mI (20403) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 102
-[0;32mI (21633) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 103
-[0;32mI (21683) mqtt_stuff: sent publish successful, msg_id=0, count=6.[0m
-[0;32mI (21723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 6
-[0;32mI (22553) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 104
-[0;32mI (23473) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 105
-[0;32mI (24683) mqtt_stuff: sent publish successful, msg_id=0, count=7.[0m
-[0;32mI (24693) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 106
-[0;32mI (24733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 7
-[0;32mI (25623) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 107
-[0;32mI (26563) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 108
-[0;32mI (27683) mqtt_stuff: sent publish successful, msg_id=0, count=8.[0m
-[0;32mI (27693) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 109
-[0;32mI (27773) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 8
-[0;32mI (28693) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 110
-[0;32mI (29613) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 111
-[0;32mI (30543) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 112
-[0;32mI (30683) mqtt_stuff: sent publish successful, msg_id=0, count=9.[0m
-[0;32mI (30843) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 9
-[0;32mI (31523) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 113
-[0;32mI (32513) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 114
-[0;32mI (33613) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 115
-[0;32mI (33683) mqtt_stuff: sent publish successful, msg_id=0, count=10.[0m
-[0;32mI (33723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 10
-[0;32mI (34843) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 116
-[0;32mI (35763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 117
-[0;32mI (36683) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 118
-[0;32mI (36693) mqtt_stuff: sent publish successful, msg_id=0, count=11.[0m
-[0;32mI (36723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 11
-[0;32mI (37603) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 119
-[0;32mI (38833) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 120
-[0;32mI (39693) mqtt_stuff: sent publish successful, msg_id=0, count=12.[0m
-[0;32mI (39703) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 121
-[0;32mI (39743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 12
-[0;32mI (40673) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 122
-[0;32mI (41903) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 123
-[0;32mI (42693) mqtt_stuff: sent publish successful, msg_id=0, count=13.[0m
-[0;32mI (42703) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 124
-[0;32mI (42743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 13
-[0;32mI (43753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 125
-[0;32mI (44673) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 126
-[0;32mI (45693) mqtt_stuff: sent publish successful, msg_id=0, count=14.[0m
-[0;32mI (45703) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 127
-[0;32mI (45733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 14
-[0;32mI (46823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 128
-[0;32mI (47743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 129
-[0;32mI (48693) mqtt_stuff: sent publish successful, msg_id=0, count=15.[0m
-[0;32mI (48703) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 130
-[0;32mI (48753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 15
-[0;32mI (49923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 131
-[0;32mI (50813) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 132
-[0;32mI (51693) mqtt_stuff: sent publish successful, msg_id=0, count=16.[0m
-[0;32mI (51713) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 133
-[0;32mI (51743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 16
-[0;32mI (52963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 134
-[0;32mI (53883) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 135
-[0;32mI (54693) mqtt_stuff: sent publish successful, msg_id=0, count=17.[0m
-[0;32mI (54723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 136
-[0;32mI (54733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 17
-[0;32mI (56033) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 137
-[0;32mI (56963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 138
-[0;32mI (57693) mqtt_stuff: sent publish successful, msg_id=0, count=18.[0m
-[0;32mI (57753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 18
-[0;32mI (57813) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 139
-[0;32mI (58803) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 140
-[0;32mI (60033) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 141
-[0;32mI (60693) mqtt_stuff: sent publish successful, msg_id=0, count=19.[0m
-[0;32mI (60953) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 19
-[0;32mI (60953) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 142
-[0;32mI (61873) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 143
-[0;32mI (62813) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 144
-[0;32mI (63693) mqtt_stuff: sent publish successful, msg_id=0, count=20.[0m
-[0;32mI (63823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 20
-[0;32mI (63823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 145
-[0;32mI (65253) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 146
-[0;32mI (65863) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 147
-[0;32mI (66693) mqtt_stuff: sent publish successful, msg_id=0, count=21.[0m
-[0;32mI (66763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 21
-[0;32mI (66823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 148
-[0;32mI (68023) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 149
-[0;32mI (68943) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 150
-[0;32mI (69693) mqtt_stuff: sent publish successful, msg_id=0, count=22.[0m
-[0;32mI (69753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 22
-[0;32mI (70183) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 151
-[0;32mI (71093) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 152
-[0;32mI (72013) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 153
-[0;32mI (72693) mqtt_stuff: sent publish successful, msg_id=0, count=23.[0m
-[0;32mI (73043) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 23
-[0;32mI (73043) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 154
-[0;32mI (74163) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 155
-[0;32mI (75083) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 156
-[0;32mI (75693) mqtt_stuff: sent publish successful, msg_id=0, count=24.[0m
-[0;32mI (76003) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 24
-[0;32mI (76013) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 157
-[0;32mI (76923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 158
-[0;32mI (78153) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 159
-[0;32mI (78693) mqtt_stuff: sent publish successful, msg_id=0, count=25.[0m
-[0;32mI (78743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 25
-[0;32mI (79073) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 160
-[0;32mI (80003) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 161
-[0;32mI (81233) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 162
-[0;32mI (81693) mqtt_stuff: sent publish successful, msg_id=0, count=26.[0m
-[0;32mI (81723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 26
-[0;32mI (82153) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 163
-[0;32mI (83073) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 164
-[0;32mI (83993) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 165
-[0;32mI (84693) mqtt_stuff: sent publish successful, msg_id=0, count=27.[0m
-[0;32mI (84743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 27
-[0;32mI (85223) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 166
-[0;32mI (86143) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 167
-[0;32mI (87083) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 168
-[0;32mI (87693) mqtt_stuff: sent publish successful, msg_id=0, count=28.[0m
-[0;32mI (87733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 28
-[0;32mI (88293) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 169
-[0;32mI (89213) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 170
-[0;32mI (90133) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 171
-[0;32mI (90693) mqtt_stuff: sent publish successful, msg_id=0, count=29.[0m
-[0;32mI (90733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 29
-[0;32mI (91063) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 172
-[0;32mI (92283) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 173
-[0;32mI (93213) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 174
-[0;32mI (93693) mqtt_stuff: sent publish successful, msg_id=0, count=30.[0m
-[0;32mI (93743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 30
-[0;32mI (94133) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 175
-[0;32mI (95363) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 176
-[0;32mI (96283) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 177
-[0;32mI (96693) mqtt_stuff: sent publish successful, msg_id=0, count=31.[0m
-[0;32mI (96753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 31
-[0;32mI (97203) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 178
-[0;32mI (98433) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 179
-[0;32mI (99353) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 180
-[0;32mI (99693) mqtt_stuff: sent publish successful, msg_id=0, count=32.[0m
-[0;32mI (99733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 32
-[0;32mI (100303) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 181
-[0;32mI (102693) mqtt_stuff: sent publish successful, msg_id=0, count=33.[0m
-[0;32mI (102743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 33
-[0;32mI (105693) mqtt_stuff: sent publish successful, msg_id=0, count=34.[0m
-[0;32mI (105733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 34
-[0;32mI (108693) mqtt_stuff: sent publish successful, msg_id=0, count=35.[0m
-[0;32mI (108743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 35
-ets Jun  8 2016 00:22:57
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7132
-ho 0 tail 12 room 4
-load:0x40078000,len:15708
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3884
-entry 0x40080650
-[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
-[0;32mI (32) boot: compile time Sep  2 2023 16:32:24[0m
-[0;32mI (34) boot: Multicore bootloader[0m
-[0;32mI (39) boot: chip revision: v1.0[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
-[0;32mI (56) boot: Enabling RNG early entropy source...[0m
-[0;32mI (62) boot: Partition Table:[0m
-[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
-[0;32mI (102) boot: End of partition table[0m
-[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a434h (173108) map[0m
-[0;32mI (178) esp_image: segment 1: paddr=0003a45c vaddr=3ffb0000 size=03800h ( 14336) load[0m
-[0;32mI (184) esp_image: segment 2: paddr=0003dc64 vaddr=40080000 size=023b4h (  9140) load[0m
-[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4d2ch (675116) map[0m
-[0;32mI (436) esp_image: segment 4: paddr=000e4d54 vaddr=400823b4 size=13278h ( 78456) load[0m
-[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (479) boot: Disabling RNG early entropy source...[0m
-[0;32mI (491) cpu_start: Multicore app[0m
-[0;32mI (491) cpu_start: Pro cpu up.[0m
-[0;32mI (491) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (511) cpu_start: Pro cpu start user code[0m
-[0;32mI (511) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (511) cpu_start: Application information:[0m
-[0;32mI (516) cpu_start: Project name:     esp32_spiffs_webserver[0m
-[0;32mI (522) cpu_start: App version:      7d00832-dirty[0m
-[0;32mI (528) cpu_start: Compile time:     Sep  2 2023 16:32:03[0m
-[0;32mI (534) cpu_start: ELF file SHA256:  4fa3c0134...[0m
-[0;32mI (539) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
-[0;32mI (546) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (551) cpu_start: Max chip rev:     v3.99 [0m
-[0;32mI (556) cpu_start: Chip rev:         v1.0[0m
-[0;32mI (561) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (568) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (574) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
-[0;32mI (580) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (586) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (593) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
-[0;32mI (601) spi_flash: detected chip: generic[0m
-[0;32mI (604) spi_flash: flash io: dio[0m
-[0;32mI (608) app_start: Starting scheduler on CPU0[0m
-[0;32mI (613) app_start: Starting scheduler on CPU1[0m
-[0;32mI (613) main_task: Started on CPU0[0m
-[0;32mI (623) main_task: Calling app_main()[0m
-[0;32mI (673) MAIN: Main app starting
-[0m
-[0;32mI (673) wifi_setup: wifi_init begin
-[0m
-I (683) wifi:wifi driver task: 3ffcc308, prio:23, stack:6656, core=0
-I (713) wifi:wifi firmware version: 3e5caf3
-I (713) wifi:wifi certification version: v7.0
-I (713) wifi:config NVS flash: enabled
-I (713) wifi:config nano formating: disabled
-I (713) wifi:Init data frame dynamic rx buffer num: 32
-I (713) wifi:Init management frame dynamic rx buffer num: 32
-I (723) wifi:Init management short buffer num: 32
-I (723) wifi:Init dynamic tx buffer num: 32
-I (733) wifi:Init static rx buffer size: 1600
-I (733) wifi:Init static rx buffer num: 10
-I (743) wifi:Init dynamic rx buffer num: 32
-[0;32mI (743) wifi_init: rx ba win: 6[0m
-[0;32mI (743) wifi_init: tcpip mbox: 32[0m
-[0;32mI (753) wifi_init: udp mbox: 6[0m
-[0;32mI (753) wifi_init: tcp mbox: 6[0m
-[0;32mI (763) wifi_init: tcp tx win: 5744[0m
-[0;32mI (763) wifi_init: tcp rx win: 5744[0m
-[0;32mI (763) wifi_init: tcp mss: 1440[0m
-[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
-[0m
-[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
-I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
-I (1023) wifi:enable tsf
-I (1093) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
-I (1093) wifi:state: init -> auth (b0)
-I (1103) wifi:state: auth -> assoc (0)
-I (1113) wifi:state: assoc -> run (10)
-I (1193) wifi:connected with Jenny, aid = 3, channel 11, BW20, bssid = 98:9d:5d:9b:ee:a4
-I (1193) wifi:security: WPA2-PSK, phy: bgn, rssi: -70
-I (1193) wifi:pm start, type: 1
-
-I (1213) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
-I (1293) wifi:AP's beacon interval = 102400 us, DTIM period = 3
-[0;32mI (2203) wifi_setup: got ip:10.0.0.75[0m
-[0;32mI (2203) esp_netif_handlers: sta ip: 10.0.0.75, mask: 255.255.255.0, gw: 10.0.0.1[0m
-[0;32mI (2203) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
-I (3543) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:0, winSize:64
-[0;32mI (3673) mqtt_stuff: mqtt_app_start[0m
-[0;32mI (3673) mqtt_stuff: [APP] Free memory: 171388 bytes[0m
-[0;32mI (3673) mqtt_stuff: Other event id:7[0m
-[0;32mI (5203) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
-[0;32mI (5203) mqtt_stuff: sent subscribe successful, msg_id=375[0m
-[0;32mI (5213) mqtt_stuff: sent subscribe successful, msg_id=63508[0m
-[0;32mI (5243) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=375[0m
-[0;32mI (5253) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5303) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=63508[0m
-[0;32mI (5303) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5343) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (5383) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (6683) mqtt_stuff: sent publish successful, msg_id=0, count=1.[0m
-[0;32mI (6933) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 1
-[0;32mI (9683) mqtt_stuff: sent publish successful, msg_id=0, count=2.[0m
-[0;32mI (9743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 2
-[0;32mI (12683) mqtt_stuff: sent publish successful, msg_id=0, count=3.[0m
-[0;32mI (12723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 3
-[0;32mI (15683) mqtt_stuff: sent publish successful, msg_id=0, count=4.[0m
-[0;32mI (15723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 4
-[0;32mI (18683) mqtt_stuff: sent publish successful, msg_id=0, count=5.[0m
-[0;32mI (18723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 5
-[0;32mI (21683) mqtt_stuff: sent publish successful, msg_id=0, count=6.[0m
-[0;32mI (21743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 6
-[0;32mI (24683) mqtt_stuff: sent publish successful, msg_id=0, count=7.[0m
-[0;32mI (24733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 7
-[0;32mI (27683) mqtt_stuff: sent publish successful, msg_id=0, count=8.[0m
-[0;32mI (27723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 8
-[0;32mI (30683) mqtt_stuff: sent publish successful, msg_id=0, count=9.[0m
-[0;32mI (30733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 9
-[0;32mI (33683) mqtt_stuff: sent publish successful, msg_id=0, count=10.[0m
-[0;32mI (33733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 10
-[0;32mI (36683) mqtt_stuff: sent publish successful, msg_id=0, count=11.[0m
-[0;32mI (36713) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 11
-[0;32mI (39683) mqtt_stuff: sent publish successful, msg_id=0, count=12.[0m
-[0;32mI (39733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 12
-[0;32mI (42683) mqtt_stuff: sent publish successful, msg_id=0, count=13.[0m
-[0;32mI (42723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 13
-[0;32mI (45683) mqtt_stuff: sent publish successful, msg_id=0, count=14.[0m
-[0;32mI (45943) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 14
-[0;32mI (48683) mqtt_stuff: sent publish successful, msg_id=0, count=15.[0m
-[0;32mI (48733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 15
-[0;32mI (51683) mqtt_stuff: sent publish successful, msg_id=0, count=16.[0m
-[0;32mI (51723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 16
-[0;32mI (54683) mqtt_stuff: sent publish successful, msg_id=0, count=17.[0m
-[0;32mI (54723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 17
-[0;32mI (57683) mqtt_stuff: sent publish successful, msg_id=0, count=18.[0m
-[0;32mI (57923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 18
-[0;32mI (60683) mqtt_stuff: sent publish successful, msg_id=0, count=19.[0m
-[0;32mI (60993) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 19
-[0;32mI (63143) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 0
-[0;32mI (63683) mqtt_stuff: sent publish successful, msg_id=0, count=20.[0m
-[0;32mI (63733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 20
-[0;32mI (66683) mqtt_stuff: sent publish successful, msg_id=0, count=21.[0m
-[0;32mI (66743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 21
-[0;32mI (69683) mqtt_stuff: sent publish successful, msg_id=0, count=22.[0m
-[0;32mI (69903) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 22
-[0;32mI (72683) mqtt_stuff: sent publish successful, msg_id=0, count=23.[0m
-[0;32mI (72743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 23
-[0;32mI (75683) mqtt_stuff: sent publish successful, msg_id=0, count=24.[0m
-[0;32mI (75723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 24
-[0;32mI (78683) mqtt_stuff: sent publish successful, msg_id=0, count=25.[0m
-[0;32mI (78723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 25
-ets Jun  8 2016 00:22:57
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7132
-ho 0 tail 12 room 4
-load:0x40078000,len:15708
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3884
-entry 0x40080650
-[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
-[0;32mI (32) boot: compile time Sep  2 2023 16:32:24[0m
-[0;32mI (34) boot: Multicore bootloader[0m
-[0;32mI (39) boot: chip revision: v1.0[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
-[0;32mI (56) boot: Enabling RNG early entropy source...[0m
-[0;32mI (62) boot: Partition Table:[0m
-[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (80) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (87) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (95) boot:  3 storage          Unknown data     01 82 00110000 00100000[0m
-[0;32mI (102) boot: End of partition table[0m
-[0;32mI (107) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a434h (173108) map[0m
-[0;32mI (178) esp_image: segment 1: paddr=0003a45c vaddr=3ffb0000 size=03800h ( 14336) load[0m
-[0;32mI (184) esp_image: segment 2: paddr=0003dc64 vaddr=40080000 size=023b4h (  9140) load[0m
-[0;32mI (188) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4d2ch (675116) map[0m
-[0;32mI (436) esp_image: segment 4: paddr=000e4d54 vaddr=400823b4 size=13278h ( 78456) load[0m
-[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (479) boot: Disabling RNG early entropy source...[0m
-[0;32mI (491) cpu_start: Multicore app[0m
-[0;32mI (491) cpu_start: Pro cpu up.[0m
-[0;32mI (491) cpu_start: Starting app cpu, entry point is 0x400811d4[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (511) cpu_start: Pro cpu start user code[0m
-[0;32mI (511) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (511) cpu_start: Application information:[0m
-[0;32mI (516) cpu_start: Project name:     esp32_spiffs_webserver[0m
-[0;32mI (522) cpu_start: App version:      7d00832-dirty[0m
-[0;32mI (528) cpu_start: Compile time:     Sep  2 2023 16:32:03[0m
-[0;32mI (534) cpu_start: ELF file SHA256:  4fa3c0134...[0m
-[0;32mI (539) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
-[0;32mI (546) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (551) cpu_start: Max chip rev:     v3.99 [0m
-[0;32mI (556) cpu_start: Chip rev:         v1.0[0m
-[0;32mI (561) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (568) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (574) heap_init: At 3FFC20C0 len 0001DF40 (119 KiB): DRAM[0m
-[0;32mI (580) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (586) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (593) heap_init: At 4009562C len 0000A9D4 (42 KiB): IRAM[0m
-[0;32mI (601) spi_flash: detected chip: generic[0m
-[0;32mI (604) spi_flash: flash io: dio[0m
-[0;32mI (608) app_start: Starting scheduler on CPU0[0m
-[0;32mI (613) app_start: Starting scheduler on CPU1[0m
-[0;32mI (613) main_task: Started on CPU0[0m
-[0;32mI (623) main_task: Calling app_main()[0m
-[0;32mI (673) MAIN: Main app starting
-[0m
-[0;32mI (673) wifi_setup: wifi_init begin
-[0m
-I (683) wifi:wifi driver task: 3ffcc308, prio:23, stack:6656, core=0
-I (713) wifi:wifi firmware version: 3e5caf3
-I (713) wifi:wifi certification version: v7.0
-I (713) wifi:config NVS flash: enabled
-I (713) wifi:config nano formating: disabled
-I (713) wifi:Init data frame dynamic rx buffer num: 32
-I (713) wifi:Init management frame dynamic rx buffer num: 32
-I (723) wifi:Init management short buffer num: 32
-I (723) wifi:Init dynamic tx buffer num: 32
-I (733) wifi:Init static rx buffer size: 1600
-I (733) wifi:Init static rx buffer num: 10
-I (743) wifi:Init dynamic rx buffer num: 32
-[0;32mI (743) wifi_init: rx ba win: 6[0m
-[0;32mI (743) wifi_init: tcpip mbox: 32[0m
-[0;32mI (753) wifi_init: udp mbox: 6[0m
-[0;32mI (753) wifi_init: tcp mbox: 6[0m
-[0;32mI (763) wifi_init: tcp tx win: 5744[0m
-[0;32mI (763) wifi_init: tcp rx win: 5744[0m
-[0;32mI (763) wifi_init: tcp mss: 1440[0m
-[0;32mI (773) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (923) wifi_setup: Entering from_ap_to_sta.
-[0m
-[0;32mI (923) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
-I (1023) wifi:mode : sta (3c:61:05:15:80:c0)
-I (1023) wifi:enable tsf
-I (1033) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
-I (1043) wifi:state: init -> auth (b0)
-I (1043) wifi:state: auth -> assoc (0)
-I (1043) wifi:state: assoc -> run (10)
-I (1133) wifi:connected with Jenny, aid = 3, channel 11, BW20, bssid = 98:9d:5d:9b:ee:a4
-I (1133) wifi:security: WPA2-PSK, phy: bgn, rssi: -67
-I (1133) wifi:pm start, type: 1
-
-I (1203) wifi:AP's beacon interval = 102400 us, DTIM period = 3
-I (1653) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
-[0;32mI (2643) wifi_setup: got ip:10.0.0.75[0m
-[0;32mI (2643) esp_netif_handlers: sta ip: 10.0.0.75, mask: 255.255.255.0, gw: 10.0.0.1[0m
-[0;32mI (2643) wifi_setup: connected to ap SSID:Jenny password:4168386922[0m
-I (3663) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:0, winSize:64
-[0;32mI (3673) mqtt_stuff: mqtt_app_start[0m
-[0;32mI (3673) mqtt_stuff: [APP] Free memory: 170692 bytes[0m
-[0;32mI (3673) mqtt_stuff: Other event id:7[0m
-[0;32mI (5023) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
-[0;32mI (5023) mqtt_stuff: sent subscribe successful, msg_id=10700[0m
-[0;32mI (5023) mqtt_stuff: sent subscribe successful, msg_id=12742[0m
-[0;32mI (5113) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=10700[0m
-[0;32mI (5113) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5153) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=12742[0m
-[0;32mI (5163) mqtt_stuff: sent publish successful, msg_id=0[0m
-[0;32mI (5203) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (5243) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=data
-[0;32mI (6683) mqtt_stuff: sent publish successful, msg_id=0, count=1.[0m
-[0;32mI (6743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 1
-[0;32mI (7663) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages: 0
-[0;32mI (9683) mqtt_stuff: sent publish successful, msg_id=0, count=2.[0m
-[0;32mI (9813) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 2
-[0;32mI (12683) mqtt_stuff: sent publish successful, msg_id=0, count=3.[0m
-[0;32mI (12743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 3
-[0;32mI (15683) mqtt_stuff: sent publish successful, msg_id=0, count=4.[0m
-[0;32mI (15743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 4
-[0;32mI (18683) mqtt_stuff: sent publish successful, msg_id=0, count=5.[0m
-[0;32mI (18723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 5
-[0;32mI (21683) mqtt_stuff: sent publish successful, msg_id=0, count=6.[0m
-[0;32mI (21733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 6
-[0;32mI (24683) mqtt_stuff: sent publish successful, msg_id=0, count=7.[0m
-[0;32mI (24723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 7
-[0;32mI (27683) mqtt_stuff: sent publish successful, msg_id=0, count=8.[0m
-[0;32mI (27733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 8
-[0;32mI (30683) mqtt_stuff: sent publish successful, msg_id=0, count=9.[0m
-[0;32mI (31013) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 9
-[0;32mI (33683) mqtt_stuff: sent publish successful, msg_id=0, count=10.[0m
-[0;32mI (33773) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 10
-[0;32mI (35923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages###############: 0
-[0;32mI (36683) mqtt_stuff: sent publish successful, msg_id=0, count=11.[0m
-[0;32mI (36733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 11
-[0;32mI (39683) mqtt_stuff: sent publish successful, msg_id=0, count=12.[0m
-[0;32mI (39923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 12
-[0;32mI (42683) mqtt_stuff: sent publish successful, msg_id=0, count=13.[0m
-[0;32mI (42723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 13
-[0;32mI (45683) mqtt_stuff: sent publish successful, msg_id=0, count=14.[0m
-[0;32mI (45723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 14
-[0;32mI (48683) mqtt_stuff: sent publish successful, msg_id=0, count=15.[0m
-[0;32mI (48823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 15
-[0;32mI (51283) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages##################################################: 0
-[0;32mI (51683) mqtt_stuff: sent publish successful, msg_id=0, count=16.[0m
-[0;32mI (51723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 16
-[0;32mI (54683) mqtt_stuff: sent publish successful, msg_id=0, count=17.[0m
-[0;32mI (54803) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 17
-[0;32mI (57683) mqtt_stuff: sent publish successful, msg_id=0, count=18.[0m
-[0;32mI (58043) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 18
-[0;32mI (60683) mqtt_stuff: sent publish successful, msg_id=0, count=19.[0m
-[0;32mI (60733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 19
-[0;32mI (63683) mqtt_stuff: sent publish successful, msg_id=0, count=20.[0m
-[0;32mI (63723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 20
-[0;32mI (66683) mqtt_stuff: sent publish successful, msg_id=0, count=21.[0m
-[0;32mI (66723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 21
-[0;32mI (69683) mqtt_stuff: sent publish successful, msg_id=0, count=22.[0m
-[0;32mI (69763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 22
-[0;32mI (72683) mqtt_stuff: sent publish successful, msg_id=0, count=23.[0m
-[0;32mI (72753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 23
-[0;32mI (75683) mqtt_stuff: sent publish successful, msg_id=0, count=24.[0m
-[0;32mI (75723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 24
-[0;32mI (78683) mqtt_stuff: sent publish successful, msg_id=0, count=25.[0m
-[0;32mI (78733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 25
-[0;32mI (81683) mqtt_stuff: sent publish successful, msg_id=0, count=26.[0m
-[0;32mI (81723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 26
-[0;32mI (84683) mqtt_stuff: sent publish successful, msg_id=0, count=27.[0m
-[0;32mI (84723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 27
-[0;32mI (87683) mqtt_stuff: sent publish successful, msg_id=0, count=28.[0m
-[0;32mI (87723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 28
-[0;32mI (90683) mqtt_stuff: sent publish successful, msg_id=0, count=29.[0m
-[0;32mI (90923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 29
-[0;32mI (92453) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages##################################################: 0
-[0;32mI (93683) mqtt_stuff: sent publish successful, msg_id=0, count=30.[0m
-[0;32mI (93743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 30
-[0;32mI (96683) mqtt_stuff: sent publish successful, msg_id=0, count=31.[0m
-[0;32mI (96723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 31
-[0;32mI (98593) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos1
-DATA=messages##################################################: 0
-[0;32mI (99683) mqtt_stuff: sent publish successful, msg_id=0, count=32.[0m
-[0;32mI (99723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 32
-[0;32mI (102683) mqtt_stuff: sent publish successful, msg_id=0, count=33.[0m
-[0;32mI (102723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 33
-[0;32mI (105683) mqtt_stuff: sent publish successful, msg_id=0, count=34.[0m
-[0;32mI (105963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 34
-[0;32mI (108683) mqtt_stuff: sent publish successful, msg_id=0, count=35.[0m
-[0;32mI (108723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 35
-[0;32mI (111683) mqtt_stuff: sent publish successful, msg_id=0, count=36.[0m
-[0;32mI (111733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 36
-[0;32mI (114683) mqtt_stuff: sent publish successful, msg_id=0, count=37.[0m
-[0;32mI (114723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 37
-[0;32mI (117683) mqtt_stuff: sent publish successful, msg_id=0, count=38.[0m
-[0;32mI (117733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 38
-[0;32mI (120683) mqtt_stuff: sent publish successful, msg_id=0, count=39.[0m
-[0;32mI (121023) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 39
-[0;32mI (123683) mqtt_stuff: sent publish successful, msg_id=0, count=40.[0m
-[0;32mI (123733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 40
-[0;32mI (126683) mqtt_stuff: sent publish successful, msg_id=0, count=41.[0m
-[0;32mI (126723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 41
-[0;32mI (129683) mqtt_stuff: sent publish successful, msg_id=0, count=42.[0m
-[0;32mI (129733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 42
-[0;32mI (132683) mqtt_stuff: sent publish successful, msg_id=0, count=43.[0m
-[0;32mI (132723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 43
-[0;32mI (135683) mqtt_stuff: sent publish successful, msg_id=0, count=44.[0m
-[0;32mI (135733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 44
-[0;32mI (138683) mqtt_stuff: sent publish successful, msg_id=0, count=45.[0m
-[0;32mI (138733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 45
-[0;32mI (141683) mqtt_stuff: sent publish successful, msg_id=0, count=46.[0m
-[0;32mI (141723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 46
-[0;32mI (144683) mqtt_stuff: sent publish successful, msg_id=0, count=47.[0m
-[0;32mI (144723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 47
-[0;32mI (147683) mqtt_stuff: sent publish successful, msg_id=0, count=48.[0m
-[0;32mI (147723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 48
-[0;32mI (150683) mqtt_stuff: sent publish successful, msg_id=0, count=49.[0m
-[0;32mI (150723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 49
-[0;32mI (153683) mqtt_stuff: sent publish successful, msg_id=0, count=50.[0m
-[0;32mI (153723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 50
-[0;32mI (156683) mqtt_stuff: sent publish successful, msg_id=0, count=51.[0m
-[0;32mI (156963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 51
-[0;32mI (159683) mqtt_stuff: sent publish successful, msg_id=0, count=52.[0m
-[0;32mI (159743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 52
-[0;32mI (162683) mqtt_stuff: sent publish successful, msg_id=0, count=53.[0m
-[0;32mI (162723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 53
-[0;32mI (165683) mqtt_stuff: sent publish successful, msg_id=0, count=54.[0m
-[0;32mI (165733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 54
-[0;32mI (168683) mqtt_stuff: sent publish successful, msg_id=0, count=55.[0m
-[0;32mI (168723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 55
-[0;32mI (171683) mqtt_stuff: sent publish successful, msg_id=0, count=56.[0m
-[0;32mI (171723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 56
-[0;32mI (174683) mqtt_stuff: sent publish successful, msg_id=0, count=57.[0m
-[0;32mI (174733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 57
-[0;32mI (177683) mqtt_stuff: sent publish successful, msg_id=0, count=58.[0m
-[0;32mI (177733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 58
-[0;32mI (180683) mqtt_stuff: sent publish successful, msg_id=0, count=59.[0m
-[0;32mI (180723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 59
-[0;32mI (183683) mqtt_stuff: sent publish successful, msg_id=0, count=60.[0m
-[0;32mI (184003) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 60
-[0;32mI (186683) mqtt_stuff: sent publish successful, msg_id=0, count=61.[0m
-[0;32mI (186743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 61
-[0;32mI (189683) mqtt_stuff: sent publish successful, msg_id=0, count=62.[0m
-[0;32mI (189733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 62
-[0;32mI (192683) mqtt_stuff: sent publish successful, msg_id=0, count=63.[0m
-[0;32mI (192733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 63
-[0;32mI (195683) mqtt_stuff: sent publish successful, msg_id=0, count=64.[0m
-[0;32mI (195723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 64
-[0;32mI (198683) mqtt_stuff: sent publish successful, msg_id=0, count=65.[0m
-[0;32mI (198723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 65
-[0;32mI (201683) mqtt_stuff: sent publish successful, msg_id=0, count=66.[0m
-[0;32mI (201723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 66
-[0;32mI (204683) mqtt_stuff: sent publish successful, msg_id=0, count=67.[0m
-[0;32mI (204733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 67
-[0;32mI (207683) mqtt_stuff: sent publish successful, msg_id=0, count=68.[0m
-[0;32mI (207733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 68
-[0;32mI (210683) mqtt_stuff: sent publish successful, msg_id=0, count=69.[0m
-[0;32mI (210723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 69
-[0;32mI (213683) mqtt_stuff: sent publish successful, msg_id=0, count=70.[0m
-[0;32mI (213723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 70
-[0;32mI (216683) mqtt_stuff: sent publish successful, msg_id=0, count=71.[0m
-[0;32mI (216723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 71
-[0;32mI (219683) mqtt_stuff: sent publish successful, msg_id=0, count=72.[0m
-[0;32mI (219723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 72
-[0;32mI (222683) mqtt_stuff: sent publish successful, msg_id=0, count=73.[0m
-[0;32mI (222733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 73
-[0;32mI (225683) mqtt_stuff: sent publish successful, msg_id=0, count=74.[0m
-[0;32mI (225773) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 74
-[0;32mI (228683) mqtt_stuff: sent publish successful, msg_id=0, count=75.[0m
-[0;32mI (228723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 75
-[0;32mI (231683) mqtt_stuff: sent publish successful, msg_id=0, count=76.[0m
-[0;32mI (231723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 76
-[0;32mI (234683) mqtt_stuff: sent publish successful, msg_id=0, count=77.[0m
-[0;32mI (234993) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 77
-[0;32mI (237683) mqtt_stuff: sent publish successful, msg_id=0, count=78.[0m
-[0;32mI (237723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 78
-[0;32mI (240683) mqtt_stuff: sent publish successful, msg_id=0, count=79.[0m
-[0;32mI (240733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 79
-[0;32mI (243683) mqtt_stuff: sent publish successful, msg_id=0, count=80.[0m
-[0;32mI (243733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 80
-[0;32mI (246683) mqtt_stuff: sent publish successful, msg_id=0, count=81.[0m
-[0;32mI (246733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 81
-[0;32mI (249683) mqtt_stuff: sent publish successful, msg_id=0, count=82.[0m
-[0;32mI (249733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 82
-[0;32mI (252683) mqtt_stuff: sent publish successful, msg_id=0, count=83.[0m
-[0;32mI (252723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 83
-[0;32mI (255683) mqtt_stuff: sent publish successful, msg_id=0, count=84.[0m
-[0;32mI (255733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 84
-[0;32mI (258683) mqtt_stuff: sent publish successful, msg_id=0, count=85.[0m
-[0;32mI (258753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 85
-[0;32mI (261683) mqtt_stuff: sent publish successful, msg_id=0, count=86.[0m
-[0;32mI (261723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 86
-[0;32mI (264683) mqtt_stuff: sent publish successful, msg_id=0, count=87.[0m
-[0;32mI (264733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 87
-[0;32mI (267683) mqtt_stuff: sent publish successful, msg_id=0, count=88.[0m
-[0;32mI (267723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 88
-[0;32mI (270683) mqtt_stuff: sent publish successful, msg_id=0, count=89.[0m
-[0;32mI (270723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 89
-[0;32mI (273683) mqtt_stuff: sent publish successful, msg_id=0, count=90.[0m
-[0;32mI (273733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 90
-[0;32mI (276683) mqtt_stuff: sent publish successful, msg_id=0, count=91.[0m
-[0;32mI (276723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 91
-[0;32mI (279683) mqtt_stuff: sent publish successful, msg_id=0, count=92.[0m
-[0;32mI (279723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 92
-[0;32mI (282683) mqtt_stuff: sent publish successful, msg_id=0, count=93.[0m
-[0;32mI (282723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 93
-[0;32mI (285683) mqtt_stuff: sent publish successful, msg_id=0, count=94.[0m
-[0;32mI (285733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 94
-[0;32mI (288683) mqtt_stuff: sent publish successful, msg_id=0, count=95.[0m
-[0;32mI (288723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 95
-[0;32mI (291683) mqtt_stuff: sent publish successful, msg_id=0, count=96.[0m
-[0;32mI (291733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 96
-[0;32mI (294683) mqtt_stuff: sent publish successful, msg_id=0, count=97.[0m
-[0;32mI (294733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 97
-[0;32mI (297683) mqtt_stuff: sent publish successful, msg_id=0, count=98.[0m
-[0;32mI (297723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 98
-[0;32mI (300683) mqtt_stuff: sent publish successful, msg_id=0, count=99.[0m
-[0;32mI (300723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 99
-[0;32mI (303683) mqtt_stuff: sent publish successful, msg_id=0, count=100.[0m
-[0;32mI (303733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 100
-[0;32mI (306683) mqtt_stuff: sent publish successful, msg_id=0, count=101.[0m
-[0;32mI (306723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 101
-[0;32mI (309683) mqtt_stuff: sent publish successful, msg_id=0, count=102.[0m
-[0;32mI (309723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 102
-[0;32mI (312683) mqtt_stuff: sent publish successful, msg_id=0, count=103.[0m
-[0;32mI (312723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 103
-[0;32mI (315683) mqtt_stuff: sent publish successful, msg_id=0, count=104.[0m
-[0;32mI (315743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 104
-[0;32mI (318683) mqtt_stuff: sent publish successful, msg_id=0, count=105.[0m
-[0;32mI (318723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 105
-[0;32mI (321683) mqtt_stuff: sent publish successful, msg_id=0, count=106.[0m
-[0;32mI (321743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 106
-[0;32mI (324683) mqtt_stuff: sent publish successful, msg_id=0, count=107.[0m
-[0;32mI (324753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 107
-[0;32mI (327683) mqtt_stuff: sent publish successful, msg_id=0, count=108.[0m
-[0;32mI (327723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 108
-[0;32mI (330683) mqtt_stuff: sent publish successful, msg_id=0, count=109.[0m
-[0;32mI (330723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 109
-[0;32mI (333683) mqtt_stuff: sent publish successful, msg_id=0, count=110.[0m
-[0;32mI (333723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 110
-[0;32mI (336683) mqtt_stuff: sent publish successful, msg_id=0, count=111.[0m
-[0;32mI (336723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 111
-[0;32mI (339683) mqtt_stuff: sent publish successful, msg_id=0, count=112.[0m
-[0;32mI (340053) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 112
-[0;32mI (342683) mqtt_stuff: sent publish successful, msg_id=0, count=113.[0m
-[0;32mI (342723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 113
-[0;32mI (345683) mqtt_stuff: sent publish successful, msg_id=0, count=114.[0m
-[0;32mI (345893) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 114
-[0;32mI (348683) mqtt_stuff: sent publish successful, msg_id=0, count=115.[0m
-[0;32mI (348963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 115
-[0;32mI (351683) mqtt_stuff: sent publish successful, msg_id=0, count=116.[0m
-[0;32mI (352033) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 116
-[0;32mI (354683) mqtt_stuff: sent publish successful, msg_id=0, count=117.[0m
-[0;32mI (354733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 117
-[0;32mI (357683) mqtt_stuff: sent publish successful, msg_id=0, count=118.[0m
-[0;32mI (357733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 118
-[0;32mI (360683) mqtt_stuff: sent publish successful, msg_id=0, count=119.[0m
-[0;32mI (360723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 119
-[0;32mI (363683) mqtt_stuff: sent publish successful, msg_id=0, count=120.[0m
-[0;32mI (363723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 120
-[0;32mI (366683) mqtt_stuff: sent publish successful, msg_id=0, count=121.[0m
-[0;32mI (366783) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 121
-[0;32mI (369683) mqtt_stuff: sent publish successful, msg_id=0, count=122.[0m
-[0;32mI (369723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 122
-[0;32mI (372683) mqtt_stuff: sent publish successful, msg_id=0, count=123.[0m
-[0;32mI (372723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 123
-[0;32mI (375683) mqtt_stuff: sent publish successful, msg_id=0, count=124.[0m
-[0;32mI (375743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 124
-[0;32mI (378683) mqtt_stuff: sent publish successful, msg_id=0, count=125.[0m
-[0;32mI (378783) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 125
-[0;32mI (381683) mqtt_stuff: sent publish successful, msg_id=0, count=126.[0m
-[0;32mI (381733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 126
-[0;32mI (384683) mqtt_stuff: sent publish successful, msg_id=0, count=127.[0m
-[0;32mI (384903) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 127
-[0;32mI (387683) mqtt_stuff: sent publish successful, msg_id=0, count=128.[0m
-[0;32mI (387983) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 128
-[0;32mI (390683) mqtt_stuff: sent publish successful, msg_id=0, count=129.[0m
-[0;32mI (390723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 129
-[0;32mI (393683) mqtt_stuff: sent publish successful, msg_id=0, count=130.[0m
-[0;32mI (393733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 130
-[0;32mI (396683) mqtt_stuff: sent publish successful, msg_id=0, count=131.[0m
-[0;32mI (396733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 131
-[0;32mI (399683) mqtt_stuff: sent publish successful, msg_id=0, count=132.[0m
-[0;32mI (399723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 132
-[0;32mI (402683) mqtt_stuff: sent publish successful, msg_id=0, count=133.[0m
-[0;32mI (402723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 133
-[0;32mI (405683) mqtt_stuff: sent publish successful, msg_id=0, count=134.[0m
-[0;32mI (405723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 134
-[0;32mI (408683) mqtt_stuff: sent publish successful, msg_id=0, count=135.[0m
-[0;32mI (408723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 135
-[0;32mI (411683) mqtt_stuff: sent publish successful, msg_id=0, count=136.[0m
-[0;32mI (411723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 136
-[0;32mI (414683) mqtt_stuff: sent publish successful, msg_id=0, count=137.[0m
-[0;32mI (414723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 137
-[0;32mI (417683) mqtt_stuff: sent publish successful, msg_id=0, count=138.[0m
-[0;32mI (417783) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 138
-[0;32mI (420683) mqtt_stuff: sent publish successful, msg_id=0, count=139.[0m
-[0;32mI (420723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 139
-[0;32mI (423683) mqtt_stuff: sent publish successful, msg_id=0, count=140.[0m
-[0;32mI (423733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 140
-[0;32mI (426683) mqtt_stuff: sent publish successful, msg_id=0, count=141.[0m
-[0;32mI (426723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 141
-[0;32mI (429683) mqtt_stuff: sent publish successful, msg_id=0, count=142.[0m
-[0;32mI (429723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 142
-[0;32mI (432683) mqtt_stuff: sent publish successful, msg_id=0, count=143.[0m
-[0;32mI (432723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 143
-[0;32mI (435683) mqtt_stuff: sent publish successful, msg_id=0, count=144.[0m
-[0;32mI (435723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 144
-[0;32mI (438683) mqtt_stuff: sent publish successful, msg_id=0, count=145.[0m
-[0;32mI (438733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 145
-[0;32mI (441683) mqtt_stuff: sent publish successful, msg_id=0, count=146.[0m
-[0;32mI (441733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 146
-[0;32mI (444683) mqtt_stuff: sent publish successful, msg_id=0, count=147.[0m
-[0;32mI (444733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 147
-[0;32mI (447683) mqtt_stuff: sent publish successful, msg_id=0, count=148.[0m
-[0;32mI (447723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 148
-[0;32mI (450683) mqtt_stuff: sent publish successful, msg_id=0, count=149.[0m
-[0;32mI (450723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 149
-[0;32mI (453683) mqtt_stuff: sent publish successful, msg_id=0, count=150.[0m
-[0;32mI (453723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 150
-[0;32mI (456683) mqtt_stuff: sent publish successful, msg_id=0, count=151.[0m
-[0;32mI (456723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 151
-[0;32mI (459683) mqtt_stuff: sent publish successful, msg_id=0, count=152.[0m
-[0;32mI (459723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 152
-[0;32mI (462683) mqtt_stuff: sent publish successful, msg_id=0, count=153.[0m
-[0;32mI (462723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 153
-[0;32mI (465683) mqtt_stuff: sent publish successful, msg_id=0, count=154.[0m
-[0;32mI (465723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 154
-[0;32mI (468683) mqtt_stuff: sent publish successful, msg_id=0, count=155.[0m
-[0;32mI (468723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 155
-[0;32mI (471683) mqtt_stuff: sent publish successful, msg_id=0, count=156.[0m
-[0;32mI (471723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 156
-[0;32mI (474683) mqtt_stuff: sent publish successful, msg_id=0, count=157.[0m
-[0;32mI (474733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 157
-[0;32mI (477683) mqtt_stuff: sent publish successful, msg_id=0, count=158.[0m
-[0;32mI (477743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 158
-[0;32mI (480683) mqtt_stuff: sent publish successful, msg_id=0, count=159.[0m
-[0;32mI (480723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 159
-[0;32mI (483683) mqtt_stuff: sent publish successful, msg_id=0, count=160.[0m
-[0;32mI (483723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 160
-[0;32mI (486683) mqtt_stuff: sent publish successful, msg_id=0, count=161.[0m
-[0;32mI (486723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 161
-[0;32mI (489683) mqtt_stuff: sent publish successful, msg_id=0, count=162.[0m
-[0;32mI (489723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 162
-[0;32mI (492683) mqtt_stuff: sent publish successful, msg_id=0, count=163.[0m
-[0;32mI (492723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 163
-[0;32mI (495683) mqtt_stuff: sent publish successful, msg_id=0, count=164.[0m
-[0;32mI (495743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 164
-[0;32mI (498683) mqtt_stuff: sent publish successful, msg_id=0, count=165.[0m
-[0;32mI (498733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 165
-[0;32mI (501683) mqtt_stuff: sent publish successful, msg_id=0, count=166.[0m
-[0;32mI (501953) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 166
-[0;32mI (504683) mqtt_stuff: sent publish successful, msg_id=0, count=167.[0m
-[0;32mI (504733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 167
-[0;32mI (507683) mqtt_stuff: sent publish successful, msg_id=0, count=168.[0m
-[0;32mI (507723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 168
-[0;32mI (510683) mqtt_stuff: sent publish successful, msg_id=0, count=169.[0m
-[0;32mI (510863) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 169
-[0;32mI (513683) mqtt_stuff: sent publish successful, msg_id=0, count=170.[0m
-[0;32mI (513723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 170
-[0;32mI (516683) mqtt_stuff: sent publish successful, msg_id=0, count=171.[0m
-[0;32mI (517003) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 171
-[0;32mI (519683) mqtt_stuff: sent publish successful, msg_id=0, count=172.[0m
-[0;32mI (519723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 172
-[0;32mI (522683) mqtt_stuff: sent publish successful, msg_id=0, count=173.[0m
-[0;32mI (522843) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 173
-[0;32mI (525683) mqtt_stuff: sent publish successful, msg_id=0, count=174.[0m
-[0;32mI (525733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 174
-[0;32mI (528683) mqtt_stuff: sent publish successful, msg_id=0, count=175.[0m
-[0;32mI (528983) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 175
-[0;32mI (531683) mqtt_stuff: sent publish successful, msg_id=0, count=176.[0m
-[0;32mI (531733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 176
-[0;32mI (534683) mqtt_stuff: sent publish successful, msg_id=0, count=177.[0m
-[0;32mI (534823) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 177
-[0;32mI (537683) mqtt_stuff: sent publish successful, msg_id=0, count=178.[0m
-[0;32mI (537893) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 178
-[0;32mI (540683) mqtt_stuff: sent publish successful, msg_id=0, count=179.[0m
-[0;32mI (540743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 179
-[0;32mI (543683) mqtt_stuff: sent publish successful, msg_id=0, count=180.[0m
-[0;32mI (543753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 180
-[0;32mI (546683) mqtt_stuff: sent publish successful, msg_id=0, count=181.[0m
-[0;32mI (546733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 181
-[0;32mI (549683) mqtt_stuff: sent publish successful, msg_id=0, count=182.[0m
-[0;32mI (549733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 182
-[0;32mI (552683) mqtt_stuff: sent publish successful, msg_id=0, count=183.[0m
-[0;32mI (552953) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 183
-[0;32mI (555683) mqtt_stuff: sent publish successful, msg_id=0, count=184.[0m
-[0;32mI (555733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 184
-[0;32mI (558683) mqtt_stuff: sent publish successful, msg_id=0, count=185.[0m
-[0;32mI (558753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 185
-[0;32mI (561683) mqtt_stuff: sent publish successful, msg_id=0, count=186.[0m
-[0;32mI (561723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 186
-[0;32mI (564683) mqtt_stuff: sent publish successful, msg_id=0, count=187.[0m
-[0;32mI (564733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 187
-[0;32mI (567683) mqtt_stuff: sent publish successful, msg_id=0, count=188.[0m
-[0;32mI (568003) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 188
-[0;32mI (570683) mqtt_stuff: sent publish successful, msg_id=0, count=189.[0m
-[0;32mI (570763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 189
-[0;32mI (573683) mqtt_stuff: sent publish successful, msg_id=0, count=190.[0m
-[0;32mI (573723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 190
-[0;32mI (576683) mqtt_stuff: sent publish successful, msg_id=0, count=191.[0m
-[0;32mI (576933) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 191
-[0;32mI (579683) mqtt_stuff: sent publish successful, msg_id=0, count=192.[0m
-[0;32mI (579733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 192
-[0;32mI (582683) mqtt_stuff: sent publish successful, msg_id=0, count=193.[0m
-[0;32mI (582723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 193
-[0;32mI (585683) mqtt_stuff: sent publish successful, msg_id=0, count=194.[0m
-[0;32mI (585833) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 194
-[0;32mI (588683) mqtt_stuff: sent publish successful, msg_id=0, count=195.[0m
-[0;32mI (588733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 195
-[0;32mI (591683) mqtt_stuff: sent publish successful, msg_id=0, count=196.[0m
-[0;32mI (591723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 196
-[0;32mI (594683) mqtt_stuff: sent publish successful, msg_id=0, count=197.[0m
-[0;32mI (594763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 197
-[0;32mI (597683) mqtt_stuff: sent publish successful, msg_id=0, count=198.[0m
-[0;32mI (597743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 198
-[0;32mI (600683) mqtt_stuff: sent publish successful, msg_id=0, count=199.[0m
-[0;32mI (600733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 199
-[0;32mI (603683) mqtt_stuff: sent publish successful, msg_id=0, count=200.[0m
-[0;32mI (603943) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 200
-[0;32mI (606683) mqtt_stuff: sent publish successful, msg_id=0, count=201.[0m
-[0;32mI (606753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 201
-[0;32mI (609683) mqtt_stuff: sent publish successful, msg_id=0, count=202.[0m
-[0;32mI (609783) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 202
-[0;32mI (612683) mqtt_stuff: sent publish successful, msg_id=0, count=203.[0m
-[0;32mI (612723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 203
-[0;32mI (615683) mqtt_stuff: sent publish successful, msg_id=0, count=204.[0m
-[0;32mI (615733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 204
-[0;32mI (618683) mqtt_stuff: sent publish successful, msg_id=0, count=205.[0m
-[0;32mI (618993) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 205
-[0;32mI (621683) mqtt_stuff: sent publish successful, msg_id=0, count=206.[0m
-[0;32mI (621763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 206
-[0;32mI (624683) mqtt_stuff: sent publish successful, msg_id=0, count=207.[0m
-[0;32mI (624853) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 207
-[0;32mI (627683) mqtt_stuff: sent publish successful, msg_id=0, count=208.[0m
-[0;32mI (627743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 208
-[0;32mI (630683) mqtt_stuff: sent publish successful, msg_id=0, count=209.[0m
-[0;32mI (630743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 209
-[0;32mI (633683) mqtt_stuff: sent publish successful, msg_id=0, count=210.[0m
-[0;32mI (634053) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 210
-[0;32mI (636683) mqtt_stuff: sent publish successful, msg_id=0, count=211.[0m
-[0;32mI (636733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 211
-[0;32mI (639683) mqtt_stuff: sent publish successful, msg_id=0, count=212.[0m
-[0;32mI (639743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 212
-[0;32mI (642683) mqtt_stuff: sent publish successful, msg_id=0, count=213.[0m
-[0;32mI (642743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 213
-[0;32mI (645683) mqtt_stuff: sent publish successful, msg_id=0, count=214.[0m
-[0;32mI (645743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 214
-[0;32mI (648683) mqtt_stuff: sent publish successful, msg_id=0, count=215.[0m
-[0;32mI (648723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 215
-[0;32mI (651683) mqtt_stuff: sent publish successful, msg_id=0, count=216.[0m
-[0;32mI (651723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 216
-[0;32mI (654683) mqtt_stuff: sent publish successful, msg_id=0, count=217.[0m
-[0;32mI (654723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 217
-[0;32mI (657683) mqtt_stuff: sent publish successful, msg_id=0, count=218.[0m
-[0;32mI (657723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 218
-[0;32mI (660683) mqtt_stuff: sent publish successful, msg_id=0, count=219.[0m
-[0;32mI (660733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 219
-[0;32mI (663683) mqtt_stuff: sent publish successful, msg_id=0, count=220.[0m
-[0;32mI (663853) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 220
-[0;32mI (666683) mqtt_stuff: sent publish successful, msg_id=0, count=221.[0m
-[0;32mI (666923) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 221
-[0;32mI (669683) mqtt_stuff: sent publish successful, msg_id=0, count=222.[0m
-[0;32mI (669993) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 222
-[0;32mI (672683) mqtt_stuff: sent publish successful, msg_id=0, count=223.[0m
-[0;32mI (672723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 223
-[0;32mI (675683) mqtt_stuff: sent publish successful, msg_id=0, count=224.[0m
-[0;32mI (675733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 224
-[0;32mI (678683) mqtt_stuff: sent publish successful, msg_id=0, count=225.[0m
-[0;32mI (678913) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 225
-[0;32mI (681683) mqtt_stuff: sent publish successful, msg_id=0, count=226.[0m
-[0;32mI (681733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 226
-[0;32mI (684683) mqtt_stuff: sent publish successful, msg_id=0, count=227.[0m
-[0;32mI (684753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 227
-[0;32mI (687683) mqtt_stuff: sent publish successful, msg_id=0, count=228.[0m
-[0;32mI (687723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 228
-[0;32mI (690683) mqtt_stuff: sent publish successful, msg_id=0, count=229.[0m
-[0;32mI (690733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 229
-[0;32mI (693683) mqtt_stuff: sent publish successful, msg_id=0, count=230.[0m
-[0;32mI (693973) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 230
-[0;32mI (696683) mqtt_stuff: sent publish successful, msg_id=0, count=231.[0m
-[0;32mI (696753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 231
-[0;32mI (699683) mqtt_stuff: sent publish successful, msg_id=0, count=232.[0m
-[0;32mI (700103) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 232
-[0;32mI (702683) mqtt_stuff: sent publish successful, msg_id=0, count=233.[0m
-[0;32mI (702763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 233
-[0;32mI (705683) mqtt_stuff: sent publish successful, msg_id=0, count=234.[0m
-[0;32mI (705743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 234
-[0;32mI (708683) mqtt_stuff: sent publish successful, msg_id=0, count=235.[0m
-[0;32mI (708723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 235
-[0;32mI (711683) mqtt_stuff: sent publish successful, msg_id=0, count=236.[0m
-[0;32mI (711743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 236
-[0;32mI (714683) mqtt_stuff: sent publish successful, msg_id=0, count=237.[0m
-[0;32mI (714723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 237
-[0;32mI (717683) mqtt_stuff: sent publish successful, msg_id=0, count=238.[0m
-[0;32mI (717733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 238
-[0;32mI (720683) mqtt_stuff: sent publish successful, msg_id=0, count=239.[0m
-[0;32mI (720983) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 239
-[0;32mI (723683) mqtt_stuff: sent publish successful, msg_id=0, count=240.[0m
-[0;32mI (723723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 240
-[0;32mI (726683) mqtt_stuff: sent publish successful, msg_id=0, count=241.[0m
-[0;32mI (726723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 241
-[0;32mI (729683) mqtt_stuff: sent publish successful, msg_id=0, count=242.[0m
-[0;32mI (729723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 242
-[0;32mI (732683) mqtt_stuff: sent publish successful, msg_id=0, count=243.[0m
-[0;32mI (732723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 243
-[0;32mI (735683) mqtt_stuff: sent publish successful, msg_id=0, count=244.[0m
-[0;32mI (735723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 244
-[0;32mI (738683) mqtt_stuff: sent publish successful, msg_id=0, count=245.[0m
-[0;32mI (738803) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 245
-[0;32mI (741683) mqtt_stuff: sent publish successful, msg_id=0, count=246.[0m
-[0;32mI (741873) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 246
-[0;32mI (744683) mqtt_stuff: sent publish successful, msg_id=0, count=247.[0m
-[0;32mI (744953) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 247
-[0;32mI (747683) mqtt_stuff: sent publish successful, msg_id=0, count=248.[0m
-[0;32mI (747733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 248
-[0;32mI (750683) mqtt_stuff: sent publish successful, msg_id=0, count=249.[0m
-[0;32mI (750753) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 249
-[0;32mI (753683) mqtt_stuff: sent publish successful, msg_id=0, count=250.[0m
-[0;32mI (753723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 250
-[0;32mI (756683) mqtt_stuff: sent publish successful, msg_id=0, count=251.[0m
-[0;32mI (756743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 251
-[0;32mI (759683) mqtt_stuff: sent publish successful, msg_id=0, count=252.[0m
-[0;32mI (759733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 252
-[0;32mI (762683) mqtt_stuff: sent publish successful, msg_id=0, count=253.[0m
-[0;32mI (762763) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 253
-[0;32mI (765683) mqtt_stuff: sent publish successful, msg_id=0, count=254.[0m
-[0;32mI (765723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 254
-[0;32mI (768683) mqtt_stuff: sent publish successful, msg_id=0, count=255.[0m
-[0;32mI (768733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 255
-[0;32mI (771683) mqtt_stuff: sent publish successful, msg_id=0, count=256.[0m
-[0;32mI (771983) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 256
-[0;32mI (774683) mqtt_stuff: sent publish successful, msg_id=0, count=257.[0m
-[0;32mI (774743) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 257
-[0;32mI (777683) mqtt_stuff: sent publish successful, msg_id=0, count=258.[0m
-[0;32mI (777733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 258
-[0;32mI (780683) mqtt_stuff: sent publish successful, msg_id=0, count=259.[0m
-[0;32mI (780723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 259
-[0;32mI (783683) mqtt_stuff: sent publish successful, msg_id=0, count=260.[0m
-[0;32mI (783963) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 260
-[0;32mI (786683) mqtt_stuff: sent publish successful, msg_id=0, count=261.[0m
-[0;32mI (786733) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 261
-[0;32mI (789683) mqtt_stuff: sent publish successful, msg_id=0, count=262.[0m
-[0;32mI (789723) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 262
-[0;32mI (792683) mqtt_stuff: sent publish successful, msg_id=0, count=263.[0m
-[0;32mI (792873) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 263
-[0;32mI (795683) mqtt_stuff: sent publish successful, msg_id=0, count=264.[0m
-[0;32mI (795943) mqtt_stuff: MQTT_EVENT_DATA[0m
-TOPIC=/topic/qos0
-DATA=count is: 264
