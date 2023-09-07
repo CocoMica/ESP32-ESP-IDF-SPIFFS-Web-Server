@@ -14,12 +14,22 @@ uint32_t total_received_data_len = 0;
 uint32_t targetAddress;
 static esp_ota_handle_t ota_handle;
 bool first_time = true;
-
+uint32_t data_length = 0;
+uint8_t new_partition = 0;
 // Initialize OTA update process
 esp_err_t ota_begin()
-{
-    const esp_partition_t *update_partition = esp_partition_find_first(
-        ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
+{   const esp_partition_t *active_partition = esp_ota_get_boot_partition();
+    const esp_partition_t *update_partition;
+if(strcmp(active_partition->label, "ota_0") == 0){
+    ESP_LOGI(TAG, "Current active partition is ota_0. Preparing partition ota_1 to store incoming firmware...");
+    new_partition = 1;
+    update_partition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_1, NULL);
+}else{
+     ESP_LOGI(TAG, "Current active partition is factory OR ota_1. Preparing partition ota_0 to store incoming firmware...");
+     new_partition = 0;
+     update_partition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
+}
+
     if (update_partition == NULL)
     {
         return ESP_FAIL;
@@ -52,7 +62,7 @@ void copy_data_to_ota_0(const char *data, size_t data_len)
 {
     // esp_partition_t *otaPartition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
     total_received_data_len += data_len;
-    ESP_LOGW(TAG, "copy_data_to_ota_0: Data len=%d, copy address:  0x%08lx, total_received=%ld.", data_len, targetAddress, total_received_data_len);
+    ESP_LOGI(TAG, "copy_data_to_ota_%d: Data len=%d, copy address:  0x%08lx, total_received=%ld.",new_partition, data_len, targetAddress, total_received_data_len);
     // ESP_LOGW(TAG, "copy_data_to_ota_0: Data len=%d, total_received=%ld. first character: %c: ", data_len,  total_received_data_len, data[0]);
 
     // memcpy((void*)targetAddress, data, data_len);
@@ -63,20 +73,19 @@ void copy_data_to_ota_0(const char *data, size_t data_len)
     {
         first_time = false;
         esp_err_t ret1 = ota_begin();
-        ESP_LOGI(TAG, "begining the OTA. status of OTA: %d", ret1);
+        ESP_LOGI(TAG, "begining the OTA. status of OTA: %s", esp_err_to_name(ret1));
     }
     esp_err_t ret2 = ota_write_data(data, data_len);
-    ESP_LOGW(TAG, "writing data. status: %d", ret2);
-    if (total_received_data_len == 950160)
+    ESP_LOGI(TAG, "writing data. status: %s", esp_err_to_name(ret2));
+    if (total_received_data_len == data_length)
     {
         // end
         esp_err_t ret3 = ota_end();
-        ESP_LOGI(TAG, "all data received. status of ota: %d", ret3);
-        const char *ota0_label = "ota_0";
+        ESP_LOGI(TAG, "all data received. status of ota: %s", esp_err_to_name(ret3));
         // Use esp_ota_set_boot_partition() to set ota_0 as the active partition
-        esp_ota_set_boot_partition(esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, ota0_label));
+       // esp_ota_set_boot_partition(esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, ota0_label));
         // Print a message indicating that the next boot will use ota_0
-        printf("Next boot will use ota_0 as the active partition.....\n");
+        printf("Next boot will use ota_%d as the active partition.....\n",new_partition);
         vTaskDelay(pdMS_TO_TICKS(6000));
         esp_restart();
     }
@@ -119,10 +128,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
         msg_id = esp_mqtt_client_subscribe(client, "/topic/qos0", 0);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
-
         msg_id = esp_mqtt_client_subscribe(client, "/topic/qos1", 1);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
-
         // msg_id = esp_mqtt_client_unsubscribe(client, "/topic/qos1");
         // ESP_LOGI(TAG, "sent unsubscribe successful, msg_id=%d", msg_id);
         break;
@@ -146,6 +153,12 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         if (strncmp(event->topic, "/topic/qos0", event->topic_len) == 0)
         {
             copy_data_to_ota_0(event->data, event->data_len);
+        }
+        else if (strncmp(event->topic, "/topic/qos1", event->topic_len) == 0)
+        {
+           data_length = strtoul(event->data, NULL, 10);
+            ESP_LOGI(TAG, "OTA data about to receive. total firmware size: %ld", data_length);
+            
         }
         else
         {
@@ -187,35 +200,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 void mqtt_app_start(void)
 {
     ESP_LOGI(TAG, "mqtt_app_start");
-    // Get a pointer to the currently active partition
-    const esp_partition_t *active_partition = esp_ota_get_boot_partition();
-
-    // Print information about the active partition
-    if (active_partition != NULL)
-    {
-        printf("Active Partition Label: %s\n", active_partition->label);
-        printf("Active Partition Type: %d\n", active_partition->type);
-        printf("Active Partition Subtype: %d\n", active_partition->subtype);
-        printf("Active Partition Address: 0x%08lx\n", active_partition->address);
-        printf("Active Partition Size: %ld bytes\n", active_partition->size);
-    }
-    else
-    {
-        printf("Failed to get active partition information\n");
-    }
-
-    const esp_partition_t *otaPartition = esp_partition_find_first(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_OTA_0, NULL);
-    targetAddress = otaPartition->address;
-    if (otaPartition != NULL)
-    {
-        // Print the address of the ota_0 partition
-        printf("targetaddress: 0x%08lx. OTA Partition Address: 0x%08lx\n", targetAddress, otaPartition->address);
-    }
-    else
-    {
-        printf("OTA Partition not found\n");
-    }
-
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker = {
             .address.uri = CONFIG_BROKER_URI,
@@ -224,10 +208,7 @@ void mqtt_app_start(void)
         .credentials = {
             .username = "device1",
             .authentication.password = "device001",
-
         }};
-
-    ESP_LOGI(TAG, "[APP] Free memory: %" PRIu32 " bytes", esp_get_free_heap_size());
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);

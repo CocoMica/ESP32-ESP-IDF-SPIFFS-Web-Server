@@ -13,11 +13,8 @@ void app_main()
     gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
     ESP_LOGI(TAG, "Main app starting\n");
-    ESP_LOGE(TAG, "##############################!!!!!!!!!!THIS IS THE NEW CODE !!!!!!!################\n");
-    vTaskDelay(pdMS_TO_TICKS(3000));
     xTaskCreate(read_ws_msg, "read_ws_msg", 4096, NULL, 1, NULL);
     xTaskCreate(wifi_task, "wifi_task", 4096, NULL, 1, NULL);
-    // xTaskCreate(firmware_update_init, "firmware_update_init", 4096, NULL, 1, NULL);
     int count = 0;
     send_message = "gg";
     // char sendMsg[MAX_STRING_LENGTH];
