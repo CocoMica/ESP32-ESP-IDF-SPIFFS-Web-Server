@@ -15,10 +15,13 @@
 #include "received_messages.h"
 #include "firmware_update.h"
 #include "mqtt_stuff.h"
+#include "ota_stuff.h"
+#include "machine_status.h"
+#include "storage.h"
 
 
 #define LED_PIN 2
 
-static const char *TAG = "MAIN"; // TAG for debug
+
 
 #endif

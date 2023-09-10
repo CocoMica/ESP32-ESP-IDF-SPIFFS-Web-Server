@@ -166,6 +166,8 @@ void initi_web_page_buffer(void)
         ESP_LOGE(TAG, "image fread failed");
     }
     fclose(fp4);
+
+    esp_vfs_spiffs_unregister(conf.partition_label);
 }
 
 //---index.html functions---//

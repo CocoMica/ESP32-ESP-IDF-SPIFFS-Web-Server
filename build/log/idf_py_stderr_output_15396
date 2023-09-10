@@ -1,0 +1,93 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- idf_monitor on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+[0m
+[0;33m0x4016624f: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1524
+[0m
+[0;33m0x401678f9: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:34 (discriminator 5)
+[0m
+[0;33m0x40174e55: esp_log_writev at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x4008e495: esp_log_write at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x400d8c80: init_storage_nvs at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/storage.c:24
+[0m
+[0;33m0x400d7c7d: app_main at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/main.c:13 (discriminator 2)
+[0m
+[0;33m0x4017451f: main_task at D:/Softwares/ESP-IDF/esp-idf/components/freertos/app_startup.c:217 (discriminator 13)
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+[0m
+[0;33m0x4016624f: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1524
+[0m
+[0;33m0x401678f9: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:34 (discriminator 5)
+[0m
+[0;33m0x40174e55: esp_log_writev at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x4008e495: esp_log_write at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x400d8c80: init_storage_nvs at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/storage.c:24
+[0m
+[0;33m0x400d7c7d: app_main at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/main.c:13 (discriminator 2)
+[0m
+[0;33m0x4017451f: main_task at D:/Softwares/ESP-IDF/esp-idf/components/freertos/app_startup.c:217 (discriminator 13)
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+[0m
+[0;33m0x4016624f: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1524
+[0m
+[0;33m0x401678f9: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:34 (discriminator 5)
+[0m
+[0;33m0x40174e55: esp_log_writev at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x4008e495: esp_log_write at D:/Softwares/ESP-IDF/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x400d8c80: init_storage_nvs at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/storage.c:24
+[0m
+[0;33m0x400d7c7d: app_main at D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/main.c:13 (discriminator 2)
+[0m
+[0;33m0x4017451f: main_task at D:/Softwares/ESP-IDF/esp-idf/components/freertos/app_startup.c:217 (discriminator 13)
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0m

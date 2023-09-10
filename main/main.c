@@ -1,5 +1,5 @@
 #include "inc/main.h"
-
+static const char *TAG = "MAIN"; // TAG for debug
 void app_main()
 {
     // Initialize NVS
@@ -13,6 +13,7 @@ void app_main()
     gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
     ESP_LOGI(TAG, "Main app starting\n");
+    ESP_reset_reason();
     xTaskCreate(read_ws_msg, "read_ws_msg", 4096, NULL, 1, NULL);
     xTaskCreate(wifi_task, "wifi_task", 4096, NULL, 1, NULL);
     int count = 0;

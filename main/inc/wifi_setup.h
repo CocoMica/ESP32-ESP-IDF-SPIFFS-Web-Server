@@ -18,14 +18,7 @@
 #include <lwip/netdb.h>
 #include "url_stuff.h"
 #include "received_messages.h"
-
- #define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
-//#define EXAMPLE_ESP_WIFI_SSID "eeddd"
-#define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
-#define EXAMPLE_ESP_MAXIMUM_RETRY CONFIG_ESP_MAXIMUM_RETRY
-
-#define EXAMPLE_ESP_AP_SSID CONFIG_ESP_AP_SSID
-#define EXAMPLE_ESP_AP_PASSWORD CONFIG_ESP_AP_PASSWORD
+#include "storage.h"
 
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT BIT1
