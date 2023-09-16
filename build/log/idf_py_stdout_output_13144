@@ -1,0 +1,1338 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 10 2023 14:33:40[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (87) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (102) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (117) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (129) boot: Defaulting to factory image[0m
+[0;32mI (134) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=2b408h (177160) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=0004b430 vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=0004ec38 vaddr=40080000 size=013e0h (  5088) load[0m
+[0;32mI (215) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a6508h (681224) map[0m
+[0;32mI (467) esp_image: segment 4: paddr=000f6530 vaddr=400813e0 size=14284h ( 82564) load[0m
+[0;32mI (512) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (512) boot: Disabling RNG early entropy source...[0m
+[0;32mI (524) cpu_start: Multicore app[0m
+[0;32mI (524) cpu_start: Pro cpu up.[0m
+[0;32mI (524) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (555) cpu_start: App version:      b25803e-dirty[0m
+[0;32mI (560) cpu_start: Compile time:     Sep 10 2023 14:33:14[0m
+[0;32mI (567) cpu_start: ELF file SHA256:  203096f2d...[0m
+[0;32mI (572) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (579) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (584) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (588) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (593) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (601) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFC21C0 len 0001DE40 (119 KiB): DRAM[0m
+[0;32mI (613) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (619) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (633) spi_flash: detected chip: generic[0m
+[0;32mI (636) spi_flash: flash io: dio[0m
+[0;32mI (641) app_start: Starting scheduler on CPU0[0m
+[0;32mI (645) app_start: Starting scheduler on CPU1[0m
+[0;32mI (645) main_task: Started on CPU0[0m
+[0;32mI (655) main_task: Calling app_main()[0m
+[0;32mI (715) MAIN: Main app starting
+[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+machine_info.wifi_info.max_retries = 5
+[0;33mW (735) machine_status: ESP32 last Reset reason: Power-on reset[0m
+[0;32mI (745) wifi_setup: wifi_init begin
+[0m
+I (765) wifi:wifi driver task: 3ffcc4f0, prio:23, stack:6656, core=0
+I (785) wifi:wifi firmware version: 3e5caf3
+I (795) wifi:wifi certification version: v7.0
+I (795) wifi:config NVS flash: enabled
+I (795) wifi:config nano formating: disabled
+I (795) wifi:Init data frame dynamic rx buffer num: 32
+I (795) wifi:Init management frame dynamic rx buffer num: 32
+I (805) wifi:Init management short buffer num: 32
+I (805) wifi:Init dynamic tx buffer num: 32
+I (815) wifi:Init static rx buffer size: 1600
+I (815) wifi:Init static rx buffer num: 10
+I (825) wifi:Init dynamic rx buffer num: 32
+[0;32mI (825) wifi_init: rx ba win: 6[0m
+[0;32mI (825) wifi_init: tcpip mbox: 32[0m
+[0;32mI (835) wifi_init: udp mbox: 6[0m
+[0;32mI (835) wifi_init: tcp mbox: 6[0m
+[0;32mI (845) wifi_init: tcp tx win: 5744[0m
+[0;32mI (845) wifi_init: tcp rx win: 5744[0m
+[0;32mI (845) wifi_init: tcp mss: 1440[0m
+[0;32mI (855) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (855) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1025) wifi:enable tsf
+I (1765) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1765) wifi:state: init -> auth (b0)
+I (1775) wifi:state: auth -> assoc (0)
+I (1795) wifi:state: assoc -> run (10)
+I (1915) wifi:connected with Jenny, aid = 13, channel 6, BW20, bssid = 50:d4:f7:cd:9a:01
+I (1915) wifi:security: WPA2-PSK, phy: bgn, rssi: -65
+I (1915) wifi:pm start, type: 1
+
+I (1975) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 10 2023 14:33:40[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (87) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (102) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (117) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (129) boot: Defaulting to factory image[0m
+[0;32mI (134) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=2b408h (177160) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=0004b430 vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=0004ec38 vaddr=40080000 size=013e0h (  5088) load[0m
+[0;32mI (215) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a6508h (681224) map[0m
+[0;32mI (467) esp_image: segment 4: paddr=000f6530 vaddr=400813e0 size=14284h ( 82564) load[0m
+[0;32mI (512) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (512) boot: Disabling RNG early entropy source...[0m
+[0;32mI (524) cpu_start: Multicore app[0m
+[0;32mI (524) cpu_start: Pro cpu up.[0m
+[0;32mI (524) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (555) cpu_start: App version:      b25803e-dirty[0m
+[0;32mI (560) cpu_start: Compile time:     Sep 10 2023 14:33:14[0m
+[0;32mI (567) cpu_start: ELF file SHA256:  203096f2d...[0m
+[0;32mI (572) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (579) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (584) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (588) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (593) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (601) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFC21C0 len 0001DE40 (119 KiB): DRAM[0m
+[0;32mI (613) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (619) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (625) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (633) spi_flash: detected chip: generic[0m
+[0;32mI (636) spi_flash: flash io: dio[0m
+[0;32mI (641) app_start: Starting scheduler on CPU0[0m
+[0;32mI (645) app_start: Starting scheduler on CPU1[0m
+[0;32mI (645) main_task: Started on CPU0[0m
+[0;32mI (655) main_task: Calling app_main()[0m
+[0;32mI (715) MAIN: Main app starting
+[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+machine_info.wifi_info.max_retries = 5
+[0;33mW (735) machine_status: ESP32 last Reset reason: Power-on reset[0m
+[0;32mI (745) wifi_setup: wifi_init begin
+[0m
+I (765) wifi:wifi driver task: 3ffcc4f0, prio:23, stack:6656, core=0
+I (785) wifi:wifi firmware version: 3e5caf3
+I (795) wifi:wifi certification version: v7.0
+I (795) wifi:config NVS flash: enabled
+I (795) wifi:config nano formating: disabled
+I (795) wifi:Init data frame dynamic rx buffer num: 32
+I (795) wifi:Init management frame dynamic rx buffer num: 32
+I (805) wifi:Init management short buffer num: 32
+I (805) wifi:Init dynamic tx buffer num: 32
+I (815) wifi:Init static rx buffer size: 1600
+I (815) wifi:Init static rx buffer num: 10
+I (825) wifi:Init dynamic rx buffer num: 32
+[0;32mI (825) wifi_init: rx ba win: 6[0m
+[0;32mI (825) wifi_init: tcpip mbox: 32[0m
+[0;32mI (835) wifi_init: udp mbox: 6[0m
+[0;32mI (835) wifi_init: tcp mbox: 6[0m
+[0;32mI (845) wifi_init: tcp tx win: 5744[0m
+[0;32mI (845) wifi_init: tcp rx win: 5744[0m
+[0;32mI (845) wifi_init: tcp mss: 1440[0m
+[0;32mI (855) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (855) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1025) wifi:enable tsf
+I (1785) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1785) wifi:state: init -> auth (b0)
+I (1795) wifi:state: auth -> assoc (0)
+I (1815) wifi:state: assoc -> run (10)
+I (1855) wifi:connected with Jenny, aid = 3, channel 6, BW20, bssid = 98:9d:5d:9b:ee:a4
+I (1855) wifi:security: WPA2-PSK, phy: bgn, rssi: -67
+I (1855) wifi:pm start, type: 1
+
+I (1885) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+I (1895) wifi:<ba-add>idx:0 (ifx:0, 98:9d:5d:9b:ee:a4), tid:6, ssn:1, winSize:64
+I (2095) wifi:<ba-add>idx:1 (ifx:0, 98:9d:5d:9b:ee:a4), tid:0, ssn:0, winSize:64
+[0;32mI (3365) wifi_setup: got ip:10.0.0.76[0m
+[0;32mI (3365) esp_netif_handlers: sta ip: 10.0.0.76, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (3365) wifi_setup: connected to ap SSID: Jenny password: 4168386922[0m
+[0;32mI (3745) mqtt_stuff: mqtt_app_start[0m
+[0;32mI (3745) mqtt_stuff: Other event id:7[0m
+[0;32mI (3745) MAIN: exiting while loop[0m
+[0;32mI (3745) main_task: Returned from app_main()[0m
+[0;32mI (5005) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5015) ota_stuff: Subscribe successful, msg_id=27806[0m
+[0;32mI (5015) ota_stuff: Subscribe successful, msg_id=46908[0m
+[0;32mI (5075) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=27806[0m
+[0;32mI (5135) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=46908[0m
+[0;32mI (9795) ota_stuff: OTA data about to receive. total firmware size: 960480[0m
+[0;32mI (15645) ota_stuff: Current active partition is factory OR ota_1. Preparing partition ota_0 to store incoming firmware...[0m
+[0;32mI (19055) ota_stuff: begining the OTA. status of OTA: ESP_OK[0m
+[0;32mI (19065) ota_stuff: Target partition: ota_0: Data len: 1006, target address: 0x00000000, total_received: 1006, writing data status: ESP_OK[0m
+[0;32mI (19075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000003ee, total_received: 2030, writing data status: ESP_OK[0m
+[0;32mI (19085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000007ee, total_received: 3054, writing data status: ESP_OK[0m
+[0;32mI (19095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00000bee, total_received: 4078, writing data status: ESP_OK[0m
+[0;32mI (19115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00000fee, total_received: 5102, writing data status: ESP_OK[0m
+[0;32mI (19125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000013ee, total_received: 6126, writing data status: ESP_OK[0m
+[0;32mI (19155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000017ee, total_received: 7150, writing data status: ESP_OK[0m
+[0;32mI (19155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00001bee, total_received: 8174, writing data status: ESP_OK[0m
+[0;32mI (19175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00001fee, total_received: 9198, writing data status: ESP_OK[0m
+[0;32mI (19185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000023ee, total_received: 10222, writing data status: ESP_OK[0m
+[0;32mI (19255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000027ee, total_received: 11246, writing data status: ESP_OK[0m
+[0;32mI (19265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00002bee, total_received: 12270, writing data status: ESP_OK[0m
+[0;32mI (19285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00002fee, total_received: 13294, writing data status: ESP_OK[0m
+[0;32mI (19295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000033ee, total_received: 14318, writing data status: ESP_OK[0m
+[0;32mI (19315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000037ee, total_received: 15342, writing data status: ESP_OK[0m
+[0;32mI (19325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00003bee, total_received: 16366, writing data status: ESP_OK[0m
+[0;32mI (19515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00003fee, total_received: 17390, writing data status: ESP_OK[0m
+[0;32mI (19515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000043ee, total_received: 18414, writing data status: ESP_OK[0m
+[0;32mI (19525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000047ee, total_received: 19438, writing data status: ESP_OK[0m
+[0;32mI (19545) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00004bee, total_received: 20462, writing data status: ESP_OK[0m
+[0;32mI (19555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00004fee, total_received: 21486, writing data status: ESP_OK[0m
+[0;32mI (19565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000053ee, total_received: 22510, writing data status: ESP_OK[0m
+[0;32mI (19585) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000057ee, total_received: 23534, writing data status: ESP_OK[0m
+[0;32mI (19595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00005bee, total_received: 24558, writing data status: ESP_OK[0m
+[0;32mI (19605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00005fee, total_received: 25582, writing data status: ESP_OK[0m
+[0;32mI (19625) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000063ee, total_received: 26606, writing data status: ESP_OK[0m
+[0;32mI (19635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000067ee, total_received: 27630, writing data status: ESP_OK[0m
+[0;32mI (19645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00006bee, total_received: 28654, writing data status: ESP_OK[0m
+[0;32mI (19665) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00006fee, total_received: 29678, writing data status: ESP_OK[0m
+[0;32mI (19675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000073ee, total_received: 30702, writing data status: ESP_OK[0m
+[0;32mI (19685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000077ee, total_received: 31726, writing data status: ESP_OK[0m
+[0;32mI (19705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00007bee, total_received: 32750, writing data status: ESP_OK[0m
+[0;32mI (19905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00007fee, total_received: 33774, writing data status: ESP_OK[0m
+[0;32mI (19915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000083ee, total_received: 34798, writing data status: ESP_OK[0m
+[0;32mI (19925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000087ee, total_received: 35822, writing data status: ESP_OK[0m
+[0;32mI (19935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00008bee, total_received: 36846, writing data status: ESP_OK[0m
+[0;32mI (19955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00008fee, total_received: 37870, writing data status: ESP_OK[0m
+[0;32mI (19965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000093ee, total_received: 38894, writing data status: ESP_OK[0m
+[0;32mI (19975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000097ee, total_received: 39918, writing data status: ESP_OK[0m
+[0;32mI (19995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00009bee, total_received: 40942, writing data status: ESP_OK[0m
+[0;32mI (20005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00009fee, total_received: 41966, writing data status: ESP_OK[0m
+[0;32mI (20015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000a3ee, total_received: 42990, writing data status: ESP_OK[0m
+[0;32mI (20035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000a7ee, total_received: 44014, writing data status: ESP_OK[0m
+[0;32mI (20045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000abee, total_received: 45038, writing data status: ESP_OK[0m
+[0;32mI (20055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000afee, total_received: 46062, writing data status: ESP_OK[0m
+[0;32mI (20075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000b3ee, total_received: 47086, writing data status: ESP_OK[0m
+[0;32mI (20085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000b7ee, total_received: 48110, writing data status: ESP_OK[0m
+[0;32mI (20095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000bbee, total_received: 49134, writing data status: ESP_OK[0m
+[0;32mI (20325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000bfee, total_received: 50158, writing data status: ESP_OK[0m
+[0;32mI (20325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000c3ee, total_received: 51182, writing data status: ESP_OK[0m
+[0;32mI (20345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000c7ee, total_received: 52206, writing data status: ESP_OK[0m
+[0;32mI (20355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000cbee, total_received: 53230, writing data status: ESP_OK[0m
+[0;32mI (20365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000cfee, total_received: 54254, writing data status: ESP_OK[0m
+[0;32mI (20385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000d3ee, total_received: 55278, writing data status: ESP_OK[0m
+[0;32mI (20395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000d7ee, total_received: 56302, writing data status: ESP_OK[0m
+[0;32mI (20405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000dbee, total_received: 57326, writing data status: ESP_OK[0m
+[0;32mI (20425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000dfee, total_received: 58350, writing data status: ESP_OK[0m
+[0;32mI (20435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000e3ee, total_received: 59374, writing data status: ESP_OK[0m
+[0;32mI (20445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000e7ee, total_received: 60398, writing data status: ESP_OK[0m
+[0;32mI (20465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000ebee, total_received: 61422, writing data status: ESP_OK[0m
+[0;32mI (20475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000efee, total_received: 62446, writing data status: ESP_OK[0m
+[0;32mI (20485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000f3ee, total_received: 63470, writing data status: ESP_OK[0m
+[0;32mI (20505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000f7ee, total_received: 64494, writing data status: ESP_OK[0m
+[0;32mI (20515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000fbee, total_received: 65518, writing data status: ESP_OK[0m
+[0;32mI (21195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0000ffee, total_received: 66542, writing data status: ESP_OK[0m
+[0;32mI (21205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000103ee, total_received: 67566, writing data status: ESP_OK[0m
+[0;32mI (21215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000107ee, total_received: 68590, writing data status: ESP_OK[0m
+[0;32mI (21235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00010bee, total_received: 69614, writing data status: ESP_OK[0m
+[0;32mI (21245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00010fee, total_received: 70638, writing data status: ESP_OK[0m
+[0;32mI (21255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000113ee, total_received: 71662, writing data status: ESP_OK[0m
+[0;32mI (21275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000117ee, total_received: 72686, writing data status: ESP_OK[0m
+[0;32mI (21285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00011bee, total_received: 73710, writing data status: ESP_OK[0m
+[0;32mI (21295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00011fee, total_received: 74734, writing data status: ESP_OK[0m
+[0;32mI (21315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000123ee, total_received: 75758, writing data status: ESP_OK[0m
+[0;32mI (21325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000127ee, total_received: 76782, writing data status: ESP_OK[0m
+[0;32mI (21335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00012bee, total_received: 77806, writing data status: ESP_OK[0m
+[0;32mI (21355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00012fee, total_received: 78830, writing data status: ESP_OK[0m
+[0;32mI (21365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000133ee, total_received: 79854, writing data status: ESP_OK[0m
+[0;32mI (21375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000137ee, total_received: 80878, writing data status: ESP_OK[0m
+[0;32mI (21395) ota_stuff: Target partition: ota_0: Data len: 971, target address: 0x00013bee, total_received: 81849, writing data status: ESP_OK[0m
+[0;32mI (21405) ota_stuff: Target partition: ota_0: Data len: 53, target address: 0x00013fb9, total_received: 81902, writing data status: ESP_OK[0m
+[0;32mI (21595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00013fee, total_received: 82926, writing data status: ESP_OK[0m
+[0;32mI (21605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000143ee, total_received: 83950, writing data status: ESP_OK[0m
+[0;32mI (21615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000147ee, total_received: 84974, writing data status: ESP_OK[0m
+[0;32mI (21625) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00014bee, total_received: 85998, writing data status: ESP_OK[0m
+[0;32mI (21635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00014fee, total_received: 87022, writing data status: ESP_OK[0m
+[0;32mI (21655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000153ee, total_received: 88046, writing data status: ESP_OK[0m
+[0;32mI (21665) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000157ee, total_received: 89070, writing data status: ESP_OK[0m
+[0;32mI (21675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00015bee, total_received: 90094, writing data status: ESP_OK[0m
+[0;32mI (21695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00015fee, total_received: 91118, writing data status: ESP_OK[0m
+[0;32mI (21705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000163ee, total_received: 92142, writing data status: ESP_OK[0m
+[0;32mI (21715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000167ee, total_received: 93166, writing data status: ESP_OK[0m
+[0;32mI (21735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00016bee, total_received: 94190, writing data status: ESP_OK[0m
+[0;32mI (21745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00016fee, total_received: 95214, writing data status: ESP_OK[0m
+[0;32mI (21755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000173ee, total_received: 96238, writing data status: ESP_OK[0m
+[0;32mI (21775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000177ee, total_received: 97262, writing data status: ESP_OK[0m
+[0;32mI (21785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00017bee, total_received: 98286, writing data status: ESP_OK[0m
+[0;32mI (21995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00017fee, total_received: 99310, writing data status: ESP_OK[0m
+[0;32mI (21995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000183ee, total_received: 100334, writing data status: ESP_OK[0m
+[0;32mI (22015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000187ee, total_received: 101358, writing data status: ESP_OK[0m
+[0;32mI (22025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00018bee, total_received: 102382, writing data status: ESP_OK[0m
+[0;32mI (22035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00018fee, total_received: 103406, writing data status: ESP_OK[0m
+[0;32mI (22055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000193ee, total_received: 104430, writing data status: ESP_OK[0m
+[0;32mI (22065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000197ee, total_received: 105454, writing data status: ESP_OK[0m
+[0;32mI (22075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00019bee, total_received: 106478, writing data status: ESP_OK[0m
+[0;32mI (22095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00019fee, total_received: 107502, writing data status: ESP_OK[0m
+[0;32mI (22105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001a3ee, total_received: 108526, writing data status: ESP_OK[0m
+[0;32mI (22115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001a7ee, total_received: 109550, writing data status: ESP_OK[0m
+[0;32mI (22135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001abee, total_received: 110574, writing data status: ESP_OK[0m
+[0;32mI (22145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001afee, total_received: 111598, writing data status: ESP_OK[0m
+[0;32mI (22165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001b3ee, total_received: 112622, writing data status: ESP_OK[0m
+[0;32mI (22175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001b7ee, total_received: 113646, writing data status: ESP_OK[0m
+[0;32mI (22185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001bbee, total_received: 114670, writing data status: ESP_OK[0m
+[0;32mI (22435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001bfee, total_received: 115694, writing data status: ESP_OK[0m
+[0;32mI (22445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001c3ee, total_received: 116718, writing data status: ESP_OK[0m
+[0;32mI (22455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001c7ee, total_received: 117742, writing data status: ESP_OK[0m
+[0;32mI (22465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001cbee, total_received: 118766, writing data status: ESP_OK[0m
+[0;32mI (22485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001cfee, total_received: 119790, writing data status: ESP_OK[0m
+[0;32mI (22495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001d3ee, total_received: 120814, writing data status: ESP_OK[0m
+[0;32mI (22505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001d7ee, total_received: 121838, writing data status: ESP_OK[0m
+[0;32mI (22525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001dbee, total_received: 122862, writing data status: ESP_OK[0m
+[0;32mI (22535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001dfee, total_received: 123886, writing data status: ESP_OK[0m
+[0;32mI (22545) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001e3ee, total_received: 124910, writing data status: ESP_OK[0m
+[0;32mI (22565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001e7ee, total_received: 125934, writing data status: ESP_OK[0m
+[0;32mI (22575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001ebee, total_received: 126958, writing data status: ESP_OK[0m
+[0;32mI (22585) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001efee, total_received: 127982, writing data status: ESP_OK[0m
+[0;32mI (22605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001f3ee, total_received: 129006, writing data status: ESP_OK[0m
+[0;32mI (22615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001f7ee, total_received: 130030, writing data status: ESP_OK[0m
+[0;32mI (22625) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001fbee, total_received: 131054, writing data status: ESP_OK[0m
+[0;32mI (23425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0001ffee, total_received: 132078, writing data status: ESP_OK[0m
+[0;32mI (23425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000203ee, total_received: 133102, writing data status: ESP_OK[0m
+[0;32mI (23445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000207ee, total_received: 134126, writing data status: ESP_OK[0m
+[0;32mI (23455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00020bee, total_received: 135150, writing data status: ESP_OK[0m
+[0;32mI (23465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00020fee, total_received: 136174, writing data status: ESP_OK[0m
+[0;32mI (23485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000213ee, total_received: 137198, writing data status: ESP_OK[0m
+[0;32mI (23495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000217ee, total_received: 138222, writing data status: ESP_OK[0m
+[0;32mI (23505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00021bee, total_received: 139246, writing data status: ESP_OK[0m
+[0;32mI (23525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00021fee, total_received: 140270, writing data status: ESP_OK[0m
+[0;32mI (23535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000223ee, total_received: 141294, writing data status: ESP_OK[0m
+[0;32mI (23545) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000227ee, total_received: 142318, writing data status: ESP_OK[0m
+[0;32mI (23565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00022bee, total_received: 143342, writing data status: ESP_OK[0m
+[0;32mI (23575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00022fee, total_received: 144366, writing data status: ESP_OK[0m
+[0;32mI (23585) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000233ee, total_received: 145390, writing data status: ESP_OK[0m
+[0;32mI (23605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000237ee, total_received: 146414, writing data status: ESP_OK[0m
+[0;32mI (23615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00023bee, total_received: 147438, writing data status: ESP_OK[0m
+[0;32mI (24285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00023fee, total_received: 148462, writing data status: ESP_OK[0m
+[0;32mI (24285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000243ee, total_received: 149486, writing data status: ESP_OK[0m
+[0;32mI (24305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000247ee, total_received: 150510, writing data status: ESP_OK[0m
+[0;32mI (24315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00024bee, total_received: 151534, writing data status: ESP_OK[0m
+[0;32mI (24325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00024fee, total_received: 152558, writing data status: ESP_OK[0m
+[0;32mI (24345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000253ee, total_received: 153582, writing data status: ESP_OK[0m
+[0;32mI (24355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000257ee, total_received: 154606, writing data status: ESP_OK[0m
+[0;32mI (24365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00025bee, total_received: 155630, writing data status: ESP_OK[0m
+[0;32mI (24385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00025fee, total_received: 156654, writing data status: ESP_OK[0m
+[0;32mI (24395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000263ee, total_received: 157678, writing data status: ESP_OK[0m
+[0;32mI (24405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000267ee, total_received: 158702, writing data status: ESP_OK[0m
+[0;32mI (24425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00026bee, total_received: 159726, writing data status: ESP_OK[0m
+[0;32mI (24435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00026fee, total_received: 160750, writing data status: ESP_OK[0m
+[0;32mI (24445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000273ee, total_received: 161774, writing data status: ESP_OK[0m
+[0;32mI (24465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000277ee, total_received: 162798, writing data status: ESP_OK[0m
+[0;32mI (24475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00027bee, total_received: 163822, writing data status: ESP_OK[0m
+[0;32mI (25155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00027fee, total_received: 164846, writing data status: ESP_OK[0m
+[0;32mI (25155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000283ee, total_received: 165870, writing data status: ESP_OK[0m
+[0;32mI (25175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000287ee, total_received: 166894, writing data status: ESP_OK[0m
+[0;32mI (25185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00028bee, total_received: 167918, writing data status: ESP_OK[0m
+[0;32mI (25195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00028fee, total_received: 168942, writing data status: ESP_OK[0m
+[0;32mI (25215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000293ee, total_received: 169966, writing data status: ESP_OK[0m
+[0;32mI (25225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000297ee, total_received: 170990, writing data status: ESP_OK[0m
+[0;32mI (25235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00029bee, total_received: 172014, writing data status: ESP_OK[0m
+[0;32mI (25255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00029fee, total_received: 173038, writing data status: ESP_OK[0m
+[0;32mI (25265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002a3ee, total_received: 174062, writing data status: ESP_OK[0m
+[0;32mI (25275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002a7ee, total_received: 175086, writing data status: ESP_OK[0m
+[0;32mI (25295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002abee, total_received: 176110, writing data status: ESP_OK[0m
+[0;32mI (25305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002afee, total_received: 177134, writing data status: ESP_OK[0m
+[0;32mI (25315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002b3ee, total_received: 178158, writing data status: ESP_OK[0m
+[0;32mI (25335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002b7ee, total_received: 179182, writing data status: ESP_OK[0m
+[0;32mI (25345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002bbee, total_received: 180206, writing data status: ESP_OK[0m
+[0;32mI (25615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002bfee, total_received: 181230, writing data status: ESP_OK[0m
+[0;32mI (25615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002c3ee, total_received: 182254, writing data status: ESP_OK[0m
+[0;32mI (25635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002c7ee, total_received: 183278, writing data status: ESP_OK[0m
+[0;32mI (25645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002cbee, total_received: 184302, writing data status: ESP_OK[0m
+[0;32mI (25655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002cfee, total_received: 185326, writing data status: ESP_OK[0m
+[0;32mI (25675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002d3ee, total_received: 186350, writing data status: ESP_OK[0m
+[0;32mI (25685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002d7ee, total_received: 187374, writing data status: ESP_OK[0m
+[0;32mI (25695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002dbee, total_received: 188398, writing data status: ESP_OK[0m
+[0;32mI (25715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002dfee, total_received: 189422, writing data status: ESP_OK[0m
+[0;32mI (25725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002e3ee, total_received: 190446, writing data status: ESP_OK[0m
+[0;32mI (25735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002e7ee, total_received: 191470, writing data status: ESP_OK[0m
+[0;32mI (25755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002ebee, total_received: 192494, writing data status: ESP_OK[0m
+[0;32mI (25765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002efee, total_received: 193518, writing data status: ESP_OK[0m
+[0;32mI (25775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002f3ee, total_received: 194542, writing data status: ESP_OK[0m
+[0;32mI (25795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002f7ee, total_received: 195566, writing data status: ESP_OK[0m
+[0;32mI (25805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002fbee, total_received: 196590, writing data status: ESP_OK[0m
+[0;32mI (26035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0002ffee, total_received: 197614, writing data status: ESP_OK[0m
+[0;32mI (26045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000303ee, total_received: 198638, writing data status: ESP_OK[0m
+[0;32mI (26055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000307ee, total_received: 199662, writing data status: ESP_OK[0m
+[0;32mI (26065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00030bee, total_received: 200686, writing data status: ESP_OK[0m
+[0;32mI (26085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00030fee, total_received: 201710, writing data status: ESP_OK[0m
+[0;32mI (26095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000313ee, total_received: 202734, writing data status: ESP_OK[0m
+[0;32mI (26105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000317ee, total_received: 203758, writing data status: ESP_OK[0m
+[0;32mI (26125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00031bee, total_received: 204782, writing data status: ESP_OK[0m
+[0;32mI (26135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00031fee, total_received: 205806, writing data status: ESP_OK[0m
+[0;32mI (26145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000323ee, total_received: 206830, writing data status: ESP_OK[0m
+[0;32mI (26165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000327ee, total_received: 207854, writing data status: ESP_OK[0m
+[0;32mI (26175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00032bee, total_received: 208878, writing data status: ESP_OK[0m
+[0;32mI (26185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00032fee, total_received: 209902, writing data status: ESP_OK[0m
+[0;32mI (26205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000333ee, total_received: 210926, writing data status: ESP_OK[0m
+[0;32mI (26215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000337ee, total_received: 211950, writing data status: ESP_OK[0m
+[0;32mI (26225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00033bee, total_received: 212974, writing data status: ESP_OK[0m
+[0;32mI (26895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00033fee, total_received: 213998, writing data status: ESP_OK[0m
+[0;32mI (26905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000343ee, total_received: 215022, writing data status: ESP_OK[0m
+[0;32mI (26915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000347ee, total_received: 216046, writing data status: ESP_OK[0m
+[0;32mI (26925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00034bee, total_received: 217070, writing data status: ESP_OK[0m
+[0;32mI (26945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00034fee, total_received: 218094, writing data status: ESP_OK[0m
+[0;32mI (26955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000353ee, total_received: 219118, writing data status: ESP_OK[0m
+[0;32mI (26965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000357ee, total_received: 220142, writing data status: ESP_OK[0m
+[0;32mI (26985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00035bee, total_received: 221166, writing data status: ESP_OK[0m
+[0;32mI (26995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00035fee, total_received: 222190, writing data status: ESP_OK[0m
+[0;32mI (27005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000363ee, total_received: 223214, writing data status: ESP_OK[0m
+[0;32mI (27025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000367ee, total_received: 224238, writing data status: ESP_OK[0m
+[0;32mI (27035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00036bee, total_received: 225262, writing data status: ESP_OK[0m
+[0;32mI (27045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00036fee, total_received: 226286, writing data status: ESP_OK[0m
+[0;32mI (27065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000373ee, total_received: 227310, writing data status: ESP_OK[0m
+[0;32mI (27075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000377ee, total_received: 228334, writing data status: ESP_OK[0m
+[0;32mI (27085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00037bee, total_received: 229358, writing data status: ESP_OK[0m
+[0;32mI (27315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00037fee, total_received: 230382, writing data status: ESP_OK[0m
+[0;32mI (27315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000383ee, total_received: 231406, writing data status: ESP_OK[0m
+[0;32mI (27335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000387ee, total_received: 232430, writing data status: ESP_OK[0m
+[0;32mI (27345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00038bee, total_received: 233454, writing data status: ESP_OK[0m
+[0;32mI (27355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00038fee, total_received: 234478, writing data status: ESP_OK[0m
+[0;32mI (27375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000393ee, total_received: 235502, writing data status: ESP_OK[0m
+[0;32mI (27385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000397ee, total_received: 236526, writing data status: ESP_OK[0m
+[0;32mI (27395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00039bee, total_received: 237550, writing data status: ESP_OK[0m
+[0;32mI (27415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00039fee, total_received: 238574, writing data status: ESP_OK[0m
+[0;32mI (27425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003a3ee, total_received: 239598, writing data status: ESP_OK[0m
+[0;32mI (27435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003a7ee, total_received: 240622, writing data status: ESP_OK[0m
+[0;32mI (27455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003abee, total_received: 241646, writing data status: ESP_OK[0m
+[0;32mI (27465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003afee, total_received: 242670, writing data status: ESP_OK[0m
+[0;32mI (27475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003b3ee, total_received: 243694, writing data status: ESP_OK[0m
+[0;32mI (27495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003b7ee, total_received: 244718, writing data status: ESP_OK[0m
+[0;32mI (27505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003bbee, total_received: 245742, writing data status: ESP_OK[0m
+[0;32mI (28305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003bfee, total_received: 246766, writing data status: ESP_OK[0m
+[0;32mI (28305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003c3ee, total_received: 247790, writing data status: ESP_OK[0m
+[0;32mI (28325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003c7ee, total_received: 248814, writing data status: ESP_OK[0m
+[0;32mI (28335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003cbee, total_received: 249838, writing data status: ESP_OK[0m
+[0;32mI (28345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003cfee, total_received: 250862, writing data status: ESP_OK[0m
+[0;32mI (28365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003d3ee, total_received: 251886, writing data status: ESP_OK[0m
+[0;32mI (28375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003d7ee, total_received: 252910, writing data status: ESP_OK[0m
+[0;32mI (28385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003dbee, total_received: 253934, writing data status: ESP_OK[0m
+[0;32mI (28405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003dfee, total_received: 254958, writing data status: ESP_OK[0m
+[0;32mI (28415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003e3ee, total_received: 255982, writing data status: ESP_OK[0m
+[0;32mI (28425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003e7ee, total_received: 257006, writing data status: ESP_OK[0m
+[0;32mI (28445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003ebee, total_received: 258030, writing data status: ESP_OK[0m
+[0;32mI (28455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003efee, total_received: 259054, writing data status: ESP_OK[0m
+[0;32mI (28465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003f3ee, total_received: 260078, writing data status: ESP_OK[0m
+[0;32mI (28485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003f7ee, total_received: 261102, writing data status: ESP_OK[0m
+[0;32mI (28495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003fbee, total_received: 262126, writing data status: ESP_OK[0m
+[0;32mI (28725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0003ffee, total_received: 263150, writing data status: ESP_OK[0m
+[0;32mI (28735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000403ee, total_received: 264174, writing data status: ESP_OK[0m
+[0;32mI (28745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000407ee, total_received: 265198, writing data status: ESP_OK[0m
+[0;32mI (28765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00040bee, total_received: 266222, writing data status: ESP_OK[0m
+[0;32mI (28775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00040fee, total_received: 267246, writing data status: ESP_OK[0m
+[0;32mI (28785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000413ee, total_received: 268270, writing data status: ESP_OK[0m
+[0;32mI (28805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000417ee, total_received: 269294, writing data status: ESP_OK[0m
+[0;32mI (28815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00041bee, total_received: 270318, writing data status: ESP_OK[0m
+[0;32mI (28825) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00041fee, total_received: 271342, writing data status: ESP_OK[0m
+[0;32mI (28845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000423ee, total_received: 272366, writing data status: ESP_OK[0m
+[0;32mI (28855) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000427ee, total_received: 273390, writing data status: ESP_OK[0m
+[0;32mI (28865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00042bee, total_received: 274414, writing data status: ESP_OK[0m
+[0;32mI (28885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00042fee, total_received: 275438, writing data status: ESP_OK[0m
+[0;32mI (28895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000433ee, total_received: 276462, writing data status: ESP_OK[0m
+[0;32mI (28905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000437ee, total_received: 277486, writing data status: ESP_OK[0m
+[0;32mI (28925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00043bee, total_received: 278510, writing data status: ESP_OK[0m
+[0;32mI (29135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00043fee, total_received: 279534, writing data status: ESP_OK[0m
+[0;32mI (29135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000443ee, total_received: 280558, writing data status: ESP_OK[0m
+[0;32mI (29155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000447ee, total_received: 281582, writing data status: ESP_OK[0m
+[0;32mI (29165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00044bee, total_received: 282606, writing data status: ESP_OK[0m
+[0;32mI (29175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00044fee, total_received: 283630, writing data status: ESP_OK[0m
+[0;32mI (29195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000453ee, total_received: 284654, writing data status: ESP_OK[0m
+[0;32mI (29205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000457ee, total_received: 285678, writing data status: ESP_OK[0m
+[0;32mI (29215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00045bee, total_received: 286702, writing data status: ESP_OK[0m
+[0;32mI (29235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00045fee, total_received: 287726, writing data status: ESP_OK[0m
+[0;32mI (29245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000463ee, total_received: 288750, writing data status: ESP_OK[0m
+[0;32mI (29255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000467ee, total_received: 289774, writing data status: ESP_OK[0m
+[0;32mI (29275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00046bee, total_received: 290798, writing data status: ESP_OK[0m
+[0;32mI (29285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00046fee, total_received: 291822, writing data status: ESP_OK[0m
+[0;32mI (29295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000473ee, total_received: 292846, writing data status: ESP_OK[0m
+[0;32mI (29315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000477ee, total_received: 293870, writing data status: ESP_OK[0m
+[0;32mI (29325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00047bee, total_received: 294894, writing data status: ESP_OK[0m
+[0;32mI (29635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00047fee, total_received: 295918, writing data status: ESP_OK[0m
+[0;32mI (29645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000483ee, total_received: 296942, writing data status: ESP_OK[0m
+[0;32mI (29655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000487ee, total_received: 297966, writing data status: ESP_OK[0m
+[0;32mI (29665) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00048bee, total_received: 298990, writing data status: ESP_OK[0m
+[0;32mI (29685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00048fee, total_received: 300014, writing data status: ESP_OK[0m
+[0;32mI (29695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000493ee, total_received: 301038, writing data status: ESP_OK[0m
+[0;32mI (29705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000497ee, total_received: 302062, writing data status: ESP_OK[0m
+[0;32mI (29725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00049bee, total_received: 303086, writing data status: ESP_OK[0m
+[0;32mI (29735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00049fee, total_received: 304110, writing data status: ESP_OK[0m
+[0;32mI (29745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004a3ee, total_received: 305134, writing data status: ESP_OK[0m
+[0;32mI (29765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004a7ee, total_received: 306158, writing data status: ESP_OK[0m
+[0;32mI (29775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004abee, total_received: 307182, writing data status: ESP_OK[0m
+[0;32mI (29795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004afee, total_received: 308206, writing data status: ESP_OK[0m
+[0;32mI (29805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004b3ee, total_received: 309230, writing data status: ESP_OK[0m
+[0;32mI (29815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004b7ee, total_received: 310254, writing data status: ESP_OK[0m
+[0;32mI (29835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004bbee, total_received: 311278, writing data status: ESP_OK[0m
+[0;32mI (30865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004bfee, total_received: 312302, writing data status: ESP_OK[0m
+[0;32mI (30875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004c3ee, total_received: 313326, writing data status: ESP_OK[0m
+[0;32mI (30885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004c7ee, total_received: 314350, writing data status: ESP_OK[0m
+[0;32mI (30905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004cbee, total_received: 315374, writing data status: ESP_OK[0m
+[0;32mI (30915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004cfee, total_received: 316398, writing data status: ESP_OK[0m
+[0;32mI (30925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004d3ee, total_received: 317422, writing data status: ESP_OK[0m
+[0;32mI (30945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004d7ee, total_received: 318446, writing data status: ESP_OK[0m
+[0;32mI (30955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004dbee, total_received: 319470, writing data status: ESP_OK[0m
+[0;32mI (30965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004dfee, total_received: 320494, writing data status: ESP_OK[0m
+[0;32mI (30985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004e3ee, total_received: 321518, writing data status: ESP_OK[0m
+[0;32mI (30995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004e7ee, total_received: 322542, writing data status: ESP_OK[0m
+[0;32mI (31005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004ebee, total_received: 323566, writing data status: ESP_OK[0m
+[0;32mI (31025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004efee, total_received: 324590, writing data status: ESP_OK[0m
+[0;32mI (31035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004f3ee, total_received: 325614, writing data status: ESP_OK[0m
+[0;32mI (31045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004f7ee, total_received: 326638, writing data status: ESP_OK[0m
+[0;32mI (31065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004fbee, total_received: 327662, writing data status: ESP_OK[0m
+[0;32mI (31255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0004ffee, total_received: 328686, writing data status: ESP_OK[0m
+[0;32mI (31255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000503ee, total_received: 329710, writing data status: ESP_OK[0m
+[0;32mI (31275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000507ee, total_received: 330734, writing data status: ESP_OK[0m
+[0;32mI (31285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00050bee, total_received: 331758, writing data status: ESP_OK[0m
+[0;32mI (31295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00050fee, total_received: 332782, writing data status: ESP_OK[0m
+[0;32mI (31315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000513ee, total_received: 333806, writing data status: ESP_OK[0m
+[0;32mI (31325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000517ee, total_received: 334830, writing data status: ESP_OK[0m
+[0;32mI (31335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00051bee, total_received: 335854, writing data status: ESP_OK[0m
+[0;32mI (31355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00051fee, total_received: 336878, writing data status: ESP_OK[0m
+[0;32mI (31365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000523ee, total_received: 337902, writing data status: ESP_OK[0m
+[0;32mI (31375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000527ee, total_received: 338926, writing data status: ESP_OK[0m
+[0;32mI (31395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00052bee, total_received: 339950, writing data status: ESP_OK[0m
+[0;32mI (31405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00052fee, total_received: 340974, writing data status: ESP_OK[0m
+[0;32mI (31415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000533ee, total_received: 341998, writing data status: ESP_OK[0m
+[0;32mI (31435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000537ee, total_received: 343022, writing data status: ESP_OK[0m
+[0;32mI (31445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00053bee, total_received: 344046, writing data status: ESP_OK[0m
+[0;32mI (31675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00053fee, total_received: 345070, writing data status: ESP_OK[0m
+[0;32mI (31685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000543ee, total_received: 346094, writing data status: ESP_OK[0m
+[0;32mI (31695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000547ee, total_received: 347118, writing data status: ESP_OK[0m
+[0;32mI (31705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00054bee, total_received: 348142, writing data status: ESP_OK[0m
+[0;32mI (31725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00054fee, total_received: 349166, writing data status: ESP_OK[0m
+[0;32mI (31735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000553ee, total_received: 350190, writing data status: ESP_OK[0m
+[0;32mI (31745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000557ee, total_received: 351214, writing data status: ESP_OK[0m
+[0;32mI (31765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00055bee, total_received: 352238, writing data status: ESP_OK[0m
+[0;32mI (31775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00055fee, total_received: 353262, writing data status: ESP_OK[0m
+[0;32mI (31785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000563ee, total_received: 354286, writing data status: ESP_OK[0m
+[0;32mI (31805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000567ee, total_received: 355310, writing data status: ESP_OK[0m
+[0;32mI (31815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00056bee, total_received: 356334, writing data status: ESP_OK[0m
+[0;32mI (31825) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00056fee, total_received: 357358, writing data status: ESP_OK[0m
+[0;32mI (31845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000573ee, total_received: 358382, writing data status: ESP_OK[0m
+[0;32mI (31855) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000577ee, total_received: 359406, writing data status: ESP_OK[0m
+[0;32mI (31865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00057bee, total_received: 360430, writing data status: ESP_OK[0m
+[0;32mI (32045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00057fee, total_received: 361454, writing data status: ESP_OK[0m
+[0;32mI (32045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000583ee, total_received: 362478, writing data status: ESP_OK[0m
+[0;32mI (32065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000587ee, total_received: 363502, writing data status: ESP_OK[0m
+[0;32mI (32075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00058bee, total_received: 364526, writing data status: ESP_OK[0m
+[0;32mI (32085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00058fee, total_received: 365550, writing data status: ESP_OK[0m
+[0;32mI (32105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000593ee, total_received: 366574, writing data status: ESP_OK[0m
+[0;32mI (32115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000597ee, total_received: 367598, writing data status: ESP_OK[0m
+[0;32mI (32125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00059bee, total_received: 368622, writing data status: ESP_OK[0m
+[0;32mI (32145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00059fee, total_received: 369646, writing data status: ESP_OK[0m
+[0;32mI (32155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005a3ee, total_received: 370670, writing data status: ESP_OK[0m
+[0;32mI (32165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005a7ee, total_received: 371694, writing data status: ESP_OK[0m
+[0;32mI (32185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005abee, total_received: 372718, writing data status: ESP_OK[0m
+[0;32mI (32195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005afee, total_received: 373742, writing data status: ESP_OK[0m
+[0;32mI (32205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005b3ee, total_received: 374766, writing data status: ESP_OK[0m
+[0;32mI (32225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005b7ee, total_received: 375790, writing data status: ESP_OK[0m
+[0;32mI (32235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005bbee, total_received: 376814, writing data status: ESP_OK[0m
+[0;32mI (32465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005bfee, total_received: 377838, writing data status: ESP_OK[0m
+[0;32mI (32475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005c3ee, total_received: 378862, writing data status: ESP_OK[0m
+[0;32mI (32485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005c7ee, total_received: 379886, writing data status: ESP_OK[0m
+[0;32mI (32495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005cbee, total_received: 380910, writing data status: ESP_OK[0m
+[0;32mI (32515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005cfee, total_received: 381934, writing data status: ESP_OK[0m
+[0;32mI (32525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005d3ee, total_received: 382958, writing data status: ESP_OK[0m
+[0;32mI (32535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005d7ee, total_received: 383982, writing data status: ESP_OK[0m
+[0;32mI (32555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005dbee, total_received: 385006, writing data status: ESP_OK[0m
+[0;32mI (32565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005dfee, total_received: 386030, writing data status: ESP_OK[0m
+[0;32mI (32575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005e3ee, total_received: 387054, writing data status: ESP_OK[0m
+[0;32mI (32595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005e7ee, total_received: 388078, writing data status: ESP_OK[0m
+[0;32mI (32605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005ebee, total_received: 389102, writing data status: ESP_OK[0m
+[0;32mI (32615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005efee, total_received: 390126, writing data status: ESP_OK[0m
+[0;32mI (32635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005f3ee, total_received: 391150, writing data status: ESP_OK[0m
+[0;32mI (32645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005f7ee, total_received: 392174, writing data status: ESP_OK[0m
+[0;32mI (32655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005fbee, total_received: 393198, writing data status: ESP_OK[0m
+[0;32mI (32875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0005ffee, total_received: 394222, writing data status: ESP_OK[0m
+[0;32mI (32875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000603ee, total_received: 395246, writing data status: ESP_OK[0m
+[0;32mI (32895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000607ee, total_received: 396270, writing data status: ESP_OK[0m
+[0;32mI (32905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00060bee, total_received: 397294, writing data status: ESP_OK[0m
+[0;32mI (32915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00060fee, total_received: 398318, writing data status: ESP_OK[0m
+[0;32mI (32935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000613ee, total_received: 399342, writing data status: ESP_OK[0m
+[0;32mI (32945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000617ee, total_received: 400366, writing data status: ESP_OK[0m
+[0;32mI (32955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00061bee, total_received: 401390, writing data status: ESP_OK[0m
+[0;32mI (32975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00061fee, total_received: 402414, writing data status: ESP_OK[0m
+[0;32mI (32985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000623ee, total_received: 403438, writing data status: ESP_OK[0m
+[0;32mI (32995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000627ee, total_received: 404462, writing data status: ESP_OK[0m
+[0;32mI (33015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00062bee, total_received: 405486, writing data status: ESP_OK[0m
+[0;32mI (33025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00062fee, total_received: 406510, writing data status: ESP_OK[0m
+[0;32mI (33035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000633ee, total_received: 407534, writing data status: ESP_OK[0m
+[0;32mI (33055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000637ee, total_received: 408558, writing data status: ESP_OK[0m
+[0;32mI (33065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00063bee, total_received: 409582, writing data status: ESP_OK[0m
+[0;32mI (33295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00063fee, total_received: 410606, writing data status: ESP_OK[0m
+[0;32mI (33305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000643ee, total_received: 411630, writing data status: ESP_OK[0m
+[0;32mI (33315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000647ee, total_received: 412654, writing data status: ESP_OK[0m
+[0;32mI (33325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00064bee, total_received: 413678, writing data status: ESP_OK[0m
+[0;32mI (33345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00064fee, total_received: 414702, writing data status: ESP_OK[0m
+[0;32mI (33355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000653ee, total_received: 415726, writing data status: ESP_OK[0m
+[0;32mI (33365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000657ee, total_received: 416750, writing data status: ESP_OK[0m
+[0;32mI (33385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00065bee, total_received: 417774, writing data status: ESP_OK[0m
+[0;32mI (33395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00065fee, total_received: 418798, writing data status: ESP_OK[0m
+[0;32mI (33405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000663ee, total_received: 419822, writing data status: ESP_OK[0m
+[0;32mI (33425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000667ee, total_received: 420846, writing data status: ESP_OK[0m
+[0;32mI (33435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00066bee, total_received: 421870, writing data status: ESP_OK[0m
+[0;32mI (33445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00066fee, total_received: 422894, writing data status: ESP_OK[0m
+[0;32mI (33465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000673ee, total_received: 423918, writing data status: ESP_OK[0m
+[0;32mI (33475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000677ee, total_received: 424942, writing data status: ESP_OK[0m
+[0;32mI (33485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00067bee, total_received: 425966, writing data status: ESP_OK[0m
+[0;32mI (33705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00067fee, total_received: 426990, writing data status: ESP_OK[0m
+[0;32mI (33715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000683ee, total_received: 428014, writing data status: ESP_OK[0m
+[0;32mI (33725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000687ee, total_received: 429038, writing data status: ESP_OK[0m
+[0;32mI (33735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00068bee, total_received: 430062, writing data status: ESP_OK[0m
+[0;32mI (33755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00068fee, total_received: 431086, writing data status: ESP_OK[0m
+[0;32mI (33765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000693ee, total_received: 432110, writing data status: ESP_OK[0m
+[0;32mI (33775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000697ee, total_received: 433134, writing data status: ESP_OK[0m
+[0;32mI (33795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00069bee, total_received: 434158, writing data status: ESP_OK[0m
+[0;32mI (33805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00069fee, total_received: 435182, writing data status: ESP_OK[0m
+[0;32mI (33815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006a3ee, total_received: 436206, writing data status: ESP_OK[0m
+[0;32mI (33835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006a7ee, total_received: 437230, writing data status: ESP_OK[0m
+[0;32mI (33845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006abee, total_received: 438254, writing data status: ESP_OK[0m
+[0;32mI (33855) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006afee, total_received: 439278, writing data status: ESP_OK[0m
+[0;32mI (33875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006b3ee, total_received: 440302, writing data status: ESP_OK[0m
+[0;32mI (33885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006b7ee, total_received: 441326, writing data status: ESP_OK[0m
+[0;32mI (33895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006bbee, total_received: 442350, writing data status: ESP_OK[0m
+[0;32mI (34065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006bfee, total_received: 443374, writing data status: ESP_OK[0m
+[0;32mI (34075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006c3ee, total_received: 444398, writing data status: ESP_OK[0m
+[0;32mI (34085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006c7ee, total_received: 445422, writing data status: ESP_OK[0m
+[0;32mI (34105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006cbee, total_received: 446446, writing data status: ESP_OK[0m
+[0;32mI (34115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006cfee, total_received: 447470, writing data status: ESP_OK[0m
+[0;32mI (34125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006d3ee, total_received: 448494, writing data status: ESP_OK[0m
+[0;32mI (34145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006d7ee, total_received: 449518, writing data status: ESP_OK[0m
+[0;32mI (34155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006dbee, total_received: 450542, writing data status: ESP_OK[0m
+[0;32mI (34165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006dfee, total_received: 451566, writing data status: ESP_OK[0m
+[0;32mI (34185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006e3ee, total_received: 452590, writing data status: ESP_OK[0m
+[0;32mI (34195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006e7ee, total_received: 453614, writing data status: ESP_OK[0m
+[0;32mI (34205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006ebee, total_received: 454638, writing data status: ESP_OK[0m
+[0;32mI (34225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006efee, total_received: 455662, writing data status: ESP_OK[0m
+[0;32mI (34235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006f3ee, total_received: 456686, writing data status: ESP_OK[0m
+[0;32mI (34245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006f7ee, total_received: 457710, writing data status: ESP_OK[0m
+[0;32mI (34265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006fbee, total_received: 458734, writing data status: ESP_OK[0m
+[0;32mI (34495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0006ffee, total_received: 459758, writing data status: ESP_OK[0m
+[0;32mI (34495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000703ee, total_received: 460782, writing data status: ESP_OK[0m
+[0;32mI (34515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000707ee, total_received: 461806, writing data status: ESP_OK[0m
+[0;32mI (34525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00070bee, total_received: 462830, writing data status: ESP_OK[0m
+[0;32mI (34535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00070fee, total_received: 463854, writing data status: ESP_OK[0m
+[0;32mI (34555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000713ee, total_received: 464878, writing data status: ESP_OK[0m
+[0;32mI (34565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000717ee, total_received: 465902, writing data status: ESP_OK[0m
+[0;32mI (34575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00071bee, total_received: 466926, writing data status: ESP_OK[0m
+[0;32mI (34595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00071fee, total_received: 467950, writing data status: ESP_OK[0m
+[0;32mI (34605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000723ee, total_received: 468974, writing data status: ESP_OK[0m
+[0;32mI (34615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000727ee, total_received: 469998, writing data status: ESP_OK[0m
+[0;32mI (34635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00072bee, total_received: 471022, writing data status: ESP_OK[0m
+[0;32mI (34645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00072fee, total_received: 472046, writing data status: ESP_OK[0m
+[0;32mI (34655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000733ee, total_received: 473070, writing data status: ESP_OK[0m
+[0;32mI (34675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000737ee, total_received: 474094, writing data status: ESP_OK[0m
+[0;32mI (34685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00073bee, total_received: 475118, writing data status: ESP_OK[0m
+[0;32mI (34915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00073fee, total_received: 476142, writing data status: ESP_OK[0m
+[0;32mI (34915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000743ee, total_received: 477166, writing data status: ESP_OK[0m
+[0;32mI (34925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000747ee, total_received: 478190, writing data status: ESP_OK[0m
+[0;32mI (34945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00074bee, total_received: 479214, writing data status: ESP_OK[0m
+[0;32mI (34955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00074fee, total_received: 480238, writing data status: ESP_OK[0m
+[0;32mI (34965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000753ee, total_received: 481262, writing data status: ESP_OK[0m
+[0;32mI (34985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000757ee, total_received: 482286, writing data status: ESP_OK[0m
+[0;32mI (34995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00075bee, total_received: 483310, writing data status: ESP_OK[0m
+[0;32mI (35005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00075fee, total_received: 484334, writing data status: ESP_OK[0m
+[0;32mI (35025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000763ee, total_received: 485358, writing data status: ESP_OK[0m
+[0;32mI (35035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000767ee, total_received: 486382, writing data status: ESP_OK[0m
+[0;32mI (35045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00076bee, total_received: 487406, writing data status: ESP_OK[0m
+[0;32mI (35065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00076fee, total_received: 488430, writing data status: ESP_OK[0m
+[0;32mI (35075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000773ee, total_received: 489454, writing data status: ESP_OK[0m
+[0;32mI (35085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000777ee, total_received: 490478, writing data status: ESP_OK[0m
+[0;32mI (35105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00077bee, total_received: 491502, writing data status: ESP_OK[0m
+[0;32mI (35455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00077fee, total_received: 492526, writing data status: ESP_OK[0m
+[0;32mI (35465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000783ee, total_received: 493550, writing data status: ESP_OK[0m
+[0;32mI (35475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000787ee, total_received: 494574, writing data status: ESP_OK[0m
+[0;32mI (35485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00078bee, total_received: 495598, writing data status: ESP_OK[0m
+[0;32mI (35505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00078fee, total_received: 496622, writing data status: ESP_OK[0m
+[0;32mI (35515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000793ee, total_received: 497646, writing data status: ESP_OK[0m
+[0;32mI (35525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000797ee, total_received: 498670, writing data status: ESP_OK[0m
+[0;32mI (35545) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00079bee, total_received: 499694, writing data status: ESP_OK[0m
+[0;32mI (35555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00079fee, total_received: 500718, writing data status: ESP_OK[0m
+[0;32mI (35565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007a3ee, total_received: 501742, writing data status: ESP_OK[0m
+[0;32mI (35585) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007a7ee, total_received: 502766, writing data status: ESP_OK[0m
+[0;32mI (35595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007abee, total_received: 503790, writing data status: ESP_OK[0m
+[0;32mI (35605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007afee, total_received: 504814, writing data status: ESP_OK[0m
+[0;32mI (35625) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007b3ee, total_received: 505838, writing data status: ESP_OK[0m
+[0;32mI (35635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007b7ee, total_received: 506862, writing data status: ESP_OK[0m
+[0;32mI (35645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007bbee, total_received: 507886, writing data status: ESP_OK[0m
+[0;32mI (36215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007bfee, total_received: 508910, writing data status: ESP_OK[0m
+[0;32mI (36225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007c3ee, total_received: 509934, writing data status: ESP_OK[0m
+[0;32mI (36235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007c7ee, total_received: 510958, writing data status: ESP_OK[0m
+[0;32mI (36245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007cbee, total_received: 511982, writing data status: ESP_OK[0m
+[0;32mI (36265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007cfee, total_received: 513006, writing data status: ESP_OK[0m
+[0;32mI (36275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007d3ee, total_received: 514030, writing data status: ESP_OK[0m
+[0;32mI (36285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007d7ee, total_received: 515054, writing data status: ESP_OK[0m
+[0;32mI (36305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007dbee, total_received: 516078, writing data status: ESP_OK[0m
+[0;32mI (36315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007dfee, total_received: 517102, writing data status: ESP_OK[0m
+[0;32mI (36325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007e3ee, total_received: 518126, writing data status: ESP_OK[0m
+[0;32mI (36345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007e7ee, total_received: 519150, writing data status: ESP_OK[0m
+[0;32mI (36355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007ebee, total_received: 520174, writing data status: ESP_OK[0m
+[0;32mI (36365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007efee, total_received: 521198, writing data status: ESP_OK[0m
+[0;32mI (36385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007f3ee, total_received: 522222, writing data status: ESP_OK[0m
+[0;32mI (36395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007f7ee, total_received: 523246, writing data status: ESP_OK[0m
+[0;32mI (36405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007fbee, total_received: 524270, writing data status: ESP_OK[0m
+[0;32mI (36615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0007ffee, total_received: 525294, writing data status: ESP_OK[0m
+[0;32mI (36615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000803ee, total_received: 526318, writing data status: ESP_OK[0m
+[0;32mI (36635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000807ee, total_received: 527342, writing data status: ESP_OK[0m
+[0;32mI (36645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00080bee, total_received: 528366, writing data status: ESP_OK[0m
+[0;32mI (36655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00080fee, total_received: 529390, writing data status: ESP_OK[0m
+[0;32mI (36675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000813ee, total_received: 530414, writing data status: ESP_OK[0m
+[0;32mI (36685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000817ee, total_received: 531438, writing data status: ESP_OK[0m
+[0;32mI (36695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00081bee, total_received: 532462, writing data status: ESP_OK[0m
+[0;32mI (36715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00081fee, total_received: 533486, writing data status: ESP_OK[0m
+[0;32mI (36725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000823ee, total_received: 534510, writing data status: ESP_OK[0m
+[0;32mI (36735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000827ee, total_received: 535534, writing data status: ESP_OK[0m
+[0;32mI (36755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00082bee, total_received: 536558, writing data status: ESP_OK[0m
+[0;32mI (36765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00082fee, total_received: 537582, writing data status: ESP_OK[0m
+[0;32mI (36775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000833ee, total_received: 538606, writing data status: ESP_OK[0m
+[0;32mI (36795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000837ee, total_received: 539630, writing data status: ESP_OK[0m
+[0;32mI (36805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00083bee, total_received: 540654, writing data status: ESP_OK[0m
+[0;32mI (37085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00083fee, total_received: 541678, writing data status: ESP_OK[0m
+[0;32mI (37095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000843ee, total_received: 542702, writing data status: ESP_OK[0m
+[0;32mI (37105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000847ee, total_received: 543726, writing data status: ESP_OK[0m
+[0;32mI (37115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00084bee, total_received: 544750, writing data status: ESP_OK[0m
+[0;32mI (37135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00084fee, total_received: 545774, writing data status: ESP_OK[0m
+[0;32mI (37145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000853ee, total_received: 546798, writing data status: ESP_OK[0m
+[0;32mI (37155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000857ee, total_received: 547822, writing data status: ESP_OK[0m
+[0;32mI (37175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00085bee, total_received: 548846, writing data status: ESP_OK[0m
+[0;32mI (37185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00085fee, total_received: 549870, writing data status: ESP_OK[0m
+[0;32mI (37195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000863ee, total_received: 550894, writing data status: ESP_OK[0m
+[0;32mI (37215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000867ee, total_received: 551918, writing data status: ESP_OK[0m
+[0;32mI (37225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00086bee, total_received: 552942, writing data status: ESP_OK[0m
+[0;32mI (37235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00086fee, total_received: 553966, writing data status: ESP_OK[0m
+[0;32mI (37255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000873ee, total_received: 554990, writing data status: ESP_OK[0m
+[0;32mI (37265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000877ee, total_received: 556014, writing data status: ESP_OK[0m
+[0;32mI (37275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00087bee, total_received: 557038, writing data status: ESP_OK[0m
+[0;32mI (37565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00087fee, total_received: 558062, writing data status: ESP_OK[0m
+[0;32mI (37575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000883ee, total_received: 559086, writing data status: ESP_OK[0m
+[0;32mI (37585) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000887ee, total_received: 560110, writing data status: ESP_OK[0m
+[0;32mI (37605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00088bee, total_received: 561134, writing data status: ESP_OK[0m
+[0;32mI (37615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00088fee, total_received: 562158, writing data status: ESP_OK[0m
+[0;32mI (37625) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000893ee, total_received: 563182, writing data status: ESP_OK[0m
+[0;32mI (37645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000897ee, total_received: 564206, writing data status: ESP_OK[0m
+[0;32mI (37655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00089bee, total_received: 565230, writing data status: ESP_OK[0m
+[0;32mI (37665) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00089fee, total_received: 566254, writing data status: ESP_OK[0m
+[0;32mI (37685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008a3ee, total_received: 567278, writing data status: ESP_OK[0m
+[0;32mI (37695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008a7ee, total_received: 568302, writing data status: ESP_OK[0m
+[0;32mI (37705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008abee, total_received: 569326, writing data status: ESP_OK[0m
+[0;32mI (37725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008afee, total_received: 570350, writing data status: ESP_OK[0m
+[0;32mI (37735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008b3ee, total_received: 571374, writing data status: ESP_OK[0m
+[0;32mI (37745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008b7ee, total_received: 572398, writing data status: ESP_OK[0m
+[0;32mI (37765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008bbee, total_received: 573422, writing data status: ESP_OK[0m
+[0;32mI (38095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008bfee, total_received: 574446, writing data status: ESP_OK[0m
+[0;32mI (38105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008c3ee, total_received: 575470, writing data status: ESP_OK[0m
+[0;32mI (38115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008c7ee, total_received: 576494, writing data status: ESP_OK[0m
+[0;32mI (38135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008cbee, total_received: 577518, writing data status: ESP_OK[0m
+[0;32mI (38145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008cfee, total_received: 578542, writing data status: ESP_OK[0m
+[0;32mI (38155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008d3ee, total_received: 579566, writing data status: ESP_OK[0m
+[0;32mI (38175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008d7ee, total_received: 580590, writing data status: ESP_OK[0m
+[0;32mI (38185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008dbee, total_received: 581614, writing data status: ESP_OK[0m
+[0;32mI (38195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008dfee, total_received: 582638, writing data status: ESP_OK[0m
+[0;32mI (38215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008e3ee, total_received: 583662, writing data status: ESP_OK[0m
+[0;32mI (38225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008e7ee, total_received: 584686, writing data status: ESP_OK[0m
+[0;32mI (38235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008ebee, total_received: 585710, writing data status: ESP_OK[0m
+[0;32mI (38255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008efee, total_received: 586734, writing data status: ESP_OK[0m
+[0;32mI (38265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008f3ee, total_received: 587758, writing data status: ESP_OK[0m
+[0;32mI (38275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008f7ee, total_received: 588782, writing data status: ESP_OK[0m
+[0;32mI (38295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008fbee, total_received: 589806, writing data status: ESP_OK[0m
+[0;32mI (38475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0008ffee, total_received: 590830, writing data status: ESP_OK[0m
+[0;32mI (38485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000903ee, total_received: 591854, writing data status: ESP_OK[0m
+[0;32mI (38495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000907ee, total_received: 592878, writing data status: ESP_OK[0m
+[0;32mI (38515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00090bee, total_received: 593902, writing data status: ESP_OK[0m
+[0;32mI (38525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00090fee, total_received: 594926, writing data status: ESP_OK[0m
+[0;32mI (38535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000913ee, total_received: 595950, writing data status: ESP_OK[0m
+[0;32mI (38555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000917ee, total_received: 596974, writing data status: ESP_OK[0m
+[0;32mI (38565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00091bee, total_received: 597998, writing data status: ESP_OK[0m
+[0;32mI (38575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00091fee, total_received: 599022, writing data status: ESP_OK[0m
+[0;32mI (38595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000923ee, total_received: 600046, writing data status: ESP_OK[0m
+[0;32mI (38605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000927ee, total_received: 601070, writing data status: ESP_OK[0m
+[0;32mI (38615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00092bee, total_received: 602094, writing data status: ESP_OK[0m
+[0;32mI (38635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00092fee, total_received: 603118, writing data status: ESP_OK[0m
+[0;32mI (38645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000933ee, total_received: 604142, writing data status: ESP_OK[0m
+[0;32mI (38655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000937ee, total_received: 605166, writing data status: ESP_OK[0m
+[0;32mI (38675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00093bee, total_received: 606190, writing data status: ESP_OK[0m
+[0;32mI (38855) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00093fee, total_received: 607214, writing data status: ESP_OK[0m
+[0;32mI (38865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000943ee, total_received: 608238, writing data status: ESP_OK[0m
+[0;32mI (38875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000947ee, total_received: 609262, writing data status: ESP_OK[0m
+[0;32mI (38895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00094bee, total_received: 610286, writing data status: ESP_OK[0m
+[0;32mI (38905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00094fee, total_received: 611310, writing data status: ESP_OK[0m
+[0;32mI (38915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000953ee, total_received: 612334, writing data status: ESP_OK[0m
+[0;32mI (38935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000957ee, total_received: 613358, writing data status: ESP_OK[0m
+[0;32mI (38945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00095bee, total_received: 614382, writing data status: ESP_OK[0m
+[0;32mI (38955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00095fee, total_received: 615406, writing data status: ESP_OK[0m
+[0;32mI (38975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000963ee, total_received: 616430, writing data status: ESP_OK[0m
+[0;32mI (38985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000967ee, total_received: 617454, writing data status: ESP_OK[0m
+[0;32mI (38995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00096bee, total_received: 618478, writing data status: ESP_OK[0m
+[0;32mI (39015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00096fee, total_received: 619502, writing data status: ESP_OK[0m
+[0;32mI (39025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000973ee, total_received: 620526, writing data status: ESP_OK[0m
+[0;32mI (39035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000977ee, total_received: 621550, writing data status: ESP_OK[0m
+[0;32mI (39055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00097bee, total_received: 622574, writing data status: ESP_OK[0m
+[0;32mI (39255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00097fee, total_received: 623598, writing data status: ESP_OK[0m
+[0;32mI (39265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000983ee, total_received: 624622, writing data status: ESP_OK[0m
+[0;32mI (39275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000987ee, total_received: 625646, writing data status: ESP_OK[0m
+[0;32mI (39295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00098bee, total_received: 626670, writing data status: ESP_OK[0m
+[0;32mI (39305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00098fee, total_received: 627694, writing data status: ESP_OK[0m
+[0;32mI (39315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000993ee, total_received: 628718, writing data status: ESP_OK[0m
+[0;32mI (39335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000997ee, total_received: 629742, writing data status: ESP_OK[0m
+[0;32mI (39345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00099bee, total_received: 630766, writing data status: ESP_OK[0m
+[0;32mI (39355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x00099fee, total_received: 631790, writing data status: ESP_OK[0m
+[0;32mI (39375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009a3ee, total_received: 632814, writing data status: ESP_OK[0m
+[0;32mI (39385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009a7ee, total_received: 633838, writing data status: ESP_OK[0m
+[0;32mI (39395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009abee, total_received: 634862, writing data status: ESP_OK[0m
+[0;32mI (39415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009afee, total_received: 635886, writing data status: ESP_OK[0m
+[0;32mI (39425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009b3ee, total_received: 636910, writing data status: ESP_OK[0m
+[0;32mI (39435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009b7ee, total_received: 637934, writing data status: ESP_OK[0m
+[0;32mI (39455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009bbee, total_received: 638958, writing data status: ESP_OK[0m
+[0;32mI (39685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009bfee, total_received: 639982, writing data status: ESP_OK[0m
+[0;32mI (39685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009c3ee, total_received: 641006, writing data status: ESP_OK[0m
+[0;32mI (39705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009c7ee, total_received: 642030, writing data status: ESP_OK[0m
+[0;32mI (39715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009cbee, total_received: 643054, writing data status: ESP_OK[0m
+[0;32mI (39725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009cfee, total_received: 644078, writing data status: ESP_OK[0m
+[0;32mI (39735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009d3ee, total_received: 645102, writing data status: ESP_OK[0m
+[0;32mI (39755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009d7ee, total_received: 646126, writing data status: ESP_OK[0m
+[0;32mI (39765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009dbee, total_received: 647150, writing data status: ESP_OK[0m
+[0;32mI (39785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009dfee, total_received: 648174, writing data status: ESP_OK[0m
+[0;32mI (39795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009e3ee, total_received: 649198, writing data status: ESP_OK[0m
+[0;32mI (39805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009e7ee, total_received: 650222, writing data status: ESP_OK[0m
+[0;32mI (39825) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009ebee, total_received: 651246, writing data status: ESP_OK[0m
+[0;32mI (39835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009efee, total_received: 652270, writing data status: ESP_OK[0m
+[0;32mI (39845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009f3ee, total_received: 653294, writing data status: ESP_OK[0m
+[0;32mI (39865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009f7ee, total_received: 654318, writing data status: ESP_OK[0m
+[0;32mI (39875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009fbee, total_received: 655342, writing data status: ESP_OK[0m
+[0;32mI (40145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x0009ffee, total_received: 656366, writing data status: ESP_OK[0m
+[0;32mI (40155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a03ee, total_received: 657390, writing data status: ESP_OK[0m
+[0;32mI (40165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a07ee, total_received: 658414, writing data status: ESP_OK[0m
+[0;32mI (40185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a0bee, total_received: 659438, writing data status: ESP_OK[0m
+[0;32mI (40195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a0fee, total_received: 660462, writing data status: ESP_OK[0m
+[0;32mI (40205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a13ee, total_received: 661486, writing data status: ESP_OK[0m
+[0;32mI (40225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a17ee, total_received: 662510, writing data status: ESP_OK[0m
+[0;32mI (40235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a1bee, total_received: 663534, writing data status: ESP_OK[0m
+[0;32mI (40245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a1fee, total_received: 664558, writing data status: ESP_OK[0m
+[0;32mI (40265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a23ee, total_received: 665582, writing data status: ESP_OK[0m
+[0;32mI (40275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a27ee, total_received: 666606, writing data status: ESP_OK[0m
+[0;32mI (40285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a2bee, total_received: 667630, writing data status: ESP_OK[0m
+[0;32mI (40305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a2fee, total_received: 668654, writing data status: ESP_OK[0m
+[0;32mI (40315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a33ee, total_received: 669678, writing data status: ESP_OK[0m
+[0;32mI (40325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a37ee, total_received: 670702, writing data status: ESP_OK[0m
+[0;32mI (40345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a3bee, total_received: 671726, writing data status: ESP_OK[0m
+[0;32mI (40535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a3fee, total_received: 672750, writing data status: ESP_OK[0m
+[0;32mI (40535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a43ee, total_received: 673774, writing data status: ESP_OK[0m
+[0;32mI (40555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a47ee, total_received: 674798, writing data status: ESP_OK[0m
+[0;32mI (40565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a4bee, total_received: 675822, writing data status: ESP_OK[0m
+[0;32mI (40575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a4fee, total_received: 676846, writing data status: ESP_OK[0m
+[0;32mI (40595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a53ee, total_received: 677870, writing data status: ESP_OK[0m
+[0;32mI (40605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a57ee, total_received: 678894, writing data status: ESP_OK[0m
+[0;32mI (40615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a5bee, total_received: 679918, writing data status: ESP_OK[0m
+[0;32mI (40635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a5fee, total_received: 680942, writing data status: ESP_OK[0m
+[0;32mI (40645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a63ee, total_received: 681966, writing data status: ESP_OK[0m
+[0;32mI (40655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a67ee, total_received: 682990, writing data status: ESP_OK[0m
+[0;32mI (40675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a6bee, total_received: 684014, writing data status: ESP_OK[0m
+[0;32mI (40685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a6fee, total_received: 685038, writing data status: ESP_OK[0m
+[0;32mI (40695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a73ee, total_received: 686062, writing data status: ESP_OK[0m
+[0;32mI (40715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a77ee, total_received: 687086, writing data status: ESP_OK[0m
+[0;32mI (40725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a7bee, total_received: 688110, writing data status: ESP_OK[0m
+[0;32mI (40925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a7fee, total_received: 689134, writing data status: ESP_OK[0m
+[0;32mI (40925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a83ee, total_received: 690158, writing data status: ESP_OK[0m
+[0;32mI (40935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a87ee, total_received: 691182, writing data status: ESP_OK[0m
+[0;32mI (40955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a8bee, total_received: 692206, writing data status: ESP_OK[0m
+[0;32mI (40965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a8fee, total_received: 693230, writing data status: ESP_OK[0m
+[0;32mI (40975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a93ee, total_received: 694254, writing data status: ESP_OK[0m
+[0;32mI (40995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a97ee, total_received: 695278, writing data status: ESP_OK[0m
+[0;32mI (41005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a9bee, total_received: 696302, writing data status: ESP_OK[0m
+[0;32mI (41015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000a9fee, total_received: 697326, writing data status: ESP_OK[0m
+[0;32mI (41035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aa3ee, total_received: 698350, writing data status: ESP_OK[0m
+[0;32mI (41045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aa7ee, total_received: 699374, writing data status: ESP_OK[0m
+[0;32mI (41055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aabee, total_received: 700398, writing data status: ESP_OK[0m
+[0;32mI (41075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aafee, total_received: 701422, writing data status: ESP_OK[0m
+[0;32mI (41085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ab3ee, total_received: 702446, writing data status: ESP_OK[0m
+[0;32mI (41095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ab7ee, total_received: 703470, writing data status: ESP_OK[0m
+[0;32mI (41115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000abbee, total_received: 704494, writing data status: ESP_OK[0m
+[0;32mI (41305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000abfee, total_received: 705518, writing data status: ESP_OK[0m
+[0;32mI (41315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ac3ee, total_received: 706542, writing data status: ESP_OK[0m
+[0;32mI (41325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ac7ee, total_received: 707566, writing data status: ESP_OK[0m
+[0;32mI (41335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000acbee, total_received: 708590, writing data status: ESP_OK[0m
+[0;32mI (41355) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000acfee, total_received: 709614, writing data status: ESP_OK[0m
+[0;32mI (41365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ad3ee, total_received: 710638, writing data status: ESP_OK[0m
+[0;32mI (41375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ad7ee, total_received: 711662, writing data status: ESP_OK[0m
+[0;32mI (41395) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000adbee, total_received: 712686, writing data status: ESP_OK[0m
+[0;32mI (41405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000adfee, total_received: 713710, writing data status: ESP_OK[0m
+[0;32mI (41415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ae3ee, total_received: 714734, writing data status: ESP_OK[0m
+[0;32mI (41435) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ae7ee, total_received: 715758, writing data status: ESP_OK[0m
+[0;32mI (41445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aebee, total_received: 716782, writing data status: ESP_OK[0m
+[0;32mI (41465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000aefee, total_received: 717806, writing data status: ESP_OK[0m
+[0;32mI (41475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000af3ee, total_received: 718830, writing data status: ESP_OK[0m
+[0;32mI (41485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000af7ee, total_received: 719854, writing data status: ESP_OK[0m
+[0;32mI (41505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000afbee, total_received: 720878, writing data status: ESP_OK[0m
+[0;32mI (41695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000affee, total_received: 721902, writing data status: ESP_OK[0m
+[0;32mI (41705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b03ee, total_received: 722926, writing data status: ESP_OK[0m
+[0;32mI (41715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b07ee, total_received: 723950, writing data status: ESP_OK[0m
+[0;32mI (41725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b0bee, total_received: 724974, writing data status: ESP_OK[0m
+[0;32mI (41745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b0fee, total_received: 725998, writing data status: ESP_OK[0m
+[0;32mI (41755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b13ee, total_received: 727022, writing data status: ESP_OK[0m
+[0;32mI (41765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b17ee, total_received: 728046, writing data status: ESP_OK[0m
+[0;32mI (41785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b1bee, total_received: 729070, writing data status: ESP_OK[0m
+[0;32mI (41795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b1fee, total_received: 730094, writing data status: ESP_OK[0m
+[0;32mI (41805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b23ee, total_received: 731118, writing data status: ESP_OK[0m
+[0;32mI (41825) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b27ee, total_received: 732142, writing data status: ESP_OK[0m
+[0;32mI (41835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b2bee, total_received: 733166, writing data status: ESP_OK[0m
+[0;32mI (41845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b2fee, total_received: 734190, writing data status: ESP_OK[0m
+[0;32mI (41865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b33ee, total_received: 735214, writing data status: ESP_OK[0m
+[0;32mI (41875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b37ee, total_received: 736238, writing data status: ESP_OK[0m
+[0;32mI (41885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b3bee, total_received: 737262, writing data status: ESP_OK[0m
+[0;32mI (42075) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b3fee, total_received: 738286, writing data status: ESP_OK[0m
+[0;32mI (42085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b43ee, total_received: 739310, writing data status: ESP_OK[0m
+[0;32mI (42095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b47ee, total_received: 740334, writing data status: ESP_OK[0m
+[0;32mI (42105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b4bee, total_received: 741358, writing data status: ESP_OK[0m
+[0;32mI (42125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b4fee, total_received: 742382, writing data status: ESP_OK[0m
+[0;32mI (42135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b53ee, total_received: 743406, writing data status: ESP_OK[0m
+[0;32mI (42145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b57ee, total_received: 744430, writing data status: ESP_OK[0m
+[0;32mI (42165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b5bee, total_received: 745454, writing data status: ESP_OK[0m
+[0;32mI (42175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b5fee, total_received: 746478, writing data status: ESP_OK[0m
+[0;32mI (42185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b63ee, total_received: 747502, writing data status: ESP_OK[0m
+[0;32mI (42205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b67ee, total_received: 748526, writing data status: ESP_OK[0m
+[0;32mI (42215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b6bee, total_received: 749550, writing data status: ESP_OK[0m
+[0;32mI (42225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b6fee, total_received: 750574, writing data status: ESP_OK[0m
+[0;32mI (42245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b73ee, total_received: 751598, writing data status: ESP_OK[0m
+[0;32mI (42255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b77ee, total_received: 752622, writing data status: ESP_OK[0m
+[0;32mI (42265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b7bee, total_received: 753646, writing data status: ESP_OK[0m
+[0;32mI (42455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b7fee, total_received: 754670, writing data status: ESP_OK[0m
+[0;32mI (42455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b83ee, total_received: 755694, writing data status: ESP_OK[0m
+[0;32mI (42475) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b87ee, total_received: 756718, writing data status: ESP_OK[0m
+[0;32mI (42485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b8bee, total_received: 757742, writing data status: ESP_OK[0m
+[0;32mI (42495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b8fee, total_received: 758766, writing data status: ESP_OK[0m
+[0;32mI (42515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b93ee, total_received: 759790, writing data status: ESP_OK[0m
+[0;32mI (42525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b97ee, total_received: 760814, writing data status: ESP_OK[0m
+[0;32mI (42535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b9bee, total_received: 761838, writing data status: ESP_OK[0m
+[0;32mI (42555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000b9fee, total_received: 762862, writing data status: ESP_OK[0m
+[0;32mI (42565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ba3ee, total_received: 763886, writing data status: ESP_OK[0m
+[0;32mI (42575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ba7ee, total_received: 764910, writing data status: ESP_OK[0m
+[0;32mI (42595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000babee, total_received: 765934, writing data status: ESP_OK[0m
+[0;32mI (42605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bafee, total_received: 766958, writing data status: ESP_OK[0m
+[0;32mI (42615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bb3ee, total_received: 767982, writing data status: ESP_OK[0m
+[0;32mI (42635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bb7ee, total_received: 769006, writing data status: ESP_OK[0m
+[0;32mI (42645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bbbee, total_received: 770030, writing data status: ESP_OK[0m
+[0;32mI (42875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bbfee, total_received: 771054, writing data status: ESP_OK[0m
+[0;32mI (42875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bc3ee, total_received: 772078, writing data status: ESP_OK[0m
+[0;32mI (42895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bc7ee, total_received: 773102, writing data status: ESP_OK[0m
+[0;32mI (42905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bcbee, total_received: 774126, writing data status: ESP_OK[0m
+[0;32mI (42915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bcfee, total_received: 775150, writing data status: ESP_OK[0m
+[0;32mI (42935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bd3ee, total_received: 776174, writing data status: ESP_OK[0m
+[0;32mI (42945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bd7ee, total_received: 777198, writing data status: ESP_OK[0m
+[0;32mI (42955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bdbee, total_received: 778222, writing data status: ESP_OK[0m
+[0;32mI (42975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bdfee, total_received: 779246, writing data status: ESP_OK[0m
+[0;32mI (42985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000be3ee, total_received: 780270, writing data status: ESP_OK[0m
+[0;32mI (42995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000be7ee, total_received: 781294, writing data status: ESP_OK[0m
+[0;32mI (43015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bebee, total_received: 782318, writing data status: ESP_OK[0m
+[0;32mI (43025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000befee, total_received: 783342, writing data status: ESP_OK[0m
+[0;32mI (43035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bf3ee, total_received: 784366, writing data status: ESP_OK[0m
+[0;32mI (43055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bf7ee, total_received: 785390, writing data status: ESP_OK[0m
+[0;32mI (43065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bfbee, total_received: 786414, writing data status: ESP_OK[0m
+[0;32mI (43305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000bffee, total_received: 787438, writing data status: ESP_OK[0m
+[0;32mI (43305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c03ee, total_received: 788462, writing data status: ESP_OK[0m
+[0;32mI (43325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c07ee, total_received: 789486, writing data status: ESP_OK[0m
+[0;32mI (43335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c0bee, total_received: 790510, writing data status: ESP_OK[0m
+[0;32mI (43345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c0fee, total_received: 791534, writing data status: ESP_OK[0m
+[0;32mI (43365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c13ee, total_received: 792558, writing data status: ESP_OK[0m
+[0;32mI (43375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c17ee, total_received: 793582, writing data status: ESP_OK[0m
+[0;32mI (43385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c1bee, total_received: 794606, writing data status: ESP_OK[0m
+[0;32mI (43405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c1fee, total_received: 795630, writing data status: ESP_OK[0m
+[0;32mI (43415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c23ee, total_received: 796654, writing data status: ESP_OK[0m
+[0;32mI (43425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c27ee, total_received: 797678, writing data status: ESP_OK[0m
+[0;32mI (43445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c2bee, total_received: 798702, writing data status: ESP_OK[0m
+[0;32mI (43455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c2fee, total_received: 799726, writing data status: ESP_OK[0m
+[0;32mI (43465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c33ee, total_received: 800750, writing data status: ESP_OK[0m
+[0;32mI (43485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c37ee, total_received: 801774, writing data status: ESP_OK[0m
+[0;32mI (43495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c3bee, total_received: 802798, writing data status: ESP_OK[0m
+[0;32mI (43695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c3fee, total_received: 803822, writing data status: ESP_OK[0m
+[0;32mI (43695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c43ee, total_received: 804846, writing data status: ESP_OK[0m
+[0;32mI (43715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c47ee, total_received: 805870, writing data status: ESP_OK[0m
+[0;32mI (43725) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c4bee, total_received: 806894, writing data status: ESP_OK[0m
+[0;32mI (43735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c4fee, total_received: 807918, writing data status: ESP_OK[0m
+[0;32mI (43755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c53ee, total_received: 808942, writing data status: ESP_OK[0m
+[0;32mI (43765) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c57ee, total_received: 809966, writing data status: ESP_OK[0m
+[0;32mI (43775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c5bee, total_received: 810990, writing data status: ESP_OK[0m
+[0;32mI (43795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c5fee, total_received: 812014, writing data status: ESP_OK[0m
+[0;32mI (43805) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c63ee, total_received: 813038, writing data status: ESP_OK[0m
+[0;32mI (43815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c67ee, total_received: 814062, writing data status: ESP_OK[0m
+[0;32mI (43835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c6bee, total_received: 815086, writing data status: ESP_OK[0m
+[0;32mI (43845) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c6fee, total_received: 816110, writing data status: ESP_OK[0m
+[0;32mI (43865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c73ee, total_received: 817134, writing data status: ESP_OK[0m
+[0;32mI (43875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c77ee, total_received: 818158, writing data status: ESP_OK[0m
+[0;32mI (43885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c7bee, total_received: 819182, writing data status: ESP_OK[0m
+[0;32mI (44085) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c7fee, total_received: 820206, writing data status: ESP_OK[0m
+[0;32mI (44095) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c83ee, total_received: 821230, writing data status: ESP_OK[0m
+[0;32mI (44105) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c87ee, total_received: 822254, writing data status: ESP_OK[0m
+[0;32mI (44125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c8bee, total_received: 823278, writing data status: ESP_OK[0m
+[0;32mI (44135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c8fee, total_received: 824302, writing data status: ESP_OK[0m
+[0;32mI (44145) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c93ee, total_received: 825326, writing data status: ESP_OK[0m
+[0;32mI (44165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c97ee, total_received: 826350, writing data status: ESP_OK[0m
+[0;32mI (44175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c9bee, total_received: 827374, writing data status: ESP_OK[0m
+[0;32mI (44185) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000c9fee, total_received: 828398, writing data status: ESP_OK[0m
+[0;32mI (44205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ca3ee, total_received: 829422, writing data status: ESP_OK[0m
+[0;32mI (44215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ca7ee, total_received: 830446, writing data status: ESP_OK[0m
+[0;32mI (44225) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cabee, total_received: 831470, writing data status: ESP_OK[0m
+[0;32mI (44245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cafee, total_received: 832494, writing data status: ESP_OK[0m
+[0;32mI (44255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cb3ee, total_received: 833518, writing data status: ESP_OK[0m
+[0;32mI (44265) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cb7ee, total_received: 834542, writing data status: ESP_OK[0m
+[0;32mI (44285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cbbee, total_received: 835566, writing data status: ESP_OK[0m
+[0;32mI (44485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cbfee, total_received: 836590, writing data status: ESP_OK[0m
+[0;32mI (44485) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cc3ee, total_received: 837614, writing data status: ESP_OK[0m
+[0;32mI (44495) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cc7ee, total_received: 838638, writing data status: ESP_OK[0m
+[0;32mI (44515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ccbee, total_received: 839662, writing data status: ESP_OK[0m
+[0;32mI (44525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ccfee, total_received: 840686, writing data status: ESP_OK[0m
+[0;32mI (44535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cd3ee, total_received: 841710, writing data status: ESP_OK[0m
+[0;32mI (44555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cd7ee, total_received: 842734, writing data status: ESP_OK[0m
+[0;32mI (44565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cdbee, total_received: 843758, writing data status: ESP_OK[0m
+[0;32mI (44575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cdfee, total_received: 844782, writing data status: ESP_OK[0m
+[0;32mI (44595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ce3ee, total_received: 845806, writing data status: ESP_OK[0m
+[0;32mI (44605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ce7ee, total_received: 846830, writing data status: ESP_OK[0m
+[0;32mI (44615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cebee, total_received: 847854, writing data status: ESP_OK[0m
+[0;32mI (44635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cefee, total_received: 848878, writing data status: ESP_OK[0m
+[0;32mI (44645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cf3ee, total_received: 849902, writing data status: ESP_OK[0m
+[0;32mI (44655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cf7ee, total_received: 850926, writing data status: ESP_OK[0m
+[0;32mI (44675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cfbee, total_received: 851950, writing data status: ESP_OK[0m
+[0;32mI (44875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000cffee, total_received: 852974, writing data status: ESP_OK[0m
+[0;32mI (44875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d03ee, total_received: 853998, writing data status: ESP_OK[0m
+[0;32mI (44895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d07ee, total_received: 855022, writing data status: ESP_OK[0m
+[0;32mI (44905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d0bee, total_received: 856046, writing data status: ESP_OK[0m
+[0;32mI (44915) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d0fee, total_received: 857070, writing data status: ESP_OK[0m
+[0;32mI (44935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d13ee, total_received: 858094, writing data status: ESP_OK[0m
+[0;32mI (44945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d17ee, total_received: 859118, writing data status: ESP_OK[0m
+[0;32mI (44955) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d1bee, total_received: 860142, writing data status: ESP_OK[0m
+[0;32mI (44975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d1fee, total_received: 861166, writing data status: ESP_OK[0m
+[0;32mI (44985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d23ee, total_received: 862190, writing data status: ESP_OK[0m
+[0;32mI (44995) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d27ee, total_received: 863214, writing data status: ESP_OK[0m
+[0;32mI (45015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d2bee, total_received: 864238, writing data status: ESP_OK[0m
+[0;32mI (45025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d2fee, total_received: 865262, writing data status: ESP_OK[0m
+[0;32mI (45035) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d33ee, total_received: 866286, writing data status: ESP_OK[0m
+[0;32mI (45055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d37ee, total_received: 867310, writing data status: ESP_OK[0m
+[0;32mI (45065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d3bee, total_received: 868334, writing data status: ESP_OK[0m
+[0;32mI (45275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d3fee, total_received: 869358, writing data status: ESP_OK[0m
+[0;32mI (45285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d43ee, total_received: 870382, writing data status: ESP_OK[0m
+[0;32mI (45295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d47ee, total_received: 871406, writing data status: ESP_OK[0m
+[0;32mI (45305) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d4bee, total_received: 872430, writing data status: ESP_OK[0m
+[0;32mI (45325) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d4fee, total_received: 873454, writing data status: ESP_OK[0m
+[0;32mI (45335) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d53ee, total_received: 874478, writing data status: ESP_OK[0m
+[0;32mI (45345) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d57ee, total_received: 875502, writing data status: ESP_OK[0m
+[0;32mI (45365) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d5bee, total_received: 876526, writing data status: ESP_OK[0m
+[0;32mI (45375) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d5fee, total_received: 877550, writing data status: ESP_OK[0m
+[0;32mI (45385) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d63ee, total_received: 878574, writing data status: ESP_OK[0m
+[0;32mI (45405) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d67ee, total_received: 879598, writing data status: ESP_OK[0m
+[0;32mI (45415) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d6bee, total_received: 880622, writing data status: ESP_OK[0m
+[0;32mI (45425) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d6fee, total_received: 881646, writing data status: ESP_OK[0m
+[0;32mI (45445) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d73ee, total_received: 882670, writing data status: ESP_OK[0m
+[0;32mI (45455) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d77ee, total_received: 883694, writing data status: ESP_OK[0m
+[0;32mI (45465) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d7bee, total_received: 884718, writing data status: ESP_OK[0m
+[0;32mI (45695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d7fee, total_received: 885742, writing data status: ESP_OK[0m
+[0;32mI (45705) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d83ee, total_received: 886766, writing data status: ESP_OK[0m
+[0;32mI (45715) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d87ee, total_received: 887790, writing data status: ESP_OK[0m
+[0;32mI (45735) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d8bee, total_received: 888814, writing data status: ESP_OK[0m
+[0;32mI (45745) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d8fee, total_received: 889838, writing data status: ESP_OK[0m
+[0;32mI (45755) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d93ee, total_received: 890862, writing data status: ESP_OK[0m
+[0;32mI (45775) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d97ee, total_received: 891886, writing data status: ESP_OK[0m
+[0;32mI (45785) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d9bee, total_received: 892910, writing data status: ESP_OK[0m
+[0;32mI (45795) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000d9fee, total_received: 893934, writing data status: ESP_OK[0m
+[0;32mI (45815) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000da3ee, total_received: 894958, writing data status: ESP_OK[0m
+[0;32mI (45825) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000da7ee, total_received: 895982, writing data status: ESP_OK[0m
+[0;32mI (45835) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dabee, total_received: 897006, writing data status: ESP_OK[0m
+[0;32mI (45855) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dafee, total_received: 898030, writing data status: ESP_OK[0m
+[0;32mI (45865) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000db3ee, total_received: 899054, writing data status: ESP_OK[0m
+[0;32mI (45875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000db7ee, total_received: 900078, writing data status: ESP_OK[0m
+[0;32mI (45895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dbbee, total_received: 901102, writing data status: ESP_OK[0m
+[0;32mI (46115) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dbfee, total_received: 902126, writing data status: ESP_OK[0m
+[0;32mI (46125) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dc3ee, total_received: 903150, writing data status: ESP_OK[0m
+[0;32mI (46135) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dc7ee, total_received: 904174, writing data status: ESP_OK[0m
+[0;32mI (46155) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dcbee, total_received: 905198, writing data status: ESP_OK[0m
+[0;32mI (46165) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dcfee, total_received: 906222, writing data status: ESP_OK[0m
+[0;32mI (46175) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dd3ee, total_received: 907246, writing data status: ESP_OK[0m
+[0;32mI (46195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dd7ee, total_received: 908270, writing data status: ESP_OK[0m
+[0;32mI (46205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ddbee, total_received: 909294, writing data status: ESP_OK[0m
+[0;32mI (46215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000ddfee, total_received: 910318, writing data status: ESP_OK[0m
+[0;32mI (46235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000de3ee, total_received: 911342, writing data status: ESP_OK[0m
+[0;32mI (46245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000de7ee, total_received: 912366, writing data status: ESP_OK[0m
+[0;32mI (46255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000debee, total_received: 913390, writing data status: ESP_OK[0m
+[0;32mI (46275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000defee, total_received: 914414, writing data status: ESP_OK[0m
+[0;32mI (46285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000df3ee, total_received: 915438, writing data status: ESP_OK[0m
+[0;32mI (46295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000df7ee, total_received: 916462, writing data status: ESP_OK[0m
+[0;32mI (46315) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dfbee, total_received: 917486, writing data status: ESP_OK[0m
+[0;32mI (46505) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000dffee, total_received: 918510, writing data status: ESP_OK[0m
+[0;32mI (46515) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e03ee, total_received: 919534, writing data status: ESP_OK[0m
+[0;32mI (46525) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e07ee, total_received: 920558, writing data status: ESP_OK[0m
+[0;32mI (46535) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e0bee, total_received: 921582, writing data status: ESP_OK[0m
+[0;32mI (46555) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e0fee, total_received: 922606, writing data status: ESP_OK[0m
+[0;32mI (46565) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e13ee, total_received: 923630, writing data status: ESP_OK[0m
+[0;32mI (46575) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e17ee, total_received: 924654, writing data status: ESP_OK[0m
+[0;32mI (46595) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e1bee, total_received: 925678, writing data status: ESP_OK[0m
+[0;32mI (46605) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e1fee, total_received: 926702, writing data status: ESP_OK[0m
+[0;32mI (46615) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e23ee, total_received: 927726, writing data status: ESP_OK[0m
+[0;32mI (46635) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e27ee, total_received: 928750, writing data status: ESP_OK[0m
+[0;32mI (46645) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e2bee, total_received: 929774, writing data status: ESP_OK[0m
+[0;32mI (46655) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e2fee, total_received: 930798, writing data status: ESP_OK[0m
+[0;32mI (46675) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e33ee, total_received: 931822, writing data status: ESP_OK[0m
+[0;32mI (46685) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e37ee, total_received: 932846, writing data status: ESP_OK[0m
+[0;32mI (46695) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e3bee, total_received: 933870, writing data status: ESP_OK[0m
+[0;32mI (46875) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e3fee, total_received: 934894, writing data status: ESP_OK[0m
+[0;32mI (46885) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e43ee, total_received: 935918, writing data status: ESP_OK[0m
+[0;32mI (46895) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e47ee, total_received: 936942, writing data status: ESP_OK[0m
+[0;32mI (46905) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e4bee, total_received: 937966, writing data status: ESP_OK[0m
+[0;32mI (46925) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e4fee, total_received: 938990, writing data status: ESP_OK[0m
+[0;32mI (46935) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e53ee, total_received: 940014, writing data status: ESP_OK[0m
+[0;32mI (46945) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e57ee, total_received: 941038, writing data status: ESP_OK[0m
+[0;32mI (46965) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e5bee, total_received: 942062, writing data status: ESP_OK[0m
+[0;32mI (46975) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e5fee, total_received: 943086, writing data status: ESP_OK[0m
+[0;32mI (46985) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e63ee, total_received: 944110, writing data status: ESP_OK[0m
+[0;32mI (47005) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e67ee, total_received: 945134, writing data status: ESP_OK[0m
+[0;32mI (47015) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e6bee, total_received: 946158, writing data status: ESP_OK[0m
+[0;32mI (47025) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e6fee, total_received: 947182, writing data status: ESP_OK[0m
+[0;32mI (47045) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e73ee, total_received: 948206, writing data status: ESP_OK[0m
+[0;32mI (47055) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e77ee, total_received: 949230, writing data status: ESP_OK[0m
+[0;32mI (47065) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e7bee, total_received: 950254, writing data status: ESP_OK[0m
+[0;32mI (47195) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e7fee, total_received: 951278, writing data status: ESP_OK[0m
+[0;32mI (47205) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e83ee, total_received: 952302, writing data status: ESP_OK[0m
+[0;32mI (47215) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e87ee, total_received: 953326, writing data status: ESP_OK[0m
+[0;32mI (47235) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e8bee, total_received: 954350, writing data status: ESP_OK[0m
+[0;32mI (47245) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e8fee, total_received: 955374, writing data status: ESP_OK[0m
+[0;32mI (47255) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e93ee, total_received: 956398, writing data status: ESP_OK[0m
+[0;32mI (47275) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e97ee, total_received: 957422, writing data status: ESP_OK[0m
+[0;32mI (47285) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e9bee, total_received: 958446, writing data status: ESP_OK[0m
+[0;32mI (47295) ota_stuff: Target partition: ota_0: Data len: 1024, target address: 0x000e9fee, total_received: 959470, writing data status: ESP_OK[0m
+[0;32mI (47315) ota_stuff: Target partition: ota_0: Data len: 1010, target address: 0x000ea3ee, total_received: 960480, writing data status: ESP_OK[0m
+[0;32mI (47325) esp_image: segment 0: paddr=00150020 vaddr=3f400020 size=2b408h (177160) map[0m
+[0;32mI (47385) esp_image: segment 1: paddr=0017b430 vaddr=3ffb0000 size=03800h ( 14336) [0m
+[0;32mI (47395) esp_image: segment 2: paddr=0017ec38 vaddr=40080000 size=013e0h (  5088) [0m
+[0;32mI (47395) esp_image: segment 3: paddr=00180020 vaddr=400d0020 size=a6508h (681224) map[0m
+[0;32mI (47605) esp_image: segment 4: paddr=00226530 vaddr=400813e0 size=14284h ( 82564) [0m
+[0;32mI (47635) esp_image: segment 0: paddr=00150020 vaddr=3f400020 size=2b408h (177160) map[0m
+[0;32mI (47685) esp_image: segment 1: paddr=0017b430 vaddr=3ffb0000 size=03800h ( 14336) [0m
+[0;32mI (47695) esp_image: segment 2: paddr=0017ec38 vaddr=40080000 size=013e0h (  5088) [0m
+[0;32mI (47695) esp_image: segment 3: paddr=00180020 vaddr=400d0020 size=a6508h (681224) map[0m
+[0;32mI (47905) esp_image: segment 4: paddr=00226530 vaddr=400813e0 size=14284h ( 82564) [0m
+[0;32mI (47995) ota_stuff: All data received. status of ota: ESP_OK[0m
+[0;32mI (47995) ota_stuff: Next boot will use ota_0 as the active partition.....[0m
+I (53995) wifi:state: run -> init (0)
+I (53995) wifi:pm stop, total sleep time: 19945662 us / 52130510 us
+
+I (53995) wifi:<ba-del>idx:1, tid:0
+I (53995) wifi:<ba-del>idx:0, tid:6
+I (53995) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+E (54005) wifi:NAN WiFi stop
+[0;32mI (54005) wifi_setup: retry to connect to the AP[0m
+[0;32mI (54005) wifi_setup: connect to the AP fail[0m
+I (54075) wifi:flush txq
+I (54075) wifi:stop sw txq
+I (54075) wifi:lmac stop hw txq
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 10 2023 14:33:40[0m
+[0;32mI (35) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (43) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (48) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (57) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (66) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (73) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (88) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (103) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (118) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (130) esp_image: segment 0: paddr=00150020 vaddr=3f400020 size=2b408h (177160) map[0m
+[0;32mI (202) esp_image: segment 1: paddr=0017b430 vaddr=3ffb0000 size=03800h ( 14336) load[0m
+[0;32mI (208) esp_image: segment 2: paddr=0017ec38 vaddr=40080000 size=013e0h (  5088) load[0m
+[0;32mI (211) esp_image: segment 3: paddr=00180020 vaddr=400d0020 size=a6508h (681224) map[0m
+[0;32mI (462) esp_image: segment 4: paddr=00226530 vaddr=400813e0 size=14284h ( 82564) load[0m
+[0;32mI (508) boot: Loaded app from partition at offset 0x150000[0m
+[0;32mI (508) boot: Disabling RNG early entropy source...[0m
+[0;32mI (520) cpu_start: Multicore app[0m
+[0;32mI (520) cpu_start: Pro cpu up.[0m
+[0;32mI (520) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (509) cpu_start: App cpu up.[0m
+[0;32mI (540) cpu_start: Pro cpu start user code[0m
+[0;32mI (540) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (540) cpu_start: Application information:[0m
+[0;32mI (545) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (551) cpu_start: App version:      b25803e-dirty[0m
+[0;32mI (557) cpu_start: Compile time:     Sep 10 2023 14:33:14[0m
+[0;32mI (563) cpu_start: ELF file SHA256:  203096f2d...[0m
+[0;32mI (568) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (575) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFC21C0 len 0001DE40 (119 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (615) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (629) spi_flash: detected chip: generic[0m
+[0;32mI (632) spi_flash: flash io: dio[0m
+[0;32mI (637) app_start: Starting scheduler on CPU0[0m
+[0;32mI (641) app_start: Starting scheduler on CPU1[0m
+[0;32mI (641) main_task: Started on CPU0[0m
+[0;32mI (651) main_task: Calling app_main()[0m
+[0;32mI (711) MAIN: Main app starting
+[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+machine_info.wifi_info.max_retries = 5
+[0;33mW (731) machine_status: ESP32 last Reset reason: Software reset[0m
+[0;32mI (741) wifi_setup: wifi_init begin
+[0m
+I (761) wifi:wifi driver task: 3ffcc4f0, prio:23, stack:6656, core=0
+I (781) wifi:wifi firmware version: 3e5caf3
+I (791) wifi:wifi certification version: v7.0
+I (791) wifi:config NVS flash: enabled
+I (791) wifi:config nano formating: disabled
+I (791) wifi:Init data frame dynamic rx buffer num: 32
+I (791) wifi:Init management frame dynamic rx buffer num: 32
+I (801) wifi:Init management short buffer num: 32
+I (801) wifi:Init dynamic tx buffer num: 32
+I (811) wifi:Init static rx buffer size: 1600
+I (811) wifi:Init static rx buffer num: 10
+I (821) wifi:Init dynamic rx buffer num: 32
+[0;32mI (821) wifi_init: rx ba win: 6[0m
+[0;32mI (821) wifi_init: tcpip mbox: 32[0m
+[0;32mI (831) wifi_init: udp mbox: 6[0m
+[0;32mI (831) wifi_init: tcp mbox: 6[0m
+[0;32mI (841) wifi_init: tcp tx win: 5744[0m
+[0;32mI (841) wifi_init: tcp rx win: 5744[0m
+[0;32mI (841) wifi_init: tcp mss: 1440[0m
+[0;32mI (851) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (851) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (921) wifi_setup: Entering from_ap_to_sta.
+[0m
+[0;32mI (921) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1021) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1021) wifi:enable tsf
+I (1761) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (1771) wifi:state: init -> auth (b0)
+I (1791) wifi:state: auth -> assoc (0)
+I (1851) wifi:state: assoc -> run (10)
+I (1971) wifi:connected with Jenny, aid = 13, channel 6, BW20, bssid = 50:d4:f7:cd:9a:01
+I (1971) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (1971) wifi:pm start, type: 1
+
+I (1981) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (18981) wifi_setup: got ip:10.0.0.51[0m
+[0;32mI (18981) esp_netif_handlers: sta ip: 10.0.0.51, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (18981) wifi_setup: connected to ap SSID: Jenny password: 4168386922[0m
+[0;32mI (21741) mqtt_stuff: mqtt_app_start[0m
+[0;32mI (21741) mqtt_stuff: Other event id:7[0m
+[0;32mI (21741) MAIN: exiting while loop[0m
+[0;32mI (21741) main_task: Returned from app_main()[0m
+I (22051) wifi:<ba-add>idx:0 (ifx:0, 50:d4:f7:cd:9a:01), tid:0, ssn:9, winSize:64
+[0;32mI (23371) mqtt_stuff: MQTT_EVENT_CONNECTED[0m
+[0;32mI (23381) ota_stuff: Subscribe successful, msg_id=36227[0m
+[0;32mI (23381) ota_stuff: Subscribe successful, msg_id=60703[0m
+[0;32mI (23431) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=36227[0m
+[0;32mI (23481) mqtt_stuff: MQTT_EVENT_SUBSCRIBED, msg_id=60703[0m
+I (99781) wifi:<ba-add>idx:1 (ifx:0, 50:d4:f7:cd:9a:01), tid:6, ssn:0, winSize:64

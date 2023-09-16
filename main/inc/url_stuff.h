@@ -15,6 +15,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "received_messages.h"
+#include "storage.h"
 
 #define INDEX_HTML_PATH "/spiffs/index.html"
 #define INDEX_JS_PATH "/spiffs/script.js"

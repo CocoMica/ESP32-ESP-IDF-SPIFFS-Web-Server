@@ -19,6 +19,7 @@
 #include "url_stuff.h"
 #include "received_messages.h"
 #include "storage.h"
+#include "mqtt_stuff.h"
 
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT BIT1
@@ -28,11 +29,7 @@ extern int wifi_connect_status;
 void wifi_init(void);
 void from_ap_to_sta(void);
 void from_sta_to_ap(void);
-
 void wifi_task(void *pvParameters);
-
-
-
 
 
 #endif

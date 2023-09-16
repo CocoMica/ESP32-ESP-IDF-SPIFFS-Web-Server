@@ -19,9 +19,8 @@
 #include "machine_status.h"
 #include "storage.h"
 
-
 #define LED_PIN 2
 
-
+void machine_setup_routine();
 
 #endif

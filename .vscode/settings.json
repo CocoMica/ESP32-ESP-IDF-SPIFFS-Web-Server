@@ -11,6 +11,8 @@
         "wifi_setup.h": "c",
         "url_stuff.h": "c",
         "esp_http_server.h": "c",
-        "esp_spiffs.h": "c"
+        "esp_spiffs.h": "c",
+        "storage.h": "c",
+        "machine_status.h": "c"
     }
 }

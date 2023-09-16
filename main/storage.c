@@ -1,6 +1,92 @@
 #include "inc/storage.h"
 static const char *TAG = "storage";
 
+esp_err_t nvs_set_general_information(General_Info_t new_general_info)
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t result = nvs_flash_init();
+    if (result != ESP_OK)
+    {
+        goto exit_safe;
+    }
+
+    result = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+    if (result != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to open nvs storage (%s)", esp_err_to_name(result));
+        goto exit_safe;
+    }
+
+    result = nvs_set_blob(nvs_handle, NVS_GENERAL_INFO, (const void *)&new_general_info, sizeof(new_general_info));
+    if (result != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to set blob (%s)", esp_err_to_name(result));
+        goto exit_safe;
+    }
+    result = nvs_commit(nvs_handle);
+    if (result != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to commit updates (%s)", esp_err_to_name(result));
+        goto exit_safe;
+    }
+    nvs_close(nvs_handle);
+    return ESP_OK;
+
+exit_safe:
+    nvs_close(nvs_handle);
+    return ESP_FAIL;
+}
+
+esp_err_t nvs_get_general_information(bool print_out_information)
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t result = nvs_flash_init();
+    if (result != ESP_OK)
+    {
+        goto exit_safe;
+    }
+    result = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+    if (result != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to open nvs storage (%s)", esp_err_to_name(result));
+        goto exit_safe;
+    }
+    // read data
+    size_t required_size;
+    result = nvs_get_blob(nvs_handle, NVS_GENERAL_INFO, NULL, &required_size);
+    result = nvs_get_blob(nvs_handle, NVS_GENERAL_INFO, (void *)&machine_info.general_info, &required_size);
+    if (required_size != sizeof(machine_info.general_info))
+    {
+        ESP_LOGE(TAG, "Error in size mismatch between the nvs_handle and the struct it is decoded to! Setting up inital configuration...");
+        result = ESP_ERR_NVS_NOT_FOUND;
+    }
+
+    switch (result)
+    {
+    case ESP_OK:
+        if (print_out_information)
+        {
+            printf("machine_info.general_info.last_reset_reason = %d\n", machine_info.general_info.last_reset_reason);
+        }
+
+        break;
+    case ESP_ERR_NVS_NOT_FOUND:
+        required_size = sizeof(machine_info.general_info);
+        machine_info.general_info.last_reset_reason = 0;
+        ESP_LOGI(TAG, "Setting up general default configuration in NVS ... ");
+        nvs_set_general_information(machine_info.general_info);
+        break;
+    default:
+        printf("Error (%s) reading!\n", esp_err_to_name(result));
+    }
+    nvs_close(nvs_handle);
+    return ESP_OK;
+
+exit_safe:
+    nvs_close(nvs_handle);
+    return ESP_FAIL;
+}
+
 esp_err_t nvs_set_wifi_information(Wifi_Info_t new_wifi_info)
 {
     nvs_handle_t nvs_handle;
@@ -37,9 +123,8 @@ exit_safe:
     return ESP_FAIL;
 }
 
-Wifi_Info_t nvs_get_wifi_information(bool print_out_information)
+esp_err_t nvs_get_wifi_information(bool print_out_information)
 {
-    Wifi_Info_t wifi_info = {0};
     esp_err_t result = nvs_flash_init();
     if (result != ESP_OK)
     {
@@ -55,8 +140,9 @@ Wifi_Info_t nvs_get_wifi_information(bool print_out_information)
     // read data
     size_t required_size;
     result = nvs_get_blob(nvs_handle, NVS_WIFI_INFO, NULL, &required_size);
-    result = nvs_get_blob(nvs_handle, NVS_WIFI_INFO, (void *)&wifi_info, &required_size);
-    if(required_size !=sizeof(wifi_info)){
+    result = nvs_get_blob(nvs_handle, NVS_WIFI_INFO, (void *)&machine_info.wifi_info, &required_size);
+    if (required_size != sizeof(machine_info.wifi_info))
+    {
         ESP_LOGE(TAG, "Error in size mismatch between the nvs_handle and the struct it is decoded to! Setting up inital configuration...");
         result = ESP_ERR_NVS_NOT_FOUND;
     }
@@ -65,64 +151,58 @@ Wifi_Info_t nvs_get_wifi_information(bool print_out_information)
     case ESP_OK:
         if (print_out_information)
         {
-        printf("wifi_info.STA_ssid = %s\n", wifi_info.STA_ssid);
-        printf("wifi_info.STA_ssid_len = %d\n", wifi_info.STA_ssid_len);
-        printf("wifi_info.STA_password = %s\n", wifi_info.STA_password);
-        printf("wifi_info.STA_password_len = %d\n", wifi_info.STA_password_len);
+            printf("machine_info.wifi_info.STA_ssid = %s\n", machine_info.wifi_info.STA_ssid);
+            printf("machine_info.wifi_info.STA_ssid_len = %d\n", machine_info.wifi_info.STA_ssid_len);
+            printf("machine_info.wifi_info.STA_password = %s\n", machine_info.wifi_info.STA_password);
+            printf("machine_info.wifi_info.STA_password_len = %d\n", machine_info.wifi_info.STA_password_len);
 
-        printf("wifi_info.AP_ssid = %s\n", wifi_info.AP_ssid);
-        printf("wifi_info.AP_ssidlen = %d\n", wifi_info.AP_ssid_len);
-        printf("wifi_info.AP_password = %s\n", wifi_info.AP_password);
-        printf("wifi_info.AP_password_len = %d\n", wifi_info.AP_password_len);
+            printf("machine_info.wifi_info.AP_ssid = %s\n", machine_info.wifi_info.AP_ssid);
+            printf("machine_info.wifi_info.AP_ssidlen = %d\n", machine_info.wifi_info.AP_ssid_len);
+            printf("machine_info.wifi_info.AP_password = %s\n", machine_info.wifi_info.AP_password);
+            printf("machine_info.wifi_info.AP_password_len = %d\n", machine_info.wifi_info.AP_password_len);
 
-        printf("wifi_info.max_retries = %d\n", wifi_info.max_retries);
+            printf("machine_info.wifi_info.max_retries = %d\n", machine_info.wifi_info.max_retries);
         }
 
         break;
     case ESP_ERR_NVS_NOT_FOUND:
-        printf("The value is not initialized yet!\n");
-        required_size = sizeof(wifi_info);
-        strcpy(wifi_info.STA_password, CONFIG_ESP_WIFI_PASSWORD);
-        wifi_info.STA_ssid_len = strlen(CONFIG_ESP_WIFI_SSID);
-        wifi_info.STA_password_len = strlen(CONFIG_ESP_WIFI_PASSWORD);
-        strcpy(wifi_info.AP_ssid, CONFIG_ESP_AP_SSID);
-        strcpy(wifi_info.AP_password, CONFIG_ESP_AP_PASSWORD);
-        wifi_info.AP_ssid_len = strlen(CONFIG_ESP_AP_SSID);
-        wifi_info.AP_password_len = strlen(CONFIG_ESP_AP_PASSWORD);
+        required_size = sizeof(machine_info.wifi_info);
+        strcpy(machine_info.wifi_info.STA_password, CONFIG_ESP_WIFI_PASSWORD);
+        machine_info.wifi_info.STA_ssid_len = strlen(CONFIG_ESP_WIFI_SSID);
+        machine_info.wifi_info.STA_password_len = strlen(CONFIG_ESP_WIFI_PASSWORD);
+        strcpy(machine_info.wifi_info.AP_ssid, CONFIG_ESP_AP_SSID);
+        strcpy(machine_info.wifi_info.AP_password, CONFIG_ESP_AP_PASSWORD);
+        machine_info.wifi_info.AP_ssid_len = strlen(CONFIG_ESP_AP_SSID);
+        machine_info.wifi_info.AP_password_len = strlen(CONFIG_ESP_AP_PASSWORD);
 
-        wifi_info.AP_IP[0] = 192;
-        wifi_info.AP_IP[1] = 168;
-        wifi_info.AP_IP[2] = 2;
-        wifi_info.AP_IP[3] = 1;
+        machine_info.wifi_info.AP_IP[0] = 192;
+        machine_info.wifi_info.AP_IP[1] = 168;
+        machine_info.wifi_info.AP_IP[2] = 2;
+        machine_info.wifi_info.AP_IP[3] = 1;
 
-        wifi_info.AP_GW[0] = 192;
-        wifi_info.AP_GW[1] = 168;
-        wifi_info.AP_GW[2] = 2;
-        wifi_info.AP_GW[3] = 1;
+        machine_info.wifi_info.AP_GW[0] = 192;
+        machine_info.wifi_info.AP_GW[1] = 168;
+        machine_info.wifi_info.AP_GW[2] = 2;
+        machine_info.wifi_info.AP_GW[3] = 1;
 
-        wifi_info.AP_netmask[0] = 255;
-        wifi_info.AP_netmask[1] = 255;
-        wifi_info.AP_netmask[2] = 255;
-        wifi_info.AP_netmask[3] = 0;
+        machine_info.wifi_info.AP_netmask[0] = 255;
+        machine_info.wifi_info.AP_netmask[1] = 255;
+        machine_info.wifi_info.AP_netmask[2] = 255;
+        machine_info.wifi_info.AP_netmask[3] = 0;
 
-        wifi_info.max_retries = CONFIG_ESP_MAXIMUM_RETRY;
-
-        result = nvs_set_blob(nvs_handle, NVS_WIFI_INFO, (const void *)&wifi_info, required_size);
-        printf((result != ESP_OK) ? "Failed!\n" : "Done\n");
-        printf("Committing updates in NVS ... ");
-        result = nvs_commit(nvs_handle);
-        printf((result != ESP_OK) ? "Failed!\n" : "Done\n");
+        machine_info.wifi_info.max_retries = CONFIG_ESP_MAXIMUM_RETRY;
+        ESP_LOGI(TAG, "Setting up wifi default configuration in NVS ... ");
+        nvs_set_wifi_information(machine_info.wifi_info);
         break;
     default:
         printf("Error (%s) reading!\n", esp_err_to_name(result));
     }
     nvs_close(nvs_handle);
+    return ESP_OK;
 
 exit_safe:
-    return wifi_info;
+    return ESP_FAIL;
 }
-
-
 
 void init_storage()
 {

@@ -50,7 +50,5 @@ void read_ws_msg(void *pvParameters){
     while(1){
         receiveStringFromQueue();
         vTaskDelay(pdMS_TO_TICKS(100));
-        
-
     }
 }
