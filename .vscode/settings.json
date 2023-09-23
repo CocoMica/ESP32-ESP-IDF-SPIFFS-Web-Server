@@ -13,6 +13,8 @@
         "esp_http_server.h": "c",
         "esp_spiffs.h": "c",
         "storage.h": "c",
-        "machine_status.h": "c"
+        "machine_status.h": "c",
+        "web_server.h": "c",
+        "mqtt_stuff.h": "c"
     }
 }

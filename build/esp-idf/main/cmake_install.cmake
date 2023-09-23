@@ -1,4 +1,4 @@
-# Install script for directory: D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main
+# Install script for directory: C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

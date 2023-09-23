@@ -18,8 +18,9 @@
 #include "ota_stuff.h"
 #include "machine_status.h"
 #include "storage.h"
-
+#include "web_server.h"
 #define LED_PIN 2
+//#define CLEAN_NVS_FIRST
 
 void machine_setup_routine();
 

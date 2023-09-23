@@ -1,4 +1,4 @@
-/* * Data converted from D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

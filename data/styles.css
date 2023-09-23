@@ -10,6 +10,23 @@ h1 {
     padding: 2vh;
 }
 
+       /* Center the table horizontally */
+       table {
+        margin: 0 auto;
+    }
+    
+    /* Set a custom width (e.g., 50%) */
+    table {
+        width: 50%;
+    }
+
+    /* Add a basic border to the table and its cells */
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+
 .button {
     display: inline-block;
     background-color: #b30000; //red color

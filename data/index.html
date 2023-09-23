@@ -22,6 +22,39 @@
             </div>
         </div>
     </div>
+    <h2>Wifi Table</h2>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Wifi SSID</td>
+            <td>%s</td>
+        </tr>
+        <tr>
+            <td>Wifi Password</td>
+            <td>%s</td>
+        </tr>
+        <tr>
+            <td>AP SSID</td>
+            <td>%s</td>
+        </tr>
+        <tr>
+            <td>AP Password</td>
+            <td>%s</td>
+        </tr>
+    </table>
+
+    <div>
+        <h3>To change the AP SSID and Password:</h3>
+        <form action="/submit_AP_Info" method="POST">
+            New SSID: <input type="text" name="SSID"><br>
+            New Password: <input type="text" name="Password"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
     <h1 id="header">Initial Header</h1>
     <p id="paragraph">Initial Paragraph</p>
     <button id="updateButton">Update Content</button>

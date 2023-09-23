@@ -1,4 +1,4 @@
-/* * Data converted from D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/main/mqtt_eclipseprojects_io.pem
+/* * Data converted from C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/mqtt_eclipseprojects_io.pem
  * (null byte appended)
  */
 .data

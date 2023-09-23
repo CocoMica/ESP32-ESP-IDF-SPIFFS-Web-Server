@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "D:/Softwares/ESP-IDF/esp-idf/components/bootloader/subproject"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/tmp"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src"
-  "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/tmp"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src"
+  "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/Hobby_Coding/spiffs_seb_server/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

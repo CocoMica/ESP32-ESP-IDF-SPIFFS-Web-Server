@@ -1,5 +1,4 @@
 #include "inc/mqtt_stuff.h"
-#include "inc/ota_stuff.h"
 static const char *TAG = "mqtt_stuff";
 
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
@@ -15,6 +14,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
+        //mqtt_app_stop();
         break;
 
     case MQTT_EVENT_SUBSCRIBED:
@@ -77,6 +77,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 void mqtt_app_start(void)
 {
     ESP_LOGI(TAG, "mqtt_app_start");
+    
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker = {
             .address.uri = CONFIG_BROKER_URI,
@@ -86,21 +87,16 @@ void mqtt_app_start(void)
             .username = "device1",
             .authentication.password = "device001",
         }};
+    
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    
+   client = esp_mqtt_client_init(&mqtt_cfg);
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(client);
-    /*
-        while (true)
-        {
-            return;
-            vTaskDelay(pdMS_TO_TICKS(3000));
-            char data[80];
-            count++;
-            sprintf(data, "count is: %d", count);
-            int msg_id = esp_mqtt_client_publish(client, "/topic/qos0", data, 0, 0, 0);
-            ESP_LOGI(TAG, "sent publish successful, msg_id=%d, count=%d.", msg_id, count);
-        }
-        */
+}
+void mqtt_app_stop(void){
+    ESP_LOGI(TAG, "mqtt_app_stop");
+    //esp_mqtt_client_stop(machine_info.mqtt_info.client);
 }
 
 // Function to check if a topic starts with a prefix

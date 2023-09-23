@@ -20,6 +20,7 @@
 #include "received_messages.h"
 #include "storage.h"
 #include "mqtt_stuff.h"
+#include "web_server.h"
 
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT BIT1

@@ -1,6 +1,113 @@
 #include "inc/storage.h"
 static const char *TAG = "storage";
 
+char NVS_Submit_HTML[4096];
+char NVS_Index_HTML[4096];
+char NVS_Index_JS[4096];
+char NVS_Styles_CSS[4096];
+char response_data[4096];
+char NVS_Image_Test[25000];
+
+esp_err_t load_spiffs_pages()
+{
+    // init config to read from spiffs
+    esp_vfs_spiffs_conf_t conf = {
+        .base_path = "/spiffs",
+        .partition_label = NULL,
+        .max_files = 5,
+        .format_if_mount_failed = true};
+    ESP_ERROR_CHECK(esp_vfs_spiffs_register(&conf));
+
+    // get index.html
+    memset((void *)NVS_Index_HTML, 0, sizeof(NVS_Index_HTML));
+    struct stat st;
+    if (stat(INDEX_HTML_PATH, &st))
+    {
+        ESP_LOGE(TAG, "index.html not found");
+        goto exit_safe;
+    }
+    FILE *fp = fopen(INDEX_HTML_PATH, "r");
+    if (fread(NVS_Index_HTML, st.st_size, 1, fp) == 0)
+    {
+        ESP_LOGE(TAG, "fread failed");
+        goto exit_safe;
+    }
+    fclose(fp);
+
+    // get script.js
+    struct stat st2;
+    memset((void *)NVS_Index_JS, 0, sizeof(NVS_Index_JS));
+    if (stat(INDEX_JS_PATH, &st2))
+    {
+        ESP_LOGE(TAG, "script.js not found");
+        goto exit_safe;
+    }
+    FILE *fp2 = fopen(INDEX_JS_PATH, "r");
+    if (fread(NVS_Index_JS, st2.st_size, 1, fp2) == 0)
+    {
+        ESP_LOGE(TAG, "JS fread failed");
+        goto exit_safe;
+    }
+    fclose(fp2);
+
+    // get styles.css
+    struct stat st3;
+    memset((void *)NVS_Styles_CSS, 0, sizeof(NVS_Styles_CSS));
+    if (stat(STYLES_CSS_PATH, &st3))
+    {
+        ESP_LOGE(TAG, "styles.css not found");
+        goto exit_safe;
+    }
+    FILE *fp3 = fopen(STYLES_CSS_PATH, "r");
+    if (fread(NVS_Styles_CSS, st3.st_size, 1, fp3) == 0)
+    {
+        ESP_LOGE(TAG, "CSS fread failed");
+        goto exit_safe;
+    }
+    fclose(fp3);
+
+    // get the image
+    struct stat st4;
+    memset((void *)NVS_Image_Test, 0, sizeof(NVS_Image_Test));
+    if (stat(IMAGE_PATH, &st4))
+    {
+        ESP_LOGE(TAG, "image not found");
+        goto exit_safe;
+    }
+
+    FILE *fp4 = fopen(IMAGE_PATH, "r");
+    if (fread(NVS_Image_Test, st4.st_size, 1, fp4) == 0)
+    {
+        ESP_LOGE(TAG, "image fread failed");
+        goto exit_safe;
+    }
+    fclose(fp4);
+
+    // get submit.html
+    struct stat st5;
+    memset((void *)NVS_Submit_HTML, 0, sizeof(NVS_Submit_HTML));
+
+    if (stat(SUBMIT_HTML_PATH, &st5))
+    {
+        ESP_LOGE(TAG, "submit.html not found");
+        goto exit_safe;
+    }
+    FILE *fp5 = fopen(SUBMIT_HTML_PATH, "r");
+    if (fread(NVS_Submit_HTML, st5.st_size, 1, fp5) == 0)
+    {
+        ESP_LOGE(TAG, "fread failed");
+        goto exit_safe;
+    }
+    fclose(fp5);
+
+    esp_vfs_spiffs_unregister(conf.partition_label);
+    return ESP_OK;
+exit_safe:
+    esp_vfs_spiffs_unregister(conf.partition_label);
+    return ESP_FAIL;
+}
+
+
 esp_err_t nvs_set_general_information(General_Info_t new_general_info)
 {
     nvs_handle_t nvs_handle;
@@ -160,6 +267,9 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
             printf("machine_info.wifi_info.AP_ssidlen = %d\n", machine_info.wifi_info.AP_ssid_len);
             printf("machine_info.wifi_info.AP_password = %s\n", machine_info.wifi_info.AP_password);
             printf("machine_info.wifi_info.AP_password_len = %d\n", machine_info.wifi_info.AP_password_len);
+            ESP_LOGI(TAG, "IP: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.ip));
+            ESP_LOGI(TAG, "GW: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.gw));
+            ESP_LOGI(TAG, "Mask: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.netmask));
 
             printf("machine_info.wifi_info.max_retries = %d\n", machine_info.wifi_info.max_retries);
         }
@@ -167,9 +277,11 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
         break;
     case ESP_ERR_NVS_NOT_FOUND:
         required_size = sizeof(machine_info.wifi_info);
+        strcpy(machine_info.wifi_info.STA_ssid, CONFIG_ESP_WIFI_SSID);
         strcpy(machine_info.wifi_info.STA_password, CONFIG_ESP_WIFI_PASSWORD);
         machine_info.wifi_info.STA_ssid_len = strlen(CONFIG_ESP_WIFI_SSID);
         machine_info.wifi_info.STA_password_len = strlen(CONFIG_ESP_WIFI_PASSWORD);
+
         strcpy(machine_info.wifi_info.AP_ssid, CONFIG_ESP_AP_SSID);
         strcpy(machine_info.wifi_info.AP_password, CONFIG_ESP_AP_PASSWORD);
         machine_info.wifi_info.AP_ssid_len = strlen(CONFIG_ESP_AP_SSID);
@@ -190,7 +302,12 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
         machine_info.wifi_info.AP_netmask[2] = 255;
         machine_info.wifi_info.AP_netmask[3] = 0;
 
-        machine_info.wifi_info.max_retries = CONFIG_ESP_MAXIMUM_RETRY;
+        IP4_ADDR(&machine_info.wifi_info.ipInfo.ip, machine_info.wifi_info.AP_IP[0], machine_info.wifi_info.AP_IP[1], machine_info.wifi_info.AP_IP[2], machine_info.wifi_info.AP_IP[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo.gw, machine_info.wifi_info.AP_GW[0], machine_info.wifi_info.AP_GW[1], machine_info.wifi_info.AP_GW[2], machine_info.wifi_info.AP_GW[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo.netmask, machine_info.wifi_info.AP_netmask[0], machine_info.wifi_info.AP_netmask[1], machine_info.wifi_info.AP_netmask[2], machine_info.wifi_info.AP_netmask[3]);
+
+        machine_info.wifi_info.max_retries = 5; // CONFIG_ESP_MAXIMUM_RETRY;
+
         ESP_LOGI(TAG, "Setting up wifi default configuration in NVS ... ");
         nvs_set_wifi_information(machine_info.wifi_info);
         break;

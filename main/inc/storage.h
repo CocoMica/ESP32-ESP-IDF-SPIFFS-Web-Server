@@ -8,14 +8,33 @@
 #include "nvs_flash.h"
 #include "nvs.h"
 #include "wifi_setup.h"
+#include "mqtt_client.h"
+
+#define SUBMIT_HTML_PATH "/spiffs/submit.html"
+#define INDEX_HTML_PATH "/spiffs/index.html"
+#define INDEX_JS_PATH "/spiffs/script.js"
+#define STYLES_CSS_PATH "/spiffs/styles.css"
+#define IMAGE_PATH "/spiffs/test.png"
 
 #define TEMP_FILE_PATH "/storage/myfile.txt"
 #define NVS_WIFI_INFO "nvs_wifi_info"
 #define NVS_GENERAL_INFO "nvs_gen_info"
+#define NVS_MQTT_INFO "nvs_mqtt_info"
+
+#define CONFIG_BROKER_BIN_SIZE_TO_SEND 20000
+
+
+extern char NVS_Submit_HTML[4096];
+extern char NVS_Index_HTML[4096];
+extern char NVS_Index_JS[4096];
+extern char NVS_Styles_CSS[4096];
+extern char response_data[4096];
+extern char NVS_Image_Test[25000];
 
 
 typedef struct Wifi_Info_t
 {
+    esp_netif_ip_info_t ipInfo;
     char STA_ssid[32];
     uint8_t STA_ssid_len;
     char STA_password[64];
@@ -29,21 +48,24 @@ typedef struct Wifi_Info_t
     uint8_t AP_netmask[4];
     uint8_t max_retries;
 
-} __attribute__((packed)) Wifi_Info_t;
+} Wifi_Info_t;
+
+
+
 
 typedef struct General_Info_t
 {
     esp_reset_reason_t last_reset_reason;
 
-}__attribute__((packed)) General_Info_t;
+} General_Info_t;
 
 typedef struct Machine_Info_t
 {
-    Wifi_Info_t wifi_info;
     General_Info_t general_info;
+    Wifi_Info_t wifi_info;
 
 
-}__attribute__((packed)) Machine_Info_t;
+} Machine_Info_t;
 
 typedef struct NVS_DATA_t
 {
@@ -60,6 +82,7 @@ typedef struct NVS_DATA_t
 extern Machine_Info_t machine_info;
 
 void init_storage();
+esp_err_t load_spiffs_pages();
 esp_err_t nvs_get_wifi_information(bool print_out_information);
 esp_err_t nvs_set_wifi_information(Wifi_Info_t new_wifi_info);
 esp_err_t nvs_get_general_information(bool print_out_information);

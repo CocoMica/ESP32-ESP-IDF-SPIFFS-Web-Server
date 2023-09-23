@@ -1,4 +1,5 @@
 #include "inc/wifi_setup.h"
+
 static const char *TAG = "wifi_setup";
 
 static EventGroupHandle_t s_wifi_event_group;
@@ -40,66 +41,60 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t e
 }
 void from_sta_to_ap(void)
 {
-    ESP_LOGI(TAG, "Entering from_sta_to_ap.\n");
-    esp_netif_ip_info_t ipInfo;
+    ESP_LOGI(TAG, "Entering from_sta_to_ap");
+
     if (wifi_connect_status == 1)
     {
         ESP_ERROR_CHECK(esp_wifi_disconnect());
         ESP_ERROR_CHECK(esp_wifi_stop());
         ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_NULL));
     }
-    IP4_ADDR(&ipInfo.ip, machine_info.wifi_info.AP_IP[0], machine_info.wifi_info.AP_IP[1], machine_info.wifi_info.AP_IP[2], machine_info.wifi_info.AP_IP[3]);
-    IP4_ADDR(&ipInfo.gw, machine_info.wifi_info.AP_GW[0], machine_info.wifi_info.AP_GW[1], machine_info.wifi_info.AP_GW[2], machine_info.wifi_info.AP_GW[3]);
-    IP4_ADDR(&ipInfo.netmask, machine_info.wifi_info.AP_netmask[0], machine_info.wifi_info.AP_netmask[1], machine_info.wifi_info.AP_netmask[2], machine_info.wifi_info.AP_netmask[3]);
+
     esp_netif_dhcps_stop(wifiAP);
-    esp_netif_set_ip_info(wifiAP, &ipInfo);
+    esp_netif_set_ip_info(wifiAP, &machine_info.wifi_info.ipInfo);
     esp_netif_dhcps_start(wifiAP);
-    ESP_LOGI(TAG, "IP: " IPSTR, IP2STR(&ipInfo.ip));
-    ESP_LOGI(TAG, "GW: " IPSTR, IP2STR(&ipInfo.gw));
-    ESP_LOGI(TAG, "Mask: " IPSTR, IP2STR(&ipInfo.netmask));
-    wifi_config_t wifi_config = {
-        .ap = {
-            .max_connection = 1,
-            .authmode = WIFI_AUTH_WPA_WPA2_PSK},
-    };
+    wifi_config_t wifi_config = {0};
+    wifi_config.ap.max_connection = 1;
     strncpy((char *)wifi_config.ap.ssid, machine_info.wifi_info.AP_ssid, machine_info.wifi_info.AP_ssid_len);
     strncpy((char *)wifi_config.ap.password, machine_info.wifi_info.AP_password, machine_info.wifi_info.AP_password_len);
     if (machine_info.wifi_info.AP_password_len == 0)
     {
         wifi_config.ap.authmode = WIFI_AUTH_OPEN;
     }
+    else
+    {
+        wifi_config.ap.authmode = WIFI_AUTH_WPA_WPA2_PSK;
+    }
+
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
     ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_AP, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
+
     ESP_LOGI(TAG, "wifi_init_softap finished. SSID: %s password: %s", machine_info.wifi_info.AP_ssid, machine_info.wifi_info.AP_password);
     wifi_connect_status = 0;
 }
 
 void from_ap_to_sta(void)
 {
-    ESP_LOGI(TAG, "Entering from_ap_to_sta.\n");
+    ESP_LOGI(TAG, "Entering from_ap_to_sta");
     if (wifi_connect_status == 0)
     {
         ESP_ERROR_CHECK(esp_wifi_stop());
         ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_NULL));
     }
     s_wifi_event_group = xEventGroupCreate();
-    wifi_config_t wifi_config = {
-        .sta = {
-            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
-            .pmf_cfg = {
-                .capable = true,
-                .required = false},
-        },
-    };
+    wifi_config_t wifi_config = {0};
+    wifi_config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
+    wifi_config.sta.pmf_cfg.capable = true;
+    wifi_config.sta.pmf_cfg.required = false;
     strncpy((char *)wifi_config.sta.ssid, machine_info.wifi_info.STA_ssid, machine_info.wifi_info.STA_ssid_len);
     strncpy((char *)wifi_config.sta.password, machine_info.wifi_info.STA_password, machine_info.wifi_info.STA_password_len);
 
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
-    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT | WIFI_FAIL_BIT, pdFALSE,
-                                           pdFALSE, portMAX_DELAY);
+
+    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT | WIFI_FAIL_BIT, pdFALSE, pdFALSE, portMAX_DELAY);
     if (bits & WIFI_CONNECTED_BIT)
     {
         ESP_LOGI(TAG, "connected to ap SSID: %s password: %s", machine_info.wifi_info.STA_ssid, machine_info.wifi_info.STA_password);
@@ -118,8 +113,7 @@ void from_ap_to_sta(void)
 
 void wifi_init()
 {
-
-    ESP_LOGI(TAG, "wifi_init begin\n");
+    ESP_LOGI(TAG, "wifi_init begin");
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -131,7 +125,6 @@ void wifi_init()
     wifiAP = esp_netif_create_default_wifi_ap();
 
     esp_netif_create_default_wifi_sta();
-    initi_web_page_buffer();
     setup_server();
 }
 
@@ -141,9 +134,9 @@ void wifi_task(void *pvParameters)
     from_ap_to_sta();
     // from_sta_to_ap();
     while (1)
-    {
+    {  
         if (wifi_connect_status)
-        {   
+        {
             mqtt_app_start();
             vTaskDelete(NULL);
         }
