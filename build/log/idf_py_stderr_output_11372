@@ -1,0 +1,81 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- idf_monitor on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x40081852: panic_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40088b45: esp_system_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008fc11: __assert_func at D:/Softwares/ESP-IDF/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400eb455: esp_netif_create_default_wifi_sta at D:/Softwares/ESP-IDF/esp-idf/components/esp_wifi/src/wifi_default.c:389 (discriminator 1)
+[0m
+[0;33m0x400d8294: wifi_init at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:135 (discriminator 2)
+[0m
+[0;33m0x400d829f: wifi_task at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:141
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x40081852: panic_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40088b45: esp_system_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008fc11: __assert_func at D:/Softwares/ESP-IDF/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400eb455: esp_netif_create_default_wifi_sta at D:/Softwares/ESP-IDF/esp-idf/components/esp_wifi/src/wifi_default.c:389 (discriminator 1)
+[0m
+[0;33m0x400d8294: wifi_init at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:135 (discriminator 2)
+[0m
+[0;33m0x400d829f: wifi_task at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:141
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x40081852: panic_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40088b45: esp_system_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008fc11: __assert_func at D:/Softwares/ESP-IDF/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400eb455: esp_netif_create_default_wifi_sta at D:/Softwares/ESP-IDF/esp-idf/components/esp_wifi/src/wifi_default.c:389 (discriminator 1)
+[0m
+[0;33m0x400d8294: wifi_init at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:135 (discriminator 2)
+[0m
+[0;33m0x400d829f: wifi_task at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:141
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0;33m0x40081852: panic_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40088b45: esp_system_abort at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008fc11: __assert_func at D:/Softwares/ESP-IDF/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400eb455: esp_netif_create_default_wifi_sta at D:/Softwares/ESP-IDF/esp-idf/components/esp_wifi/src/wifi_default.c:389 (discriminator 1)
+[0m
+[0;33m0x400d8294: wifi_init at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:135 (discriminator 2)
+[0m
+[0;33m0x400d829f: wifi_task at C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:141
+[0m
+[0;33m0x4008b591: vPortTaskWrapper at D:/Softwares/ESP-IDF/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400811e8: call_start_cpu1 at D:/Softwares/ESP-IDF/esp-idf/components/esp_system/port/cpu_start.c:170
+[0m
+[0m

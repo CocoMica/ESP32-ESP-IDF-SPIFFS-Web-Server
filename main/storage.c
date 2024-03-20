@@ -262,14 +262,18 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
             printf("machine_info.wifi_info.STA_ssid_len = %d\n", machine_info.wifi_info.STA_ssid_len);
             printf("machine_info.wifi_info.STA_password = %s\n", machine_info.wifi_info.STA_password);
             printf("machine_info.wifi_info.STA_password_len = %d\n", machine_info.wifi_info.STA_password_len);
+            ESP_LOGI(TAG, "STA IP: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_STA.ip));
+            ESP_LOGI(TAG, "STA GW: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_STA.gw));
+            ESP_LOGI(TAG, "STA Mask: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_STA.netmask));
 
             printf("machine_info.wifi_info.AP_ssid = %s\n", machine_info.wifi_info.AP_ssid);
             printf("machine_info.wifi_info.AP_ssidlen = %d\n", machine_info.wifi_info.AP_ssid_len);
             printf("machine_info.wifi_info.AP_password = %s\n", machine_info.wifi_info.AP_password);
             printf("machine_info.wifi_info.AP_password_len = %d\n", machine_info.wifi_info.AP_password_len);
-            ESP_LOGI(TAG, "IP: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.ip));
-            ESP_LOGI(TAG, "GW: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.gw));
-            ESP_LOGI(TAG, "Mask: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo.netmask));
+            ESP_LOGI(TAG, "AP IP: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_AP.ip));
+            ESP_LOGI(TAG, "AP GW: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_AP.gw));
+            ESP_LOGI(TAG, "AP Mask: " IPSTR, IP2STR(&machine_info.wifi_info.ipInfo_AP.netmask));
+
 
             printf("machine_info.wifi_info.max_retries = %d\n", machine_info.wifi_info.max_retries);
         }
@@ -287,14 +291,15 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
         machine_info.wifi_info.AP_ssid_len = strlen(CONFIG_ESP_AP_SSID);
         machine_info.wifi_info.AP_password_len = strlen(CONFIG_ESP_AP_PASSWORD);
 
+        //Setting up the Acceess point IP configuration
         machine_info.wifi_info.AP_IP[0] = 192;
         machine_info.wifi_info.AP_IP[1] = 168;
-        machine_info.wifi_info.AP_IP[2] = 2;
+        machine_info.wifi_info.AP_IP[2] = 4;
         machine_info.wifi_info.AP_IP[3] = 1;
 
         machine_info.wifi_info.AP_GW[0] = 192;
         machine_info.wifi_info.AP_GW[1] = 168;
-        machine_info.wifi_info.AP_GW[2] = 2;
+        machine_info.wifi_info.AP_GW[2] = 4;
         machine_info.wifi_info.AP_GW[3] = 1;
 
         machine_info.wifi_info.AP_netmask[0] = 255;
@@ -302,9 +307,29 @@ esp_err_t nvs_get_wifi_information(bool print_out_information)
         machine_info.wifi_info.AP_netmask[2] = 255;
         machine_info.wifi_info.AP_netmask[3] = 0;
 
-        IP4_ADDR(&machine_info.wifi_info.ipInfo.ip, machine_info.wifi_info.AP_IP[0], machine_info.wifi_info.AP_IP[1], machine_info.wifi_info.AP_IP[2], machine_info.wifi_info.AP_IP[3]);
-        IP4_ADDR(&machine_info.wifi_info.ipInfo.gw, machine_info.wifi_info.AP_GW[0], machine_info.wifi_info.AP_GW[1], machine_info.wifi_info.AP_GW[2], machine_info.wifi_info.AP_GW[3]);
-        IP4_ADDR(&machine_info.wifi_info.ipInfo.netmask, machine_info.wifi_info.AP_netmask[0], machine_info.wifi_info.AP_netmask[1], machine_info.wifi_info.AP_netmask[2], machine_info.wifi_info.AP_netmask[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_AP.ip, machine_info.wifi_info.AP_IP[0], machine_info.wifi_info.AP_IP[1], machine_info.wifi_info.AP_IP[2], machine_info.wifi_info.AP_IP[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_AP.gw, machine_info.wifi_info.AP_GW[0], machine_info.wifi_info.AP_GW[1], machine_info.wifi_info.AP_GW[2], machine_info.wifi_info.AP_GW[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_AP.netmask, machine_info.wifi_info.AP_netmask[0], machine_info.wifi_info.AP_netmask[1], machine_info.wifi_info.AP_netmask[2], machine_info.wifi_info.AP_netmask[3]);
+
+        //Setting up the Station IP configuration
+        machine_info.wifi_info.STA_IP[0] = 10;
+        machine_info.wifi_info.STA_IP[1] = 0;
+        machine_info.wifi_info.STA_IP[2] = 0;
+        machine_info.wifi_info.STA_IP[3] = 85;
+
+        machine_info.wifi_info.STA_GW[0] = 10;
+        machine_info.wifi_info.STA_GW[1] = 0;
+        machine_info.wifi_info.STA_GW[2] = 0;
+        machine_info.wifi_info.STA_GW[3] = 1;
+
+        machine_info.wifi_info.STA_netmask[0] = 255;
+        machine_info.wifi_info.STA_netmask[1] = 255;
+        machine_info.wifi_info.STA_netmask[2] = 255;
+        machine_info.wifi_info.STA_netmask[3] = 0;
+
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_STA.ip, machine_info.wifi_info.STA_IP[0], machine_info.wifi_info.STA_IP[1], machine_info.wifi_info.STA_IP[2], machine_info.wifi_info.STA_IP[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_STA.gw, machine_info.wifi_info.STA_GW[0], machine_info.wifi_info.STA_GW[1], machine_info.wifi_info.STA_GW[2], machine_info.wifi_info.STA_GW[3]);
+        IP4_ADDR(&machine_info.wifi_info.ipInfo_STA.netmask, machine_info.wifi_info.STA_netmask[0], machine_info.wifi_info.STA_netmask[1], machine_info.wifi_info.STA_netmask[2], machine_info.wifi_info.STA_netmask[3]);
 
         machine_info.wifi_info.max_retries = 5; // CONFIG_ESP_MAXIMUM_RETRY;
 

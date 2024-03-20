@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "esp32_spiffs_webserver",
-    "project_version":    "402957f-dirty",
+    "project_version":    "18519ea-dirty",
     "project_path":       "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server",
     "idf_path":           "D:/Softwares/ESP-IDF/esp-idf",
     "build_dir":          "C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build",

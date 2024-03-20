@@ -1,0 +1,101 @@
+[1/11] cmd.exe /C "cd /D C:\Users\fluxe\OneDrive\Documents\GitHub\ESP32-ESP-IDF-SPIFFS-Web-Server\build\esp-idf\main && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/spiffs/spiffsgen.py 0x4b000 C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/data C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/11] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\fluxe\OneDrive\Documents\GitHub\ESP32-ESP-IDF-SPIFFS-Web-Server\build\bootloader\esp-idf\esptool_py && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_setup.c.obj
+C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/main/wifi_setup.c:180:13: warning: 'wifi_init_02' defined but not used [-Wunused-function]
+  180 | static void wifi_init_02(){
+      |             ^~~~~~~~~~~~
+[4/9] Linking C static library esp-idf\main\libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable esp32_spiffs_webserver.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp32_spiffs_webserver.bin
+[8/9] cmd.exe /C "cd /D C:\Users\fluxe\OneDrive\Documents\GitHub\ESP32-ESP-IDF-SPIFFS-Web-Server\build\esp-idf\esptool_py && C:\Users\fluxe\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Softwares/ESP-IDF/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/partition_table/partition-table.bin C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build/esp32_spiffs_webserver.bin"
+esp32_spiffs_webserver.bin binary size 0xeb8e0 bytes. Smallest app partition is 0x12c000 bytes. 0x40720 bytes (21%) free.
+[8/9] cmd.exe /C "cd /D D:\Softwares\ESP-IDF\esp-idf\components\esptool_py && C:\Users\fluxe\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Softwares/ESP-IDF/esp-idf -D SERIAL_TOOL=C:/Users/fluxe/.espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Softwares/ESP-IDF/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/fluxe/OneDrive/Documents/GitHub/ESP32-ESP-IDF-SPIFFS-Web-Server/build -P D:/Softwares/ESP-IDF/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 esp32_spiffs_webserver.bin 0x8000 partition_table/partition-table.bin 0xf000 ota_data_initial.bin 0x3ac000 storage.bin
+esptool.py v4.7.dev1
+Serial port COM4
+Connecting.........
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:61:05:15:80:c0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x0010bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000f000 to 0x00010fff...
+Flash will be erased from 0x003ac000 to 0x003f6fff...
+Compressed 26832 bytes to 16850...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000767b... (100 %)
+Wrote 26832 bytes (16850 compressed) at 0x00001000 in 0.8 seconds (effective 275.7 kbit/s)...
+Hash of data verified.
+Compressed 964832 bytes to 614648...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002badd... (5 %)
+Writing at 0x00036a3d... (7 %)
+Writing at 0x0003bf41... (10 %)
+Writing at 0x00044de9... (13 %)
+Writing at 0x00050549... (15 %)
+Writing at 0x00055f3e... (18 %)
+Writing at 0x0005b8ec... (21 %)
+Writing at 0x0006110f... (23 %)
+Writing at 0x00066ab1... (26 %)
+Writing at 0x0006c7b9... (28 %)
+Writing at 0x00072a2c... (31 %)
+Writing at 0x00078170... (34 %)
+Writing at 0x0007dc12... (36 %)
+Writing at 0x00083be5... (39 %)
+Writing at 0x00089613... (42 %)
+Writing at 0x0008f00a... (44 %)
+Writing at 0x000944d2... (47 %)
+Writing at 0x0009984d... (50 %)
+Writing at 0x0009ed74... (52 %)
+Writing at 0x000a407a... (55 %)
+Writing at 0x000a9771... (57 %)
+Writing at 0x000aeef0... (60 %)
+Writing at 0x000b4b33... (63 %)
+Writing at 0x000ba2b5... (65 %)
+Writing at 0x000bf9ef... (68 %)
+Writing at 0x000c50e7... (71 %)
+Writing at 0x000cac69... (73 %)
+Writing at 0x000d02aa... (76 %)
+Writing at 0x000d5c8f... (78 %)
+Writing at 0x000db723... (81 %)
+Writing at 0x000e0e2c... (84 %)
+Writing at 0x000e9889... (86 %)
+Writing at 0x000f2184... (89 %)
+Writing at 0x000f7f77... (92 %)
+Writing at 0x000fd981... (94 %)
+Writing at 0x00103870... (97 %)
+Writing at 0x00108a92... (100 %)
+Wrote 964832 bytes (614648 compressed) at 0x00020000 in 14.3 seconds (effective 538.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 161...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (161 compressed) at 0x00008000 in 0.1 seconds (effective 308.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000f000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000f000 in 0.1 seconds (effective 555.0 kbit/s)...
+Hash of data verified.
+Compressed 307200 bytes to 21372...
+Writing at 0x003ac000... (50 %)
+Writing at 0x003b1a83... (100 %)
+Wrote 307200 bytes (21372 compressed) at 0x003ac000 in 2.1 seconds (effective 1198.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

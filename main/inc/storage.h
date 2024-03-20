@@ -34,7 +34,8 @@ extern char NVS_Image_Test[25000];
 
 typedef struct Wifi_Info_t
 {
-    esp_netif_ip_info_t ipInfo;
+    esp_netif_ip_info_t ipInfo_STA;
+    esp_netif_ip_info_t ipInfo_AP;
     char STA_ssid[32];
     uint8_t STA_ssid_len;
     char STA_password[64];
@@ -46,6 +47,9 @@ typedef struct Wifi_Info_t
     uint8_t AP_IP[4];
     uint8_t AP_GW[4];
     uint8_t AP_netmask[4];
+    uint8_t STA_IP[4];
+    uint8_t STA_GW[4];
+    uint8_t STA_netmask[4];
     uint8_t max_retries;
 
 } Wifi_Info_t;

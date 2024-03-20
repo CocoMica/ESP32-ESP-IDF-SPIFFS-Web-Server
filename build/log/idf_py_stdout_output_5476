@@ -1,0 +1,408 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 17 2023 13:44:57[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (87) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (102) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (117) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (129) boot: Defaulting to factory image[0m
+[0;32mI (134) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=28da8h (167336) map[0m
+[0;32mI (203) esp_image: segment 1: paddr=00048dd0 vaddr=3ffb0000 size=03760h ( 14176) load[0m
+[0;32mI (209) esp_image: segment 2: paddr=0004c538 vaddr=40080000 size=03ae0h ( 15072) load[0m
+[0;32mI (215) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9f4b0h (652464) map[0m
+[0;32mI (453) esp_image: segment 4: paddr=000ef4d8 vaddr=40083ae0 size=11b84h ( 72580) load[0m
+[0;32mI (494) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (494) boot: Disabling RNG early entropy source...[0m
+[0;32mI (506) cpu_start: Multicore app[0m
+[0;32mI (506) cpu_start: Pro cpu up.[0m
+[0;32mI (506) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (526) cpu_start: Pro cpu start user code[0m
+[0;32mI (526) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (526) cpu_start: Application information:[0m
+[0;32mI (531) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (537) cpu_start: App version:      18519ea-dirty[0m
+[0;32mI (542) cpu_start: Compile time:     Sep 23 2023 16:04:25[0m
+[0;32mI (548) cpu_start: ELF file SHA256:  02150ec81...[0m
+[0;32mI (554) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (561) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (566) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (583) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFC2108 len 0001DEF8 (119 KiB): DRAM[0m
+[0;32mI (595) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (601) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;32mI (623) app_start: Starting scheduler on CPU0[0m
+[0;32mI (627) app_start: Starting scheduler on CPU1[0m
+[0;32mI (627) main_task: Started on CPU0[0m
+[0;32mI (637) main_task: Calling app_main()[0m
+[0;32mI (637) MAIN: Main app starting
+[0m
+machine_info.general_info.last_reset_reason = 1
+[0;33mW (667) machine_status: ESP32 last Reset reason: Power-on reset[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+[0;32mI (677) storage: STA IP: 10.0.0.85[0m
+[0;32mI (677) storage: STA GW: 10.0.0.1[0m
+[0;32mI (687) storage: STA Mask: 255.255.255.0[0m
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+[0;32mI (707) storage: AP IP: 192.168.4.1[0m
+[0;32mI (707) storage: AP GW: 192.168.4.1[0m
+[0;32mI (717) storage: AP Mask: 255.255.255.0[0m
+machine_info.wifi_info.max_retries = 5
+[0;32mI (797) main_task: Returned from app_main()[0m
+[0;32mI (797) wifi_setup: initating wifi_init_02[0m
+I (807) wifi:wifi driver task: 3ffcb4ec, prio:23, stack:6656, core=0
+I (807) wifi:wifi firmware version: 3e5caf3
+I (807) wifi:wifi certification version: v7.0
+I (807) wifi:config NVS flash: enabled
+I (817) wifi:config nano formating: disabled
+I (817) wifi:Init data frame dynamic rx buffer num: 32
+I (817) wifi:Init management frame dynamic rx buffer num: 32
+I (827) wifi:Init management short buffer num: 32
+I (827) wifi:Init dynamic tx buffer num: 32
+I (837) wifi:Init static rx buffer size: 1600
+I (837) wifi:Init static rx buffer num: 10
+I (847) wifi:Init dynamic rx buffer num: 32
+[0;32mI (847) wifi_init: rx ba win: 6[0m
+[0;32mI (847) wifi_init: tcpip mbox: 32[0m
+[0;32mI (857) wifi_init: udp mbox: 6[0m
+[0;32mI (857) wifi_init: tcp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp tx win: 5744[0m
+[0;32mI (867) wifi_init: tcp rx win: 5744[0m
+[0;32mI (867) wifi_init: tcp mss: 1440[0m
+[0;32mI (877) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (877) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (907) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1027) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1027) wifi:enable tsf
+[0;32mI (1027) wifi_setup: wifi_init_sta finished.[0m
+I (1037) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (2207) wifi:state: init -> auth (b0)
+I (2237) wifi:state: auth -> assoc (0)
+I (2297) wifi:state: assoc -> run (10)
+I (3417) wifi:connected with Jenny, aid = 6, channel 1, BW20, bssid = 50:d4:f7:cd:9a:01
+I (3417) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (3427) wifi:pm start, type: 1
+
+[0;32mI (3437) esp_netif_handlers: sta ip: 10.0.0.85, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (3437) wifi_setup: static ip:10.0.0.85[0m
+[0;32mI (3437) wifi_setup: connected to AP SSID: Jenny password: 4168386922[0m
+[0;32mI (3447) mqtt_stuff: mqtt_app_start[0m
+[0;32mI (3447) mqtt_stuff: Other event id:7[0m
+[0;31mE (3457) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (3467) wifi:[0;31mE (3467) esp-tls: Failed to open new connection[0m
+AP's beacon interval = 102400 us, DTIM period = 1[0;31mE (3467) transport_base: Failed to open a new connection[0m
+
+[0;31mE (3477) mqtt_client: Error transport connect[0m
+[0;32mI (3487) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (3487) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (3497) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (3507) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (3507) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (13517) mqtt_stuff: Other event id:7[0m
+[0;31mE (13517) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (13517) esp-tls: Failed to open new connection[0m
+[0;31mE (13527) transport_base: Failed to open a new connection[0m
+[0;31mE (13527) mqtt_client: Error transport connect[0m
+[0;32mI (13537) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (13537) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (13547) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (13547) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (13557) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (23567) mqtt_stuff: Other event id:7[0m
+[0;31mE (23567) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (23567) esp-tls: Failed to open new connection[0m
+[0;31mE (23577) transport_base: Failed to open a new connection[0m
+[0;31mE (23577) mqtt_client: Error transport connect[0m
+[0;32mI (23587) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (23587) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (23597) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (23597) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (23607) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (33617) mqtt_stuff: Other event id:7[0m
+[0;31mE (33617) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (33617) esp-tls: Failed to open new connection[0m
+[0;31mE (33627) transport_base: Failed to open a new connection[0m
+[0;31mE (33627) mqtt_client: Error transport connect[0m
+[0;32mI (33637) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (33637) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (33647) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (33647) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (33657) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (43667) mqtt_stuff: Other event id:7[0m
+[0;31mE (43667) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (43667) esp-tls: Failed to open new connection[0m
+[0;31mE (43677) transport_base: Failed to open a new connection[0m
+[0;31mE (43677) mqtt_client: Error transport connect[0m
+[0;32mI (43687) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (43687) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (43697) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (43697) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (43707) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (53717) mqtt_stuff: Other event id:7[0m
+[0;31mE (53717) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (53717) esp-tls: Failed to open new connection[0m
+[0;31mE (53727) transport_base: Failed to open a new connection[0m
+[0;31mE (53727) mqtt_client: Error transport connect[0m
+[0;32mI (53737) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (53737) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (53747) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (53747) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (53757) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+I (62207) wifi:<ba-add>idx:0 (ifx:0, 50:d4:f7:cd:9a:01), tid:0, ssn:105, winSize:64
+[0;32mI (63767) mqtt_stuff: Other event id:7[0m
+[0;31mE (63767) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (63767) esp-tls: Failed to open new connection[0m
+[0;31mE (63777) transport_base: Failed to open a new connection[0m
+[0;31mE (63777) mqtt_client: Error transport connect[0m
+[0;32mI (63787) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (63787) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (63797) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (63797) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (63807) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (73817) mqtt_stuff: Other event id:7[0m
+[0;31mE (73817) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (73817) esp-tls: Failed to open new connection[0m
+[0;31mE (73827) transport_base: Failed to open a new connection[0m
+[0;31mE (73827) mqtt_client: Error transport connect[0m
+[0;32mI (73837) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (73837) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (73847) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (73847) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (73857) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (83867) mqtt_stuff: Other event id:7[0m
+[0;31mE (83867) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (83867) esp-tls: Failed to open new connection[0m
+[0;31mE (83877) transport_base: Failed to open a new connection[0m
+[0;31mE (83877) mqtt_client: Error transport connect[0m
+[0;32mI (83887) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (83887) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (83897) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (83897) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (83907) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (93917) mqtt_stuff: Other event id:7[0m
+[0;31mE (93917) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (93917) esp-tls: Failed to open new connection[0m
+[0;31mE (93927) transport_base: Failed to open a new connection[0m
+[0;31mE (93927) mqtt_client: Error transport connect[0m
+[0;32mI (93937) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (93937) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (93947) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (93947) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (93957) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 17 2023 13:44:57[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (87) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (102) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (117) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (129) boot: Defaulting to factory image[0m
+[0;32mI (134) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=28da8h (167336) map[0m
+[0;32mI (203) esp_image: segment 1: paddr=00048dd0 vaddr=3ffb0000 size=03760h ( 14176) load[0m
+[0;32mI (209) esp_image: segment 2: paddr=0004c538 vaddr=40080000 size=03ae0h ( 15072) load[0m
+[0;32mI (215) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9f4b0h (652464) map[0m
+[0;32mI (453) esp_image: segment 4: paddr=000ef4d8 vaddr=40083ae0 size=11b84h ( 72580) load[0m
+[0;32mI (494) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (494) boot: Disabling RNG early entropy source...[0m
+[0;32mI (505) cpu_start: Multicore app[0m
+[0;32mI (506) cpu_start: Pro cpu up.[0m
+[0;32mI (506) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (526) cpu_start: Pro cpu start user code[0m
+[0;32mI (526) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (526) cpu_start: Application information:[0m
+[0;32mI (531) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (537) cpu_start: App version:      18519ea-dirty[0m
+[0;32mI (542) cpu_start: Compile time:     Sep 23 2023 16:04:25[0m
+[0;32mI (548) cpu_start: ELF file SHA256:  02150ec81...[0m
+[0;32mI (554) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (561) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (566) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFC2108 len 0001DEF8 (119 KiB): DRAM[0m
+[0;32mI (595) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (601) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (607) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (618) spi_flash: flash io: dio[0m
+[0;32mI (623) app_start: Starting scheduler on CPU0[0m
+[0;32mI (627) app_start: Starting scheduler on CPU1[0m
+[0;32mI (627) main_task: Started on CPU0[0m
+[0;32mI (637) main_task: Calling app_main()[0m
+[0;32mI (637) MAIN: Main app starting
+[0m
+machine_info.general_info.last_reset_reason = 1
+[0;33mW (687) machine_status: ESP32 last Reset reason: Power-on reset[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+[0;32mI (697) storage: STA IP: 10.0.0.85[0m
+[0;32mI (697) storage: STA GW: 10.0.0.1[0m
+[0;32mI (707) storage: STA Mask: 255.255.255.0[0m
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+[0;32mI (727) storage: AP IP: 192.168.4.1[0m
+[0;32mI (727) storage: AP GW: 192.168.4.1[0m
+[0;32mI (737) storage: AP Mask: 255.255.255.0[0m
+machine_info.wifi_info.max_retries = 5
+[0;32mI (817) main_task: Returned from app_main()[0m
+[0;32mI (817) wifi_setup: initating wifi_init_02[0m
+I (827) wifi:wifi driver task: 3ffcb588, prio:23, stack:6656, core=0
+I (837) wifi:wifi firmware version: 3e5caf3
+I (837) wifi:wifi certification version: v7.0
+I (837) wifi:config NVS flash: enabled
+I (837) wifi:config nano formating: disabled
+I (847) wifi:Init data frame dynamic rx buffer num: 32
+I (847) wifi:Init management frame dynamic rx buffer num: 32
+I (857) wifi:Init management short buffer num: 32
+I (857) wifi:Init dynamic tx buffer num: 32
+I (867) wifi:Init static rx buffer size: 1600
+I (867) wifi:Init static rx buffer num: 10
+I (867) wifi:Init dynamic rx buffer num: 32
+[0;32mI (877) wifi_init: rx ba win: 6[0m
+[0;32mI (877) wifi_init: tcpip mbox: 32[0m
+[0;32mI (887) wifi_init: udp mbox: 6[0m
+[0;32mI (887) wifi_init: tcp mbox: 6[0m
+[0;32mI (887) wifi_init: tcp tx win: 5744[0m
+[0;32mI (897) wifi_init: tcp rx win: 5744[0m
+[0;32mI (897) wifi_init: tcp mss: 1440[0m
+[0;32mI (907) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (907) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (917) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1027) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1027) wifi:enable tsf
+[0;32mI (1027) wifi_setup: wifi_init_sta finished.[0m
+I (1037) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (1037) wifi:state: init -> auth (b0)
+I (1037) wifi:state: auth -> assoc (0)
+I (2047) wifi:state: assoc -> init (2700)
+I (2047) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (2047) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (2047) wifi:state: init -> auth (b0)
+I (2097) wifi:state: auth -> assoc (0)
+I (2127) wifi:state: assoc -> run (10)
+I (2237) wifi:connected with Jenny, aid = 6, channel 1, BW20, bssid = 50:d4:f7:cd:9a:01
+I (2237) wifi:security: WPA2-PSK, phy: bgn, rssi: -77
+I (2247) wifi:pm start, type: 1
+
+[0;32mI (2247) esp_netif_handlers: sta ip: 10.0.0.85, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (2247) wifi_setup: static ip:10.0.0.85[0m
+[0;32mI (2257) wifi_setup: connected to AP SSID: Jenny password: 4168386922[0m
+[0;32mI (2267) mqtt_stuff: mqtt_app_start[0m
+[0;32mI (2267) mqtt_stuff: Other event id:7[0m
+[0;31mE (2277) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (2287) esp-tls: Failed to open new connection[0m
+[0;31mE (2287) transport_base: Failed to open a new connection[0m
+[0;31mE (2297) mqtt_client: Error transport connect[0m
+[0;32mI (2297) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (2307) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+I (2307) wifi:[0;32mI (2307) mqtt_stuff: Last tls stack error number: 0x0[0m
+AP's beacon interval = 102400 us, DTIM period = 1[0;32mI (2317) mqtt_stuff: Last captured errno : 0 (Success)[0m
+
+[0;32mI (2327) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+I (6817) wifi:<ba-add>idx:0 (ifx:0, 50:d4:f7:cd:9a:01), tid:6, ssn:3, winSize:64
+I (6827) wifi:<ba-add>idx:1 (ifx:0, 50:d4:f7:cd:9a:01), tid:0, ssn:124, winSize:64
+[0;32mI (12337) mqtt_stuff: Other event id:7[0m
+[0;31mE (12337) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (12337) esp-tls: Failed to open new connection[0m
+[0;31mE (12347) transport_base: Failed to open a new connection[0m
+[0;31mE (12347) mqtt_client: Error transport connect[0m
+[0;32mI (12357) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (12357) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (12367) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (12367) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (12377) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (22387) mqtt_stuff: Other event id:7[0m
+[0;31mE (22387) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (22387) esp-tls: Failed to open new connection[0m
+[0;31mE (22397) transport_base: Failed to open a new connection[0m
+[0;31mE (22397) mqtt_client: Error transport connect[0m
+[0;32mI (22407) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (22407) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (22417) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (22417) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (22427) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (32437) mqtt_stuff: Other event id:7[0m
+[0;31mE (32437) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (32437) esp-tls: Failed to open new connection[0m
+[0;31mE (32447) transport_base: Failed to open a new connection[0m
+[0;31mE (32447) mqtt_client: Error transport connect[0m
+[0;32mI (32457) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (32457) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (32467) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (32467) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (32477) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (42487) mqtt_stuff: Other event id:7[0m
+[0;31mE (42487) esp-tls: couldn't get hostname for :bbcbdbaf.ala.us-east-1.emqxsl.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (42487) esp-tls: Failed to open new connection[0m
+[0;31mE (42497) transport_base: Failed to open a new connection[0m
+[0;31mE (42497) mqtt_client: Error transport connect[0m
+[0;32mI (42507) mqtt_stuff: MQTT_EVENT_ERROR[0m
+[0;32mI (42507) mqtt_stuff: Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (42517) mqtt_stuff: Last tls stack error number: 0x0[0m
+[0;32mI (42517) mqtt_stuff: Last captured errno : 0 (Success)[0m
+[0;32mI (42527) mqtt_stuff: MQTT_EVENT_DISCONNECTED[0m

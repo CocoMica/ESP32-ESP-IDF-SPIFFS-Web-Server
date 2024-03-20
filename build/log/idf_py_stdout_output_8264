@@ -1,0 +1,159 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7132
+ho 0 tail 12 room 4
+load:0x40078000,len:15708
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (32) boot: ESP-IDF v5.2-dev-1962-g53ff7d43db-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 17 2023 13:44:57[0m
+[0;32mI (35) boot: Multicore bootloader[0m
+[0;32mI (39) boot: chip revision: v1.0[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (47) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (52) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (62) boot: Partition Table:[0m
+[0;32mI (65) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (80) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (87) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (95) boot:  3 factory          factory app      00 00 00020000 0012c000[0m
+[0;32mI (102) boot:  4 ota_0            OTA app          00 10 00150000 0012c000[0m
+[0;32mI (110) boot:  5 ota_1            OTA app          00 11 00280000 0012c000[0m
+[0;32mI (117) boot:  6 storage          Unknown data     01 82 003ac000 0004b000[0m
+[0;32mI (125) boot: End of partition table[0m
+[0;32mI (129) boot: Defaulting to factory image[0m
+[0;32mI (134) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=2b900h (178432) map[0m
+[0;32mI (207) esp_image: segment 1: paddr=0004b928 vaddr=3ffb0000 size=03860h ( 14432) load[0m
+[0;32mI (213) esp_image: segment 2: paddr=0004f190 vaddr=40080000 size=00e88h (  3720) load[0m
+[0;32mI (215) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a6f54h (683860) map[0m
+[0;32mI (468) esp_image: segment 4: paddr=000f6f7c vaddr=40080e88 size=147dch ( 83932) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (526) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x400811e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (546) cpu_start: Pro cpu start user code[0m
+[0;32mI (546) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (546) cpu_start: Application information:[0m
+[0;32mI (551) cpu_start: Project name:     esp32_spiffs_webserver[0m
+[0;32mI (557) cpu_start: App version:      18519ea-dirty[0m
+[0;32mI (562) cpu_start: Compile time:     Sep 23 2023 16:04:25[0m
+[0;32mI (569) cpu_start: ELF file SHA256:  b6f258b3e...[0m
+[0;32mI (574) cpu_start: ESP-IDF:          v5.2-dev-1962-g53ff7d43db-dirty[0m
+[0;32mI (581) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (586) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (591) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (595) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (603) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFC3230 len 0001CDD0 (115 KiB): DRAM[0m
+[0;32mI (615) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (621) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (628) heap_init: At 40095664 len 0000A99C (42 KiB): IRAM[0m
+[0;32mI (635) spi_flash: detected chip: generic[0m
+[0;32mI (638) spi_flash: flash io: dio[0m
+[0;32mI (643) app_start: Starting scheduler on CPU0[0m
+[0;32mI (647) app_start: Starting scheduler on CPU1[0m
+[0;32mI (647) main_task: Started on CPU0[0m
+[0;32mI (657) main_task: Calling app_main()[0m
+[0;32mI (657) MAIN: Main app starting
+[0m
+machine_info.general_info.last_reset_reason = 1
+[0;33mW (687) machine_status: ESP32 last Reset reason: Power-on reset[0m
+machine_info.wifi_info.STA_ssid = Jenny
+machine_info.wifi_info.STA_ssid_len = 5
+machine_info.wifi_info.STA_password = 4168386922
+machine_info.wifi_info.STA_password_len = 10
+machine_info.wifi_info.AP_ssid = ESP
+machine_info.wifi_info.AP_ssidlen = 3
+machine_info.wifi_info.AP_password = 123456789
+machine_info.wifi_info.AP_password_len = 9
+[0;32mI (717) storage: IP: 192.168.4.1[0m
+[0;32mI (717) storage: GW: 192.168.4.1[0m
+[0;32mI (727) storage: Mask: 255.255.255.0[0m
+machine_info.wifi_info.max_retries = 5
+[0;32mI (807) main_task: Returned from app_main()[0m
+[0;32mI (807) wifi_setup: wifi_init begin[0m
+I (817) wifi:wifi driver task: 3ffc4c38, prio:23, stack:6656, core=0
+I (817) wifi:wifi firmware version: 3e5caf3
+I (817) wifi:wifi certification version: v7.0
+I (817) wifi:config NVS flash: enabled
+I (827) wifi:config nano formating: disabled
+I (827) wifi:Init data frame dynamic rx buffer num: 32
+I (827) wifi:Init management frame dynamic rx buffer num: 32
+I (837) wifi:Init management short buffer num: 32
+I (837) wifi:Init dynamic tx buffer num: 32
+I (847) wifi:Init static rx buffer size: 1600
+I (847) wifi:Init static rx buffer num: 10
+I (857) wifi:Init dynamic rx buffer num: 32
+[0;32mI (857) wifi_init: rx ba win: 6[0m
+[0;32mI (857) wifi_init: tcpip mbox: 32[0m
+[0;32mI (867) wifi_init: udp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp mbox: 6[0m
+[0;32mI (877) wifi_init: tcp tx win: 5744[0m
+[0;32mI (877) wifi_init: tcp rx win: 5744[0m
+[0;32mI (877) wifi_init: tcp mss: 1440[0m
+[0;32mI (887) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (887) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (897) wifi_setup: Entering from_ap_to_sta[0m
+[0;32mI (897) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1007) wifi:mode : sta (3c:61:05:15:80:c0)
+I (1007) wifi:enable tsf
+[0;32mI (1007) wifi_setup: Initiating AP connection...[0m
+[0;32mI (3417) wifi_setup: retrying to connect to the AP, try 1...[0m
+[0;31mE (3417) wifi_setup: connect to the AP fail[0m
+[0;32mI (5827) wifi_setup: retrying to connect to the AP, try 2...[0m
+[0;31mE (5837) wifi_setup: connect to the AP fail[0m
+[0;32mI (8247) wifi_setup: retrying to connect to the AP, try 3...[0m
+[0;31mE (8247) wifi_setup: connect to the AP fail[0m
+[0;32mI (10657) wifi_setup: retrying to connect to the AP, try 4...[0m
+[0;31mE (10657) wifi_setup: connect to the AP fail[0m
+[0;32mI (13067) wifi_setup: retrying to connect to the AP, try 5...[0m
+[0;31mE (13067) wifi_setup: connect to the AP fail[0m
+[0;31mE (15477) wifi_setup: connect to the AP fail[0m
+[0;32mI (15477) wifi_setup: Failed to connect to SSID: Jenny, password: 4168386922[0m
+[0;32mI (15477) wifi_setup: Entering from_sta_to_ap[0m
+I (15487) wifi:mode : softAP (3c:61:05:15:80:c1)
+I (15487) wifi:Total power save buffer number: 16
+I (15487) wifi:Init max length of beacon: 752/752
+I (15497) wifi:Init max length of beacon: 752/752
+I (17057) wifi:Total power save buffer number: 16
+[0;32mI (17057) wifi_setup: wifi_init_softap finished. SSID: ESP password: 123456789[0m
+[0;32mI (17057) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (17067) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+I (32227) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (32237) wifi:station: 3c:95:09:99:ec:03 join, AID=1, bgn, 40U
+I (32287) wifi:<ba-add>idx:2 (ifx:1, 3c:95:09:99:ec:03), tid:0, ssn:0, winSize:64
+[0;32mI (32297) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (35297) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (35367) wifi:<ba-add>idx:3 (ifx:1, 3c:95:09:99:ec:03), tid:6, ssn:2, winSize:64
+[0;32mI (43067) URL stuff: Handshake done, the new connection was opened[0m
+[0;33mW (43077) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (43077) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (45757) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (46287) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (47477) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (48537) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (49657) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (66077) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (70687) received_messages: info from browser: 1
+[0m
+[0;32mI (74697) received_messages: info from browser: 2
+[0m
+[0;32mI (74907) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (78087) received_messages: info from browser: 3
+[0m
+[0;32mI (78447) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (79037) received_messages: info from browser: 1
+[0m
+[0;32mI (81617) URL stuff: Handshake done, the new connection was opened[0m
+[0;32mI (82707) received_messages: info from browser: 1
+[0m
